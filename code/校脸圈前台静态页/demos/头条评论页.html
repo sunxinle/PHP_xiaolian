@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>软件学院微官网</title>
+	<title>头条评论页</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -25,9 +25,10 @@
 <body ontouchstart>
     
     <div class="weui_cells weui_cells_form">
+      <div id="show">  </div>
       <div class="weui_cell">
         <div class="weui_cell_bd weui_cell_primary">
-          <textarea class="weui_textarea" placeholder="请留下您的宝贵意见" rows="3" id="suggestion"></textarea>
+          <textarea class="weui_textarea" placeholder="请留下您的宝贵意见" rows="3" id="suggestion" name="suggestion"></textarea>
           <div class="weui_textarea_counter"><span>0</span>/200</div>
         </div>
       </div>
@@ -35,9 +36,9 @@
 
 
     <div class="weui_cells weui_cells_form">
-      <div class="weui_cells_tips">亲要评论哦~</div>
+       <div class="weui_cells_tips"><img src="./images/happy_face.png" width="8%" height="8%" style="margin-left:6%" class="emotion"></div>
       <div class="weui_btn_area">
-        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
+        <a class="weui_btn weui_btn_primary sub_btn" href="javascript:" id="showTooltips">提交</a>
       </div>
     </div>
 
@@ -56,6 +57,27 @@
         if(!sug) $.toptip('还没有填写评论啊');
         else $.toptip('评论成功啦', 'success');
       });
+      $(function(){
+  $('.emotion').qqFace({
+    id : 'facebox', 
+    assign:'suggestion', 
+    path:'arclist/' //表情存放的路径
+  });
+  $(".sub_btn").click(function(){
+    var str = $("#suggestion").val();
+    $("#show").html(replace_em(str));
+  });
+});
+//查看结果
+function replace_em(str){
+  str = str.replace(/\</g,'&lt;');
+  str = str.replace(/\>/g,'&gt;');
+  str = str.replace(/\n/g,'<br/>');
+  str = str.replace(/\[em_([0-9]*)\]/g,'<img src="arclist/$1.gif" border="0" />');
+  return str;
+}
     </script>
+<script  src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.qqFace.js"></script>
 </body>
 </html>
