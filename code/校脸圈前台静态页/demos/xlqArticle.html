@@ -28,14 +28,23 @@
     .swiper-container img {
         display: block;
         width: 100%;
-      }  
+      }
+      .back{
+      position: absolute;
+      top: 5%;
+      left: 5%;
+    }
+    .xiayipian{
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+    }
   </style>
 </head>
 
 <body ontouchstart>
-
+<div class="weui_tab_bd">
 <!--weui_tab_bd界面开始-->
-  <div>
     <!--在这里写主体的代码-->
     <!--说说详情开始-->
     <!--微信昵称，说说文字内容开始-->
@@ -58,17 +67,13 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide"><img src="./images/swiper-11.jpg" /></div>
+        <div class="swiper-slide"><img src="./images/swiper-22.jpg" /></div>
+        <div class="swiper-slide"><img src="./images/swiper-33.jpg" /></div>
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
     </div>
 <!--图片结束-->
-<!--下一篇+评论开始-->
-    <div class="weui-row weui-no-gutter">
-          <div class="weui-col-50"><a href="xlqArticle.html" class="weui_btn weui_btn_plain_primary close-popup">下&nbsp;一&nbsp;篇</a></div>
-          <div class="weui-col-50"><a href="校脸圈评论加点赞.html" class="weui_btn weui_btn_plain_primary close-popup">评&nbsp;论</a></div>
-      </div>
-<!--下一篇+评论结束-->
       <!--评论开始-->
      <div class="weui_panel">
   <div class="weui_panel_hd">评论列表</div>
@@ -85,11 +90,17 @@
 </div>
 <!--评论结束-->
 <!--说说详情结束-->
+</div>
+<!--下一篇+评论开始-->
+    <div class="weui-row weui-no-gutter xiayipian">
+          <div class="weui-col-50"><a href="xlqArticle.html" class="weui_btn close-popup
+          weui_btn_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
+          <div class="weui-col-50"><a href="校脸圈评论加点赞.html" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
+      </div>
+<!--下一篇+评论结束-->
 <!--在这里写主体的代码结束-->
 </div>
-
   <!--weui_tab_bd界面结束-->
-</div>
 <script src="../lib/jquery-2.1.4.js"></script>
 <script src="../lib/fastclick.js"></script>
 <script>
@@ -106,6 +117,12 @@
         console.log("open popup");
       }).on("close", ".weui-popup-modal", function() {
         console.log("close popup");
+      });
+    </script>
+    <script>
+      $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
       });
     </script>
 </body>
