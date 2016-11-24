@@ -1,367 +1,303 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>大学页面及大学简介内容页</title>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
-
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>笑脸</title>
+<link rel="stylesheet" href="css/university.css">
 <link rel="stylesheet" href="../lib/weui.min.css">
 <link rel="stylesheet" href="../css/jquery-weui.css">
 <link rel="stylesheet" href="css/demos.css">
-
-  </head>
-
-  <body ontouchstart>
-
-
-    <header class='demos-header'>
-      <h1 class="demos-title">大学</h1>
-    </header>
-
-    <!--<div class='demos-content-padded'  weui_btn   >-->
-    <div class='demos-content-padded'>
-      <!--九宫格-->
-		<div class="weui_grids">
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a1">
-				<div class="weui_grid_icon">
-					<img src="./images/hebeishida.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					河北师大
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a2">
-				<div class="weui_grid_icon">
-					<img src="images/hebeikejidaxue.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					河北科技大学
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a3">
-				<div class="weui_grid_icon">
-					<img src="./images/qinghuadaxue.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					清华大学
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a4">
-				<div class="weui_grid_icon">
-					<img src="./images/nankaidaxue.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					南开大学
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a5">
-				<div class="weui_grid_icon">
-					<img src="./images/tianjindaxue.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					天津大学
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a6">
-				<div class="weui_grid_icon">
-					<img src="./images/wuhandaxue.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					武汉大学
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a7">
-				<div class="weui_grid_icon">
-					<img src="./images/xianjiaoda.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					西安交通大学
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a6">
-				<div class="weui_grid_icon">
-					<img src="./images/wuhandaxue.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					武汉大学
-				</p>
-			</a>
-			<a href="javascript:;" class="weui_grid js_grid open-popup" data-id="button"  data-target="#a5">
-				<div class="weui_grid_icon">
-					<img src="./images/tianjindaxue.jpg" alt="">
-				</div>
-				<p class="weui_grid_label">
-					天津大学
-				</p>
-			</a>
-		</div>
-		<!--九宫格结束-->
+<style type="text/css">
+	.weui_tabbar{
+		position: fixed;
+		bottom: 0px;
+	}
+	.the_plus{
+      position: fixed;
+      bottom: 80px;
+      left: 70%;
+      z-index: 1;
+    }
+    .initials{
+    	z-index: 1;
+    }
+</style>
+</head>
+<body>
+<div class="the_plus">
+      <a href="javascript:;" class="open-popup" data-target="#half"><img src="./images/plus.png" alt=""></a>
     </div>
+<!-- 代码部分begin -->
+<header class="fixed">
+	<div class="header">
+		支持的大学列表
+	</div>
+</header>
 
-    <div id="a1" class='weui-popup-container'>
+
+<div id="letter" ></div>
+<div class="sort_box">
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">河北师范大学</div>
+		</a>
+	</div>
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name"></div>
+		</a>
+	</div>
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">中国农业大学</div>
+		</a>
+	</div>
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">中国海洋大学</div>
+		</a>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">北京师范大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">河北科技大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">北方农业大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">河北大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">石家庄经济学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">河南大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">邯郸学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">张家口学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">北京城市学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">广州大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">湖南师范大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">武汉大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">海南大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">黑龙家大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">香港科技大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">台湾大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">宾夕法尼亚大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">印度尼西亚海滨学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">内蒙古大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">青海省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">四川省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">山东省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">陕西省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">山西省</div>
+	</div>
+    <div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">台湾</div>
+		</a>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">云南省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">浙江省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">内蒙古</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">宁夏</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">西藏</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">新疆</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">香港</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="images/img.png" /></div>
+		<div class="num_name">澳门</div>
+	</div>
+</div>
+
+
+
+
+<div class="initials">
+	<ul>
+		<li><img src="images/guide_star.png"></li>
+	</ul>
+</div>
+
+
+<!-- weui_tab_bd界面结束 -->
+<!--导航栏开始-->
+  <div class="weui_tabbar">
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="./images/toutiao.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">头条</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
+      <div class="weui_tabbar_icon">
+        <img src="./images/daxue.png" alt="">
+      </div>
+      <p class="weui_tabbar_label" style="color:#29b6f6">大学</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="./images/xiaolianquan.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">校脸圈</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="./images/wode.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">我的</p>
+    </a>
+  </div>
+  <!--导航栏结束-->
+<!--点击加号界面出来的弹窗-->
+    <div id="half" class='weui-popup-container popup-bottom'>
       <div class="weui-popup-overlay"></div>
       <div class="weui-popup-modal">
-        <header class='demos-header'>
-          <h2 class="demos-second-title">河北师范大学简介</h2>
-          <p class="demos-sub-title">By MOON</p>
-        </header>
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <a href="javascript:;" class="picker-button close-popup">关闭</a>
+            <h1 class="title">快捷功能</h1>
+          </div>
+        </div>
+        <div class="modal-content">
+          <div class="weui_grids">
 
-        <article class="weui_article">
-          <h1>我的校园</h1>
-          <section>
-            <h2 class="title">1.1</h2>
-            <section>
-              <h3>历史人文</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute</p>
-            </section>
-            <section>
-              <h3>学校风采</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-          </section>
-          <section>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">关闭</a>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">我要去</a>
-          </section>
-        </article>
+            <a href="javascript:;" class="weui_grid js_grid" data-id="progress">
+              <div class="weui_grid_icon">
+                <img src="images/gothere.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                我要去
+              </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" data-id="msg">
+              <div class="weui_grid_icon">
+                <img src="images/hasgone.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                我去过
+              </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" data-id="msg">
+              <div class="weui_grid_icon">
+                <img src="images/match.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                捞一捞
+              </p>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div id="a2" class='weui-popup-container'>
-      <div class="weui-popup-overlay"></div>
-      <div class="weui-popup-modal">
-        <header class='demos-header'>
-          <h2 class="demos-second-title">河北科技大学简介</h2>
-          <p class="demos-sub-title">By MOON</p>
-        </header>
-
-        <article class="weui_article">
-          <h1>我的校园</h1>
-          <section>
-            <h2 class="title">1.1</h2>
-            <section>
-              <h3>历史人文</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute</p>
-            </section>
-            <section>
-              <h3>学校风采</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-          </section>
-          <section>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">关闭</a>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">我要去</a>
-          </section>
-        </article>
-      </div>
-    </div>
-
-    <div id="a3" class='weui-popup-container'>
-      <div class="weui-popup-overlay"></div>
-      <div class="weui-popup-modal">
-        <header class='demos-header'>
-          <h2 class="demos-second-title">清华大学简介</h2>
-          <p class="demos-sub-title">By MOON</p>
-        </header>
-
-        <article class="weui_article">
-          <h1>我的校园</h1>
-          <section>
-            <h2 class="title">1.1</h2>
-            <section>
-              <h3>历史人文</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute</p>
-            </section>
-            <section>
-              <h3>学校风采</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-          </section>
-          <section>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">关闭</a>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">我要去</a>
-          </section>
-        </article>
-      </div>
-    </div>
-
-    <div id="a4" class='weui-popup-container'>
-      <div class="weui-popup-overlay"></div>
-      <div class="weui-popup-modal">
-        <header class='demos-header'>
-          <h2 class="demos-second-title">南开大学简介</h2>
-          <p class="demos-sub-title">By MOON</p>
-        </header>
-
-        <article class="weui_article">
-          <h1>我的校园</h1>
-          <section>
-            <h2 class="title">1.1</h2>
-            <section>
-              <h3>历史人文</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute</p>
-            </section>
-            <section>
-              <h3>学校风采</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-          </section>
-          <section>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">关闭</a>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">我要去</a>
-          </section>
-        </article>
-      </div>
-    </div>
-
-    <div id="a5" class='weui-popup-container'>
-      <div class="weui-popup-overlay"></div>
-      <div class="weui-popup-modal">
-        <header class='demos-header'>
-          <h2 class="demos-second-title">天津大学简介</h2>
-          <p class="demos-sub-title">By MOON</p>
-        </header>
-
-        <article class="weui_article">
-          <h1>我的校园</h1>
-          <section>
-            <h2 class="title">1.1</h2>
-            <section>
-              <h3>历史人文</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute</p>
-            </section>
-            <section>
-              <h3>学校风采</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-          </section>
-          <section>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">关闭</a>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">我要去</a>
-          </section>
-        </article>
-      </div>
-    </div>
-
-    <div id="a6" class='weui-popup-container'>
-      <div class="weui-popup-overlay"></div>
-      <div class="weui-popup-modal">
-        <header class='demos-header'>
-          <h2 class="demos-second-title">武汉大学简介</h2>
-          <p class="demos-sub-title">By MOON</p>
-        </header>
-
-        <article class="weui_article">
-          <h1>我的校园</h1>
-          <section>
-            <h2 class="title">1.1</h2>
-            <section>
-              <h3>历史人文</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute</p>
-            </section>
-            <section>
-              <h3>学校风采</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-          </section>
-          <section>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">关闭</a>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">我要去</a>
-          </section>
-        </article>
-      </div>
-    </div>
-
-    <div id="a7" class='weui-popup-container'>
-      <div class="weui-popup-overlay"></div>
-      <div class="weui-popup-modal">
-        <header class='demos-header'>
-          <h2 class="demos-second-title">西安交通大学简介</h2>
-          <p class="demos-sub-title">By MOON</p>
-        </header>
-
-        <article class="weui_article">
-          <h1>我的校园</h1>
-          <section>
-            <h2 class="title">1.1</h2>
-            <section>
-              <h3>历史人文</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute</p>
-            </section>
-            <section>
-              <h3>学校风采</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-          </section>
-          <section>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">关闭</a>
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup">我要去</a>
-          </section>
-        </article>
-      </div>
-    </div>
-    
-    <script src="../lib/jquery-2.1.4.js"></script>
+    <!--点击加号界面出来的弹窗结束-->
+<script src="../lib/jquery-2.1.4.js"></script>
+<script src="../js/jquery.charfirst.pinyin.js"></script>
+<script src="../js/sort.js"></script>
 <script src="../lib/fastclick.js"></script>
+<script src="../js/jquery-weui.js"></script>
+<!-- 代码部分end -->
 <script>
   $(function() {
     FastClick.attach(document.body);
   });
 </script>
-<script src="../js/jquery-weui.js"></script>
 
-    <script>
-      $(document).on("open", ".weui-popup-modal", function() {
-        console.log("open popup");
-      }).on("close", ".weui-popup-modal", function() {
-        console.log("close popup");
-      });
-    </script>
-  </body>
+<script>
+  $(document).on("open", ".weui-popup-modal", function() {
+    console.log("open popup");
+    $(".weui_tabbar").hide();
+  }).on("close", ".weui-popup-modal", function() {
+    console.log("close popup");
+    $(".weui_tabbar").show();
+  });
+</script>
+</body>
 </html>
