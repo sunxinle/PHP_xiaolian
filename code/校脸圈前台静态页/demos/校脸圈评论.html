@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>校脸圈首页</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="../lib/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="css/demos.css">
+  <style type="text/css">
+    .the_plus{
+      position: absolute;
+      bottom: 80px;
+      left: 80%;
+    }
+    .weui_media_title{
+      color:#29b6f6;
+      font-weight: bolder;
+    }  
+    .nixiang{
+      background-color: #555555;
+    }
+    .back{
+      position: fixed;
+      top: 10%;
+      left: 5%;
+    }
+  </style>
+</head>
+
+<body ontouchstart>
+
+<div class="weui_tab">
+<!--weui_tab_bd界面开始-->
+  <div class="weui_tab_bd">
+    <div class="back">
+      <a href="xlqArticle.html">
+        <img src="./images/back.png" alt="">
+      </a>
+    </div>
+    <!--评论开始-->
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <textarea class="weui_textarea" placeholder="请留下您的宝贵意见" rows="3" id="suggestion"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cells_tips">亲要评论哦~</div>
+      <div class="weui_btn_area">
+        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
+      </div>
+    </div>
+    <!--评论结束-->
+    <!--说说开始-->
+    <div class="weui_panel">
+      <div class="weui_panel_hd">校友圈</div>
+        <div class="weui_panel_bd">
+          <div class="weui_media_box weui_media_text">
+            <a href="xlqArticle.html" class="weui_media_title">佩罗娜幽灵公主自我拯救</a>
+            <a href="xlqArticle.html">
+             <p class="weui_media_desc">她用自己最为消极的能力去灭掉敌人，可以遇见更为消极的乌索普，她被消极了
+             </p>
+            </a>
+            <p class="weui_media_desc">
+              <div class="weui_panel_bd">
+                <a href="xlqArticle.html" class="weui_media_box weui_media_appmsg">
+                  <div class="weui_media_hd">
+                     <img class="weui_media_appmsg_thumb" src="./images/swiper-11.jpg" alt="">
+                  </div>
+                  <div class="weui_media_hd">
+                     <img class="weui_media_appmsg_thumb" src="./images/swiper-22.jpg" alt="">
+                  </div>
+                  <div class="weui_media_hd">
+                     <img class="weui_media_appmsg_thumb" src="./images/swiper-33.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    <!--说说结束-->
+  </div>
+   <!--weui_tab_bd界面结束-->
+</div>
+<script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="../js/jquery-weui.js"></script>
+<script>
+  $("#showTooltips").click(function() {
+    var sug = $('#suggestion').val();
+    if(!sug) $.toptip('还没有填写评论啊');
+    else $.toptip('评论成功啦', 'success');
+  });
+</script>
+</body>
+</html>
