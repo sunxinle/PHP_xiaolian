@@ -1,0 +1,60 @@
+[ 2016-11-28T16:07:55+08:00 ] 127.0.0.1 /php_xiaolian/index.php/css/jquery-weui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+ERR: 无法加载模块:Css
+
+[ 2016-11-28T16:07:55+08:00 ] 127.0.0.1 /php_xiaolian/index.php/lib/weui.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+ERR: 无法加载模块:Lib
+
+[ 2016-11-28T16:07:55+08:00 ] 127.0.0.1 /php_xiaolian/index.php/lib/jquery-2.1.4.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+ERR: 无法加载模块:Lib
+
+[ 2016-11-28T16:07:55+08:00 ] 127.0.0.1 /php_xiaolian/index.php/js/jquery.charfirst.pinyin.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:07:55+08:00 ] 127.0.0.1 /php_xiaolian/index.php/js/sort.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:07:55+08:00 ] 127.0.0.1 /php_xiaolian/index.php/lib/fastclick.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+ERR: 无法加载模块:Lib
+
+[ 2016-11-28T16:07:55+08:00 ] 127.0.0.1 /php_xiaolian/index.php/js/jquery-weui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:16:10+08:00 ] 127.0.0.1 /php_xiaolian/index.php/match/go
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+ERR: 无法加载模块:Match
+
+[ 2016-11-28T16:16:22+08:00 ] 127.0.0.1 /php_xiaolian/index.php/match/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+ERR: 无法加载模块:Match
+
+[ 2016-11-28T16:35:35+08:00 ] 127.0.0.1 /php_xiaolian/index.php/match
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+ERR: 无法加载模块:Match
+

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>笑脸</title>
+<link rel="stylesheet" href="__PUBLIC__/css/university.css">
+<link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
+<link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
+<link rel="stylesheet" href="__PUBLIC__/css/demos.css">
+<style type="text/css">
+	.weui_tabbar{
+		position: fixed;
+		bottom: 0px;
+	}
+	.the_plus{
+      position: fixed;
+      bottom: 80px;
+      left: 80%;
+      z-index: 1;
+    }
+    .initials{
+    	z-index: 1;
+    }
+</style>
+</head>
+<body>
+<div class="the_plus">
+      <a href="javascript:;" class="open-popup" data-target="#half"><img src="__PUBLIC__/images/plus.png" alt=""></a>
+    </div>
+<!-- 代码部分begin -->
+<header class="fixed">
+	<div class="header">
+		支持的大学列表
+	</div>
+</header>
+
+
+<div id="letter" ></div>
+<div class="sort_box">
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">河北师范大学</div>
+		</a>
+	</div>
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name"></div>
+		</a>
+	</div>
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">中国农业大学</div>
+		</a>
+	</div>
+	<div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">中国海洋大学</div>
+		</a>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">北京师范大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">河北科技大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">北方农业大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">河北大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">石家庄经济学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">河南大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">邯郸学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">张家口学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">北京城市学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">广州大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">湖南师范大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">武汉大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">海南大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">黑龙家大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">香港科技大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">台湾大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">宾夕法尼亚大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">印度尼西亚海滨学院</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">内蒙古大学</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">青海省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">四川省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">山东省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">陕西省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">山西省</div>
+	</div>
+    <div class="sort_list"><a href="university_detail.html">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">台湾</div>
+		</a>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">云南省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">浙江省</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">内蒙古</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">宁夏</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">西藏</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">新疆</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">香港</div>
+	</div>
+    <div class="sort_list">
+		<div class="num_logo"><img src="__PUBLIC__/images/img.png" /></div>
+		<div class="num_name">澳门</div>
+	</div>
+</div>
+
+
+
+
+<div class="initials">
+	<ul>
+		<li><img src="__PUBLIC__/images/guide_star.png"></li>
+	</ul>
+</div>
+
+
+<!-- weui_tab_bd界面结束 -->
+<!--导航栏开始-->
+  <div class="weui_tabbar">
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/toutiao.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">头条</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/daxue.png" alt="">
+      </div>
+      <p class="weui_tabbar_label" style="color:#29b6f6">大学</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/xiaolianquan.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">校脸圈</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/wode.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">我的</p>
+    </a>
+  </div>
+  <!--导航栏结束-->
+<!--点击加号界面出来的弹窗-->
+    <div id="half" class='weui-popup-container popup-bottom'>
+      <div class="weui-popup-overlay"></div>
+      <div class="weui-popup-modal">
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <a href="javascript:;" class="picker-button close-popup">关闭</a>
+            <h1 class="title">快捷功能</h1>
+          </div>
+        </div>
+        <div class="modal-content">
+          <div class="weui_grids">
+
+            <a href="javascript:;" class="weui_grid js_grid" data-id="progress">
+              <div class="weui_grid_icon">
+                <img src="__PUBLIC__/images/gothere.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                我要去
+              </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" data-id="msg">
+              <div class="weui_grid_icon">
+                <img src="__PUBLIC__/images/hasgone.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                我去过
+              </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" data-id="msg">
+              <div class="weui_grid_icon">
+                <img src="__PUBLIC__/images/match.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                捞一捞
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--点击加号界面出来的弹窗结束-->
+<script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+<script src="__PUBLIC__/js/jquery.charfirst.pinyin.js"></script>
+<script src="__PUBLIC__/js/sort.js"></script>
+<script src="__PUBLIC__/lib/fastclick.js"></script>
+<script src="__PUBLIC__/js/jquery-weui.js"></script>
+<!-- 代码部分end -->
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+
+<script>
+  $(document).on("open", ".weui-popup-modal", function() {
+    console.log("open popup");
+    $(".weui_tabbar").hide();
+  }).on("close", ".weui-popup-modal", function() {
+    console.log("close popup");
+    $(".weui_tabbar").show();
+  });
+</script>
+</body>
+</html>

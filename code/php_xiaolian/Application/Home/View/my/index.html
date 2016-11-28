@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery WeUI</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
+  <link rel="stylesheet" href=__PUBLIC__/css/demos.css">
+  <style type="text/css">
+    .the_plus{
+      position: absolute;
+      bottom: 80px;
+      left: 80%;
+    }
+    .headimg{ 
+      width: 30px;
+      height: 30px;
+     
+    }
+    html,body{
+      height: 100%;
+    }
+    .swiper-container {
+        width: 100%;
+        } 
+        .swiper-container .headimg {
+        display: block;
+        /*width: 100%;*/
+        }
+        .weui_tab .weui_tab_bd .content .headmig{
+          /*width: 100%;*/
+          display: block;
+        }
+  </style>
+</head>
+
+<body ontouchstart>
+
+<div class="weui_tab">
+
+  <div class="weui_tab_bd">
+      <!--导航栏开始-->
+        <div class="weui_tab">
+          <div class="weui_navbar">
+            <a class="weui_navbar_item weui_bar_item_on">
+              我的请求
+            </a>
+            <a class="weui_navbar_item">
+              接收的请求
+            </a>
+            <a class="weui_navbar_item">
+              聊天列表
+            </a>
+          </div>
+        <div class="weui_tab_bd">
+        <!--第一个选项卡-->
+          <div class="content">
+            <div class="weui_cells weui_cells_access">
+              <a class="weui_cell" href="content.html">
+                <div class="weui_cell_hd">
+                  <img src="__PUBLIC__/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <p style="font-size:16px; height: 30px;">白照运 河北师范大学</p>
+                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北科技大学</p>
+                </div>
+                <span class="weui_cell_ft"></span>
+              </a>
+              <a class="weui_cell" href="content.html">
+                <div class="weui_cell_hd">
+                  <img src="__PUBLIC__/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <p style="font-size:16px; height: 30px;">白照运 河北师范大学</p>
+                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北医科大学</p>
+                </div>
+                <span class="weui_cell_ft"></span>
+              </a>
+            </div>
+          </div>
+          <!--第二个选项卡-->
+          <div class="content" style="display:none">
+            <div class="weui_cells weui_cells_access">
+              <a class="weui_cell" href="javascript:;">
+                <div class="weui_cell_hd">
+                  <img src="__PUBLIC__/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <p style="font-size:16px; height: 30px;">孙新乐 河北科技大学</p>
+                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北师范大学</p>
+                </div>
+
+                <a href="contents.html" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-left:50px;">我带你吧</a>
+                
+                <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn" style="margin-left:50px; width: 77px;">忽略</a>
+              </a>
+              <a class="weui_cell" href="javascript:;">
+                <div class="weui_cell_hd">
+                  <img src="__PUBLIC__/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <p style="font-size:16px; height: 30px;">王霖 河北医科大学</p>
+                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北医科大学</p>
+                </div>
+                <a href="contents.html" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-left:50px;">我带你吧</a>
+
+                <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn" style="margin-left:50px; width: 77px;">忽略</a>
+              </a>
+            </div>
+          </div>
+          <!--第三个选项卡-->
+          <div class="content" style="display:none">
+            <a class="weui_cell" href="chat.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                  <p>萌果官方客服</p>
+                </div>
+                <div class="weui_cell_ft"><h5>2016年11月01日永久连接</h5></div>
+              </a>
+              <a class="weui_cell" href="chat.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                  <p>孙新乐</p>
+                </div>
+                <div class="weui_cell_ft"><h5>2016年11月11日创建连接</h5></div>
+              </a>
+              <a class="weui_cell" href="chat.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                  <p>王霖</p>
+                </div>
+                <div class="weui_cell_ft"><h5>2016年11月12日创建连接</h5></div>
+              </a>
+   
+          </div>
+        </div>
+      </div>
+      <!--导航栏结束-->
+
+    <!--加号的界面-->
+    <div class="the_plus">
+      <a href="javascript:;" class="open-popup" data-target="#half"><img src="__PUBLIC__/images/plus.png" alt=""></a>
+    </div>
+    <!--加号界面的结束-->
+    <!--点击加号界面出来的弹窗-->
+    <div id="half" class='weui-popup-container popup-bottom'>
+      <div class="weui-popup-overlay"></div>
+      <div class="weui-popup-modal">
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <a href="javascript:;" class="picker-button close-popup">关闭</a>
+            <h1 class="title">快捷功能</h1>
+          </div>
+        </div>
+        <div class="modal-content">
+          <div class="weui_grids">
+
+            <a href="javascript:;" class="weui_grid js_grid" data-id="progress">
+              <div class="weui_grid_icon">
+                <img src="__PUBLIC__/images/gothere.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                我要去
+              </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" data-id="msg">
+              <div class="weui_grid_icon">
+                <img src="__PUBLIC__/images/hasgone.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                我去过
+              </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" data-id="msg">
+              <div class="weui_grid_icon">
+                <img src="__PUBLIC__/images/match.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                捞一捞
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--点击加号界面出来的弹窗结束-->
+  </div>
+
+  <!--weui_tab_bd界面结束-->
+
+<!--导航栏开始-->
+  <div class="weui_tabbar">
+    <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/toutiao.png" alt="">
+      </div>
+      <p class="weui_tabbar_label" style="color:#29b6f6">头条</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/daxue.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">大学</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/xiaolianquan.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">校脸圈</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/wode.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">我的</p>
+    </a>
+  </div>
+  <!--导航栏结束-->
+</div>
+
+
+
+<script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+<script src="__PUBLIC__/lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script>
+  $(document).on("open", ".weui-popup-modal", function() {
+    console.log("open popup");
+    $(".weui_tabbar").hide();
+  }).on("close", ".weui-popup-modal", function() {
+    console.log("close popup");
+    $(".weui_tabbar").show();
+  });
+   $(".weui_navbar .weui_navbar_item").click(function() {
+      $(".weui_navbar .weui_navbar_item").removeClass("weui_bar_item_on");//移除所有on效果
+      $(this).addClass("weui_bar_item_on");//单击后添加on效果
+      //判断点击第几个选项卡
+      var which=$(this).index();
+      //让所有内容区域隐藏
+      $(".weui_tab_bd .content").hide();
+      //按索引显示对应内容
+      $(".weui_tab_bd .content:eq("+which+")").show();
+
+      console.log(which);
+    })
+</script>
+<script src="__PUBLIC__/js/jquery-weui.js"></script>
+</body>
+</html>

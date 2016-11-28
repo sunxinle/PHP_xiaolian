@@ -1,0 +1,81 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery WeUI</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+<link rel="stylesheet" href="/php_xiaolian/Public/lib/weui.min.css">
+<link rel="stylesheet" href="/php_xiaolian/Public/css/jquery-weui.css">
+<link rel="stylesheet" href="/php_xiaolian/Public/css/demos.css">
+<style type="text/css">
+  .proposal{
+    padding-left: 10%;
+    list-style-type: none;
+    margin-top: 3px;
+    border-bottom: 1px solid #ADADAD;
+  }
+  .selected{
+    color: #29b6f6;
+  }
+</style>
+
+  </head>
+
+  <body ontouchstart>
+
+    <div class="weui_search_bar" id="search_bar">
+      <form class="weui_search_outer" action="index.php">
+        <div class="weui_search_inner">
+          <i class="weui_icon_search"></i>
+          <!-- 请注意：这个搜索框的name属性需要在autocomplete.js里面更改！！ -->
+          <!-- <input type="search" class="weui_search_input" id="search_input" placeholder="输入你想去的大学" required/> -->
+          <div id="search-form"></div>
+          <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+          
+        </div>
+        <label for="search_input" class="weui_search_text" id="search_text">
+          <i class="weui_icon_search"></i>
+          <span>输入你想去的大学</span>
+        </label>
+      </form>
+      <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+    </div>
+    <div class="for_like"></div>
+    <div id="message"></div>
+    <div class='demos-content-padded' style="margin-top:80%;">
+      <a href="javascript:;" class="weui_btn weui_btn_primary">确认</a>
+      <a href="javascript:;" class="weui_btn weui_btn_warn">取消</a>
+    </div>
+
+
+    <script src="/php_xiaolian/Public/lib/jquery-2.1.4.js"></script>
+<script src="/php_xiaolian/Public/lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="/php_xiaolian/Public/js/jquery-weui.js"></script>
+<script type="text/javascript" src="/php_xiaolian/Public/js/autocomplete.js"></script>
+<!--具体实现代码的时候，可以将数据库中的信息制作成为xml格式，通过ajax请求从服务器上获取文件的信息，具体操作请参见http://www.w3school.com.cn/ajax/ajax_xmlhttprequest_send.asp -->
+<script type="text/javascript">
+var proposals = ['河北师范大学', '河北科技大学', '河北医科大学', '河北大学', '河北师范大学汇华学院', '河北中医药大学', '北京大学','清华大学','河北农业大学','河北大学工商学院','河北工业大学','河北工程大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学'];
+
+$(document).ready(function(){
+  $('#search-form').autocomplete({
+    hints: proposals,
+    onSubmit: function(text){
+      $('#message').html('Selected: <b>' + text + '</b>');      
+    }
+  });
+});
+</script>
+
+
+  </body>
+</html>

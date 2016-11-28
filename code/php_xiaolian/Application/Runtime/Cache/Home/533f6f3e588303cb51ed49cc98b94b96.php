@@ -1,0 +1,165 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+  <title>校脸圈首页</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="../lib/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="css/demos.css">
+  <style type="text/css">
+    .the_plus{
+      position: absolute;
+      bottom: 80px;
+      left: 80%;
+    }
+    .weui_media_title{
+      color:#29b6f6;
+      font-weight: bolder;
+    }  
+  </style>
+</head>
+
+<body ontouchstart>
+
+<div class="weui_tab">
+<!--weui_tab_bd界面开始-->
+  <div class="weui_tab_bd">
+    <!--在这里写主体的代码-->
+    <!--说说开始-->
+    <div class="weui_panel">
+        <div class="weui_panel_hd">校友圈</div>
+          <div class="weui_panel_bd">
+            <div class="weui_media_box weui_media_text">
+              <a href="moments_detail.html" class="weui_media_title">佩罗娜幽灵公主自我拯救
+              </a>
+              <a href="moments_detail.html">
+                <p class="weui_media_desc">她用自己最为消极的能力去灭掉敌人，可以遇见更为消极的乌索普，她被消极了
+                </p>
+              </a>
+              <p class="weui_media_desc">
+                <div class="weui_panel_bd">
+                  <a href="moments_detail.html" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                      <img class="weui_media_appmsg_thumb" src="./images/swiper-11.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+              </p>
+              <ul class="weui_media_info">
+                <li class="weui_media_info_meta">2016-11-18&nbsp;16:30:25</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">河北科技大学</li>
+              </ul>
+            </div>
+
+            <div class="weui_media_box weui_media_text">
+              <a href="moments_detail.html" class="weui_media_title">有时候我觉得这部动漫比命还重要
+              </a>
+              <a href="moments_detail.html">
+                 <p class="weui_media_desc">想要以海贼王为目标，那么就一定要到达拉夫德鲁，拉夫德鲁是伟大航路的终点，是所有海贼们所向往的地方，到现在为止，也就只有罗杰海贼团到达过拉夫德鲁，可见想要到达这个神秘的地方是十分不容易，事实也却似如此，去拉夫德鲁需要集齐四块“历史正文路标，这四块路标分别指向四个岛，每一块都记录了一个地点，而通过这些地点标出显示的终点就是拉夫德鲁”</p>
+              </a>
+              <p class="weui_media_desc">
+                <div class="weui_panel_bd">
+                  <a href="moments_detail.html" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                      <img class="weui_media_appmsg_thumb" src="./images/swiper-33.jpg" alt="">
+                    </div>
+                   </a>
+                </div>
+              </p>
+              <ul class="weui_media_info">
+                <li class="weui_media_info_meta">2016-11-18&nbsp;16:30:25</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">河北师范大学</li>
+              </ul>
+            </div>
+
+
+            <div class="weui_media_box weui_media_text">
+              <a href="moments_detail.html" class="weui_media_title">我是要成为海贼王的男人</a>
+              <a href="moments_detail.html"><p class="weui_media_desc">去闯伟大航路，找到香克斯是最高兴的事</p>
+              </a>
+              <p class="weui_media_desc">
+                <div class="weui_panel_bd">
+                    <a href="moments_detail.html" class="weui_media_box weui_media_appmsg">
+                       <div class="weui_media_hd">
+                           <img class="weui_media_appmsg_thumb" src="./images/swiper-22.jpg" alt="">
+                       </div>
+                    </a>
+                </div>
+              </p>
+              <ul class="weui_media_info">
+                <li class="weui_media_info_meta">2016-11-18&nbsp;16:30:25</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">河北师范大学</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+<!--说说结束-->
+
+    <!--在这里写主体的代码结束-->
+    <!--加号的界面-->
+    <div class="the_plus">
+      <a href="moments_detail.html"><img src="./images/plus1.png" alt="发说说的加号"></a>
+    </div>
+    <!--加号界面的结束-->
+  </div>
+
+  <!--weui_tab_bd界面结束-->
+
+<!--导航栏开始-->
+  <div class="weui_tabbar">
+    <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
+      <div class="weui_tabbar_icon">
+        <img src="./images/toutiao.png" alt="">
+      </div>
+      <p class="weui_tabbar_label" style="color:#29b6f6">头条</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="./images/daxue.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">大学</p>
+    </a>
+    <a href="moments.html" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="./images/xiaolianquan.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">校脸圈</p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="./images/wode.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">我的</p>
+    </a>
+  </div>
+  <!--导航栏结束-->
+</div>
+
+
+
+<script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script>
+  $(document).on("open", ".weui-popup-modal", function() {
+    console.log("open popup");
+    $(".weui_tabbar").hide();
+  }).on("close", ".weui-popup-modal", function() {
+    console.log("close popup");
+    $(".weui_tabbar").show();
+  });
+</script>
+<script src="../js/jquery-weui.js"></script>
+</body>
+</html>

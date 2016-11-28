@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>校脸圈首页</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/demos.css">
+  <style type="text/css">
+    .the_plus{
+      position: absolute;
+      bottom: 80px;
+      left: 80%;
+    }
+    .weui_media_title{
+      color:#29b6f6;
+    }
+    .swiper-container {
+        width: 100%;
+      } 
+
+    .swiper-container img {
+        display: block;
+        width: 100%;
+      }
+      .back{
+      position: fixed;
+      top: 10%;
+      left: 5%;
+    }
+    .xiayipian{
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body ontouchstart>
+<div class="weui_tab_bd">
+<!--weui_tab_bd界面开始-->
+    <!--在这里写主体的代码-->
+    <!--说说详情开始-->
+    <!--微信昵称，说说文字内容开始-->
+    <div class="weui_panel weui_panel_access">
+  <div class="weui_panel_bd">
+    <div class="weui_media_box weui_media_text">
+      <div class="back">
+      <a href="xlqindex.html"><img src="__PUBLIC__/images/back.png" alt=""></a>
+    </div>
+      <h2 class="weui_media_title" style="font-size:24px;"
+>佩罗娜幽灵公主自我拯救</h2>
+      <ul class="weui_media_info">
+                <li class="weui_media_info_meta">2016-11-18&nbsp;16:30:25</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">河北科技大学</li>
+              </ul><br/>
+      <p style="font-size:17px;color:#999">她用自己为消极的能力去灭掉敌人，可以遇见更为消极的乌索普，她被消极了,于是乌索普成了她的心病</p>
+    </div>
+</div>
+    <!--微信昵称，.说说文字内容结束-->
+    <!--图片开始-->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="__PUBLIC__/images/swiper-11.jpg" /></div>
+        <div class="swiper-slide"><img src="__PUBLIC__/images/swiper-22.jpg" /></div>
+        <div class="swiper-slide"><img src="__PUBLIC__/images/swiper-33.jpg" /></div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+<!--图片结束-->
+      <!--评论开始-->
+     <div class="weui_panel">
+  <div class="weui_panel_hd">评论列表</div>
+  <div class="weui_panel_bd">
+    <div class="weui_media_box weui_media_text">
+      <h4 class="weui_media_title">来自星星的我你是来自哪的小怪兽快说话快说话</h4>
+      <p style="color:#999">河北师大最早起源于1902年创建于北京的顺天府学堂和1906年创建于天津的北洋女师范学堂。1996年6月，原河北师范大学、河北师范学院与创建于1952年的河北教育学院、创建于1984年的河北职业技术师范学院合并，组建成新的河北师范大学，是中国较早成立、规模较大的高等师范院校之一，为河北省人民政府与国家教育部共建大学、卓越教师培养计划实施高校。</p>
+      <ul class="weui_media_info">
+        <li class="weui_media_info_meta">2016-11-24</li>
+        <li class="weui_media_info_meta weui_media_info_meta_extra">河北师范大学</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--评论结束-->
+<!--说说详情结束-->
+</div>
+<!--下一篇+评论开始-->
+    <div class="weui-row weui-no-gutter xiayipian">
+          <div class="weui-col-50"><a href="xlqArticle.html" class="weui_btn close-popup
+          weui_btn_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
+          <div class="weui-col-50"><a href="校脸圈评论加点赞.html" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
+      </div>
+<!--下一篇+评论结束-->
+<!--在这里写主体的代码结束-->
+</div>
+  <!--weui_tab_bd界面结束-->
+<script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+<script src="__PUBLIC__/lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+
+<script src="__PUBLIC__/js/jquery-weui.js"></script>
+
+<script src="__PUBLIC__/js/swiper.js"></script>
+<script>
+      $(document).on("open", ".weui-popup-modal", function() {
+        console.log("open popup");
+      }).on("close", ".weui-popup-modal", function() {
+        console.log("close popup");
+      });
+    </script>
+    <script>
+      $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
+      });
+    </script>
+</body>
+</html>

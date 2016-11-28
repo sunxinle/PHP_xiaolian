@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>校脸圈首页</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/demos.css">
+  <style type="text/css">
+    .the_plus{
+      position: absolute;
+      bottom: 80px;
+      left: 80%;
+    }
+
+      .back{
+      position: fixed;
+      top: 10%;
+      left: 5%;
+    }
+    .xiayipian{
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+    }
+      .img_weui_media_desc{
+    width: 100%;
+    height: 10%;
+  }
+  .img_weui_media_info{
+   margin-left:7%;
+  }
+  .like_weui_media_box{
+    margin-top: -4%;
+  }
+  .like_weui_cell_primary p{
+    float: left;
+    font-size: 10px;
+  }
+  .content_weui_media_desc{
+    font-size: 100px;
+    margin-bottom: 3px;
+  }
+   .weui_tab .weui_tab_bd .content img{
+          /*width: 100%;*/
+          display: block;
+        }
+    .p_weui_cell_primary{
+      float: left;
+    }
+  </style>
+</head>
+
+<body ontouchstart>
+<div class="weui_tab_bd">
+      <header class='demos-header'>
+      <h1 class="demos-title">Article</h1>
+    </header>
+
+    <article class="weui_article">
+      <h1>大标题</h1>
+      <section>
+        <h2 class="title">章标题</h2>
+        <section>
+          <h3>1.1 节标题</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute</p>
+
+          <p>
+            <img src="__PUBLIC__/images/pic_article.png" alt="">
+            <img src="__PUBLIC__/images/pic_article.png" alt="">
+          </p>
+        </section>
+        <section>
+          <h3>1.2 节标题</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+      </section>
+    </article>
+
+      <!--评论开始-->
+     <div class="weui_panel">
+       <div class="weui_cells weui_cells_access">
+           <div class="weui_panel_hd">评论列表</div>          
+                       <a class="weui_cell" href="javascript:;">
+                          <div class="weui_cell_hd">
+                            <img src="__PUBLIC__/images/swiper-2.jpg" alt=""  width="30px" height="30px">
+                          </div>
+                          <div class="weui_cell_bd weui_cell_primary">
+                            <p style="font-size:10px;color:grey;">孔德笑 河北师范大学</p>
+                            <p style="text-indent:1em;font-size:10px; ">{评论内容评论内容评论内容评论内容评论内容}</p>
+                          </div>
+                          <span style="font-size:8px; color:grey; margin-top:-16px;">16-11-20 11:11:11</span>
+                        </a>
+                        <a class="weui_cell" href="javascript:;">
+                          <div class="weui_cell_hd">
+                            <img src="__PUBLIC__/images/swiper-2.jpg" alt=""  width="30px" height="30px">
+                          </div>
+                          <div class="weui_cell_bd weui_cell_primary">
+                            <p style="font-size:10px;color:grey;">孔德笑 河北师范大学</p>
+                            <p style="text-indent:1em;font-size:10px; ">{评论内容}</p>
+                          </div>
+                          <span style="font-size:8px; color:grey; margin-top:-16px;">16-11-20 11:11:11</span>
+                        </a>
+                      </div>
+              </div>
+<!--评论结束-->
+
+</div>
+
+<!--下一篇+评论开始-->
+    <div class="weui-row weui-no-gutter xiayipian">
+          <div class="weui-col-50"><a href="" class="weui_btn close-popup
+          weui_btn_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
+          <div class="weui-col-50"><a href="" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
+      </div>
+<!--下一篇+评论结束-->
+
+</div>
+  <div class="back">
+      <a href="javascript:;" onclick="history.go(-1)"><img src="__PUBLIC__/images/back.png" alt=""></a>
+    </div>
+<script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+<script src="__PUBLIC__/lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+
+<script src="__PUBLIC__/js/jquery-weui.js"></script>
+
+<script src="__PUBLIC__/js/swiper.js"></script>
+<script>
+      $(document).on("open", ".weui-popup-modal", function() {
+        console.log("open popup");
+      }).on("close", ".weui-popup-modal", function() {
+        console.log("close popup");
+      });
+    </script>
+</body>
+</html>
