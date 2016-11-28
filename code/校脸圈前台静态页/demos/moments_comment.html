@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>校脸圈首页</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
-
-  <link rel="stylesheet" href="../lib/weui.min.css">
-  <link rel="stylesheet" href="../css/jquery-weui.css">
-  <link rel="stylesheet" href="css/demos.css">
-  <style type="text/css">
+	<title>头条评论页</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="河北师范大学软件学院微官网">
+	<link rel="stylesheet" href="../lib/weui.min.css">
+	<link rel="stylesheet" href="../css/jquery-weui.css">
+	<link rel="stylesheet" href="css/demos.css">
+</head>
+ <style type="text/css">
+     .weui_tabbar{
+            position: fixed;
+            bottom: 0;
+          }
+    .weui_tab{
+      height: 20%;
+    }
+    .demos-title{
+        color: #ea7c14;
+        }
     .the_plus{
       position: absolute;
       bottom: 80px;
@@ -31,35 +39,27 @@
       left: 5%;
     }
   </style>
-</head>
-
 <body ontouchstart>
-
-<div class="weui_tab">
-<!--weui_tab_bd界面开始-->
-  <div class="weui_tab_bd">
-    <div class="back">
-      <a href="xlqArticle.html">
-        <img src="./images/back.png" alt="">
-      </a>
-    </div>
-    <!--评论开始-->
+    
     <div class="weui_cells weui_cells_form">
+      <div id="show">  </div>
       <div class="weui_cell">
         <div class="weui_cell_bd weui_cell_primary">
-          <textarea class="weui_textarea" placeholder="请留下您的宝贵意见" rows="3" id="suggestion"></textarea>
+          <textarea class="weui_textarea" placeholder="请留下您的宝贵意见" rows="3" id="suggestion" name="suggestion"></textarea>
+          <div class="weui_textarea_counter"><span>0</span>/200</div>
         </div>
       </div>
     </div>
 
+
     <div class="weui_cells weui_cells_form">
-      <div class="weui_cells_tips">亲要评论哦~</div>
+       <div class="weui_cells_tips"><img src="./images/happy_face.png" width="8%" height="8%" style="margin-left:6%" class="emotion"></div>
       <div class="weui_btn_area">
-        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
+        <a class="weui_btn weui_btn_primary sub_btn" href="javascript:" id="showTooltips">提交</a>
       </div>
     </div>
-    <!--评论结束-->
-    <!--说说开始-->
+
+   <!--说说开始-->
     <div class="weui_panel">
       <div class="weui_panel_hd">校友圈</div>
         <div class="weui_panel_bd">
@@ -88,23 +88,41 @@
         </div>
       </div>
     <!--说说结束-->
-  </div>
-   <!--weui_tab_bd界面结束-->
-</div>
 <script src="../lib/jquery-2.1.4.js"></script>
 <script src="../lib/fastclick.js"></script>
 <script>
-  $(function() {
-    FastClick.attach(document.body);
-  });
+	$(function() {
+		FastClick.attach(document.body);
+	});
 </script>
 <script src="../js/jquery-weui.js"></script>
-<script>
-  $("#showTooltips").click(function() {
-    var sug = $('#suggestion').val();
-    if(!sug) $.toptip('还没有填写评论啊');
-    else $.toptip('评论成功啦', 'success');
+    <script>
+      $("#showTooltips").click(function() {
+        var sug = $('#suggestion').val();
+        if(!sug) $.toptip('还没有填写评论啊');
+        else $.toptip('评论成功啦', 'success');
+      });
+      $(function(){
+  $('.emotion').qqFace({
+    id : 'facebox', 
+    assign:'suggestion', 
+    path:'arclist/' //表情存放的路径
   });
-</script>
+  $(".sub_btn").click(function(){
+    var str = $("#suggestion").val();
+    $("#show").html(replace_em(str));
+  });
+});
+//查看结果
+function replace_em(str){
+  str = str.replace(/\</g,'&lt;');
+  str = str.replace(/\>/g,'&gt;');
+  str = str.replace(/\n/g,'<br/>');
+  str = str.replace(/\[em_([0-9]*)\]/g,'<img src="arclist/$1.gif" border="0" />');
+  return str;
+}
+    </script>
+<script  src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.qqFace.js"></script>
 </body>
 </html>
