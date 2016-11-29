@@ -7,11 +7,34 @@
  */
 
 namespace Home\Controller;
-
-
 use Think\Controller;
 
 class NewsController extends Controller
 {
+	 public function index()
+	 {
+	 	$model=M('topline');
+	 	$data=$model->select();
+	 	$this->assign("topline",$data);
+	 	$this->display();
+	 }
+
+	 public function detail()
+	 {
+	 	$id=I('get.id');
+	 	$model=M('topline');              //链接头条数据表
+	 	$model2=M('toplinecomment');      //链接评论数据表
+
+	 	$data2=$model2->where("tlid=%d",$id)->select();
+	 	$data=$model->where("tlid=%d",$id)->find();
+	 	
+	 	$this->assign("topcontent",$data);
+	 	$this->assign("topcomment",$data2);
+	 	$this->display();
+	 }
+	 public function getcomment()
+	 {
+	 	
+	 }
 
 }
