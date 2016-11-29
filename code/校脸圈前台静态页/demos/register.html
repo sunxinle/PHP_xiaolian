@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="../css/jquery-weui.css">
 <link rel="stylesheet" href="css/demos.css">
 
+
   </head>
 
   <body ontouchstart>
@@ -23,12 +24,13 @@
     </header>
     
     <div class="weui_cells weui_cells_form">
-      <div class="weui_cell">
-        <div class="weui_cell_hd"><label class="weui_label">大学</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-          <input id="university" class="weui_input" type="tel" placeholder="your university">
-        </div>
-      </div>
+		<div class="weui_cell">
+        		<div class="weui_cell_hd"><label for="date" class="weui_label">大学</label></div>
+        		<div class="weui_cell_bd weui_cell_primary">
+          				<input class="weui_input" id="mobile" type="text" value="">
+        		</div>
+      		</div>
+    	</div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
         <div class="weui_cell_bd weui_cell_primary">
@@ -77,6 +79,32 @@
       });
     </script>
 <script src="../js/jquery-weui.js"></script>
+<script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="../js/jquery-weui.js"></script>
 
+
+    <script>
+      $("#mobile").picker({
+        title: "请选择您的大学",
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['河北师范大学', '河北科技大学', '河北医科大学', '河北经贸大学', '北京大学', '清华大学', '北京交通大学']
+          }
+        ],
+        onChange: function(p, v, dv) {
+          console.log(p, v, dv);
+        },
+        onClose: function(p, v, d) {
+          console.log("close");
+        }
+      });
+      </script>
   </body>
 </html>
