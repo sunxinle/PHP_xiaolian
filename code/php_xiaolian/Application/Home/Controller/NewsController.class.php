@@ -32,9 +32,27 @@ class NewsController extends Controller
 	 	$this->assign("topcomment",$data2);
 	 	$this->display();
 	 }
+	 public function comment()
+	 {
+	 	$id=I('get.id');
+	 	$this->assign("id",$id);
+	 	$this->display();
+	 }
+
 	 public function getcomment()
 	 {
-	 	
+	 	$comment=I('post.');
+	 	$model=M('toplinecomment');
+
+	 	$data['tlccontent']=$comment['suggestion'];
+	 	$data['tlid']=$comment['hid'];
+	 	//$data['tlcnickname']=$session['name']; //提取保存在session的用户信息
+	 	//$data['tlcimage']=$sessiom['img'];      //提取保存在session中的用户图片
+	 	$result=$model->add($data);
+	 	if($result){
+	 		 $this->redirect('news/detail', array('id' => $data['tlid']), 1, '评论成功');
+	 	}
+	 	else $this->error('新增失败');
 	 }
 
 }
