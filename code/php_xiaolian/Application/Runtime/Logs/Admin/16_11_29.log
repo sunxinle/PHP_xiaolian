@@ -1,0 +1,9 @@
+[ 2016-11-29T17:05:02+08:00 ] ::1 /task8_finished/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001142s ]
+NOTIC: [8] Undefined index: authid D:\wamp64\www\task8_finished\ThinkPHP\Library\Org\Util\Rbac.class.php 第 163 行.
+

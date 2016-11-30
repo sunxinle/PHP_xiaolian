@@ -6,12 +6,12 @@ use Think\Controller;
 class BaseController extends Controller {
     public function _initialize() {
         // 首先判断用户是否已经登录
-        session(null);
-          Rbac::checkLogin();
-        dump( Rbac::checkLogin());
-        dump(session());
+        Rbac::checkLogin();
+
+       //dump( Rbac::checkLogin());exit;
         // 再次判断用户是否具有当前访问权限
-        if (Rbac::AccessDecision()) {
+        //dump(session());exit();
+        if (!Rbac::AccessDecision()) {
             $this->error('您不具有当前访问权限，请换个账户登录!', C('USER_AUTH_GATEWAY'));
         }
 

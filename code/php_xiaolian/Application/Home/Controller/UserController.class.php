@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 白照运
- * Date: 2016/11/28
- * Time: 15:26
- */
-
 namespace Home\Controller;
-use Think\Controller;
-use Org\Util\Rbac;
 
-class UserController extends Controller{
+use Org\Util\Rbac;
+use Think\Controller;
+
+class UserController extends Controller {
     public function login() {
         $this->display();
     }
@@ -19,8 +13,7 @@ class UserController extends Controller{
         // 构造condition条件
         $condition = array();
         $condition['name'] = I('post.username');
-        $condition['passwd'] = I('post.pwd', '', 'md5');
-      //  dump($condition['passwd']);exit();
+        $condition['passwd'] = I('post.password', '', 'md5');
         // 调用RBAC方法实现用户校验
         $authInfo = Rbac::authenticate($condition);
         if ($authInfo) {    // 用户名和密码成立
@@ -37,3 +30,20 @@ class UserController extends Controller{
         }
     }
 }
+
+//        // 验证码校验（本例中没有该功能）
+//        // 1. 判断用户名和密码的有效性
+//        $condition = array();
+//        $condition['name'] = I('post.username');
+//        $condition['passwd'] = I('post.password', '', 'md5');
+//        if (0 !== M(C('USER_AUTH_MODEL')->where($condition)->count())) {
+//            // 2. 若用户名和密码成立，登录成功
+//            // 写入session数据
+//            session('loginedUserName', I('post.username'));
+//            // 写入权限认证识别号
+//            session(C('USER_AUTH_KEY'), 当前用户的主键id);
+//            // 在session中写入当前角色的权限列表
+//            Rbac::saveAccessList(当前用户的主键id);
+//        } else {
+//            // 3. 若用户名和密码不成立，登录失败；返回登录页面重新登录
+//        }

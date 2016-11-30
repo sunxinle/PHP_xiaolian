@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>校脸后台新闻管理</title>
+    <title>后台管理</title>
     <link rel="stylesheet" type="text/css" href="/Public/menu/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/menu/css/main.css"/>
     <script type="text/javascript" src="/Public/menu/js/libs/modernizr.min.js"></script>
@@ -45,7 +45,6 @@
                         <li><a href="<?php echo U('admin/university/view');?>"><i class="icon-font">&#xe017;</i>所有高校<li><a href="<?php echo U('admin/university/add');?>"><i class="icon-font">&#xe037;</i>添加高校</a></li>
                     </ul>
                 </li>
-                
             </ul>
         </div>
     </div>
@@ -53,13 +52,13 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">所有新闻</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">所有高校</span></div>
         </div>
         <div class="result-wrap">
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="addNews.html"><i class="icon-font"></i>新增新闻</a>
+                        <a href="addSchools.html"><i class="icon-font"></i>新增高校</a>
                         <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
                         <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
                     </div>
@@ -68,24 +67,56 @@
                     <table class="result-tab" width="100%">
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
+                            <th>排序</th>
                             <th>ID</th>
-                            <th>标题</th>
-                            <th>发布时间</th>
+                            <th>学校名称</th>
+                            <th>校徽</th>
+                            <th>学校地点</th>
+                            <th>学校简介</th>
                             <th>操作</th>
                         </tr>
-
-                        <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                                <td><?php echo ($vo["tlid"]); ?></td>
-                                <td><a target="_blank" href="<?php echo U('admin/news/show',array('id'=>$vo['tlid']));?>" title="<?php echo ($vo["tltitle"]); ?>"><?php echo (msubstr($vo["tltitle"],0,10)); ?> </a>
-                                </td>
-                                <td><?php echo ($vo["tladdtime"]); ?></td>
-                                <td>
-                                    <a class="link-update" href="<?php echo U('admin/news/update',array('id'=>$vo['tlid']));?>">修改</a>
-                                    <a class="link-del" href="#">删除</a>
-                                </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
+                        <tr>
+                            <td class="tc"><input name="id[]" value="1" type="checkbox"></td>
+                            <td>
+                                <input name="ids[]" value="1" type="hidden">
+                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
+                            </td>
+                            <td>1</td>
+                            <td title="河北师范大学"><a target="_blank" href="#" title="河北师范大学">河北师范大学</a>
+                            </td>
+                            <td>
+                                <div class="">
+                                <img src="./images/HeBeiNormalUniversity.jpg" width="50" height="50" alt="">
+                                </div>
+                            </td>
+                            <td>河北省石家庄裕华区</td>
+                            <td>河北师范大学简介</td>
+                            <td>
+                                <a class="link-update" href="#">修改</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input name="id[]" value="2" type="checkbox"></td>
+                            <td>
+                                <input name="ids[]" value="2" type="hidden">
+                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
+                            </td>
+                            <td>2</td>
+                            <td title="河北科技大学"><a target="_blank" href="#" title="河北科技大学">河北科技大学</a>
+                            </td>
+                            <td>
+                                <div class="">
+                                    <img src="./images/Hebei University of Science & Technology.jpg" width="70" height="50" alt="">
+                                </div>
+                            </td>
+                            <td>河北省石家庄裕华区</td>
+                            <td>河北科技大学简介</td>
+                            <td>
+                                <a class="link-update" href="#">修改</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr>
                     </table>
                     <div class="list-page"> 2 条 1/1 页</div>
                 </div>
