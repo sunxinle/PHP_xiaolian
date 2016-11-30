@@ -23,12 +23,14 @@
 }
 </style>
 <body ontouchstart>
-    
+    <form action="/php_xiaolian/home/news/getcomment" method="post">
     <div class="weui_cells weui_cells_form">
       <div id="show">  </div>
       <div class="weui_cell">
         <div class="weui_cell_bd weui_cell_primary">
-          <textarea class="weui_textarea" placeholder="请留下您的宝贵意见" rows="3" id="suggestion" name="suggestion"></textarea>
+          <textarea class="weui_textarea" placeholder="请留下您的宝贵意见" rows="3" id="suggestion" name="suggestion">
+          </textarea>
+          <input type="hidden" name="hid" value="{$id}" id="hid">   
           <div class="weui_textarea_counter"><span>0</span>/200</div>
         </div>
       </div>
@@ -38,10 +40,11 @@
     <div class="weui_cells weui_cells_form">
        <div class="weui_cells_tips"><img src="__PUBLIC__/images/happy_face.png" width="8%" height="8%" style="margin-left:6%" class="emotion"></div>
       <div class="weui_btn_area">
-        <a class="weui_btn weui_btn_primary sub_btn" href="{:U('home/news/detail/id/')}" id="showTooltips">提交</a>
+
+        <input type="submit" class="weui_btn weui_btn_primary sub_btn"/>
       </div>
     </div>
-
+</form>
 
 <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
 <script src="__PUBLIC__/lib/fastclick.js"></script>
@@ -61,7 +64,7 @@
   $('.emotion').qqFace({
     id : 'facebox', 
     assign:'suggestion', 
-    path:'__PUBLIC__/arclist/' //表情存放的路径
+    path:'arclist/' //表情存放的路径
   });
   $(".sub_btn").click(function(){
     var str = $("#suggestion").val();

@@ -38,26 +38,16 @@
    <div class="weui_panel weui_panel_access">
   <div class="weui_panel_hd">文字组合列表</div>
   <div class="weui_panel_bd">
-    <a href="{:U('home/news/detail/id/')}">
+
+  <volist name="topline" id="vo">
+    <a href="{:U('news/detail',array('id'=>$vo['tlid']))}">
     <div class="weui_media_box weui_media_text">
-    
-      <p class="weui_media_desc"> <div><img src="__PUBLIC__/images/swiper-3.jpg" width="98%" height="70%"></div></p>
-      <h4 class="weui_panel_hd">我要去海底</h4>
-      
+      <p class="weui_media_desc"> <div><img src="{$vo.tlimage}" width="98%" height="70%"></div></p>
+      <h4 class="weui_panel_hd">{$vo.tltitle}</h4>
     </div>
     </a>
-    <a href="{:U('home/news/detail/id/')}">
-     <div class="weui_media_box weui_media_text">
-      <p class="weui_media_desc"> <div><img src="__PUBLIC__/images/swiper-3.jpg" width="98%" height="70%"></div></p>
-       <h4 class="weui_panel_hd">hha </h4>
-    </div>
-    </a>
-    <a href="{:U('home/news/detail/id/')}">
-     <div class="weui_media_box weui_media_text">
-      <p class="weui_media_desc"> <div><img src="__PUBLIC__/images/swiper-3.jpg" width="98%" height="70%"></div></p>
-       <h4 class="weui_panel_hd">womennengxing</h4>
-    </div>
-    </a>
+    </volist>
+
   </div>
   <a href="javascript:void(0);" class="weui_panel_ft">查看更多</a>
 </div>
