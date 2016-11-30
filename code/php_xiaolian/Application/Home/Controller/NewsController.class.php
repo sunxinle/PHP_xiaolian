@@ -22,14 +22,22 @@ class NewsController extends Controller
 	 public function detail()
 	 {
 	 	$id=I('get.id');
-	 	$model=M('topline');              //链接头条数据表
-	 	$model2=M('toplinecomment');      //链接评论数据表
+	 	if(!$id){
+	 		$this->redirect('news/detail', array('id' => "1"), 0.2, "<script>alert('没有了')</script>");
+	 	}
 
-	 	$data2=$model2->where("tlid=%d",$id)->select();
+	 	$model=M('topline');              //链接头条数据表
+	 	$comment=M('toplinecomment');      //链接评论数据表
+
+	 	$data2=$comment->where("tlid=%d",$id)->select();
 	 	$data=$model->where("tlid=%d",$id)->find();
-	 	
+	 	$after=$model->where("tlid>".$id)->order('tlid asc')->limit('1')->find();
+	 	$nextid=$after['tlid'];
+
 	 	$this->assign("topcontent",$data);
 	 	$this->assign("topcomment",$data2);
+	 	$this->assign("nextid",$nextid);
+
 	 	$this->display();
 	 }
 	 public function comment()
@@ -43,7 +51,7 @@ class NewsController extends Controller
 	 {
 	 	$comment=I('post.');
 	 	$model=M('toplinecomment');
-
+	 	$data['tlcaddtime']=date("Y-m-d H:i:s",time());
 	 	$data['tlccontent']=$comment['suggestion'];
 	 	$data['tlid']=$comment['hid'];
 	 	//$data['tlcnickname']=$session['name']; //提取保存在session的用户信息
