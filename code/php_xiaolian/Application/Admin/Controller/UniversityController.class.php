@@ -8,10 +8,11 @@
 
 namespace Admin\Controller;
 
+use Common\Controller\BaseController;
 
-use Think\Controller;
-
-class UniversityController extends Controller
+class UniversityController extends BaseController
 {
-
+    public function index(){
+        echo 'university';
+    }
 }

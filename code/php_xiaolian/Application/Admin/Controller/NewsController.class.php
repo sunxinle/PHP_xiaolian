@@ -7,10 +7,8 @@
  */
 
 namespace Admin\Controller;
-
-use Think\Controller;
-
-class NewsController extends Controller
+use Common\Controller\BaseController;
+class NewsController extends BaseController
 {
     public function view(){
         $topline = M('topline');

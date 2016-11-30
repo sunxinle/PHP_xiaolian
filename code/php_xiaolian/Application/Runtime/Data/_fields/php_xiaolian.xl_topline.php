@@ -1,0 +1,1 @@
+a:7:{i:0;s:4:"tlid";i:1;s:7:"tlimage";i:2;s:7:"tltitle";i:3;s:9:"tlcontent";i:4;s:9:"tladdtime";s:3:"_pk";s:4:"tlid";s:5:"_type";a:5:{s:4:"tlid";s:7:"int(11)";s:7:"tlimage";s:12:"varchar(100)";s:7:"tltitle";s:11:"varchar(50)";s:9:"tlcontent";s:4:"text";s:9:"tladdtime";s:9:"timestamp";}}

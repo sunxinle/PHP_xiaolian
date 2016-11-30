@@ -1,16 +1,16 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>校脸后台登录</title>
-    <link href="__PUBLIC__/menu/css/admin_login.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/css/admin_login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="admin_login_wrap">
     <h1>后台管理</h1>
     <div class="adming_login_border">
         <div class="admin_input">
-            <form action="index.html" method="post">
+            <form action="<?php echo U('home/user/dologin');?>" method="post">
                 <ul class="admin_items">
                     <li>
                         <label for="user">用户名：</label>
@@ -27,7 +27,7 @@
             </form>
         </div>
     </div>
-    <p class="admin_copyright"><a tabindex="5" href="#">返回首页</a> &copy; 2014 Powered by <a href="http://jscss.me" target="_blank">有主机上线</a></p>
+    <p class="admin_copyright"><a tabindex="5" href="#">返回首页</a> &copy; 2014 Powered by <a href="" target="_blank">笑脸</a></p>
 </div>
 </body>
 </html>
