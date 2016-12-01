@@ -5,8 +5,12 @@ use Org\Util\Rbac;
 use Think\Controller;
 
 class UserController extends Controller {
-    public function login() {
+    public function index(){
         $this->display();
+    }
+    public function logout() {
+        session(null);
+        $this->success('退出成功！请重新登录',U('home/user/index'));
     }
 
     public function dologin() {
@@ -30,20 +34,3 @@ class UserController extends Controller {
         }
     }
 }
-
-//        // 验证码校验（本例中没有该功能）
-//        // 1. 判断用户名和密码的有效性
-//        $condition = array();
-//        $condition['name'] = I('post.username');
-//        $condition['passwd'] = I('post.password', '', 'md5');
-//        if (0 !== M(C('USER_AUTH_MODEL')->where($condition)->count())) {
-//            // 2. 若用户名和密码成立，登录成功
-//            // 写入session数据
-//            session('loginedUserName', I('post.username'));
-//            // 写入权限认证识别号
-//            session(C('USER_AUTH_KEY'), 当前用户的主键id);
-//            // 在session中写入当前角色的权限列表
-//            Rbac::saveAccessList(当前用户的主键id);
-//        } else {
-//            // 3. 若用户名和密码不成立，登录失败；返回登录页面重新登录
-//        }

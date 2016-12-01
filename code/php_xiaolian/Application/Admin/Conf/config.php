@@ -31,4 +31,9 @@ return array(
     'DEFAULT_JSONP_HANDLER'  => 'jsonpReturn', // 默认JSONP格式返回的处理方法
     'DEFAULT_FILTER'         => 'htmlspecialchars', // 默认参数过滤方法 用于I函数...
 
+    /*layout视图*/
+    'TMPL_LAYOUT_ITEM'       => '{__CONTENT__}', // 布局模板的内容替换标识
+    'LAYOUT_ON'              => true, // 是否启用布局
+    'LAYOUT_NAME'            => 'layout', // 当前布局名称 默认为layout
+
 );
