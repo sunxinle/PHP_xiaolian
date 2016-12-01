@@ -1,0 +1,27 @@
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:U('admin/university/view')}">高校管理</a><span class="crumb-step">&gt;</span><span>更新高校信息</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('admin/university/update')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        <h1>只支持对于大学简介的更新，如果需要修改其他内容，请直接删除此条数据并点击左侧的"新增高校"按钮</h1>
+                        <br />
+                            <tr>
+                                <th>学校简介：</th>
+                                <td><textarea name="unidescription" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10">{$result.unidescription}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit" name="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    <input type="hidden" name="id" value="{$result.uniid}">
+                </form>
+            </div>
+        </div>
