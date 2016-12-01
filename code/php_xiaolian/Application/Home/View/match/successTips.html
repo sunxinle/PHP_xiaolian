@@ -22,20 +22,23 @@
       <div class="weui_text_area">
         <h2 class="weui_msg_title">操作成功</h2>
         <p class="weui_msg_desc">请耐心等待~亲(づ￣3￣)❤</p>
+       <!-- <?php
+          header("refresh:5;url=go");
+        ?>-->
+          <meta http-equiv="refresh" content="2;URL={:U('home/my/index')}">
       </div>
-
       <div class="weui_extra_area">
         <a href="{:U('home/my/index')}">查看详情</a>
       </div>
     </div>
+
     <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
 <script src="__PUBLIC__/lib/fastclick.js"></script>
 <script>
   $(function() {
     FastClick.attach(document.body);
   });
-  $.showLoading();
-  $.showLoading("正在加载...");
+
 </script>
 <script src="__PUBLIC__/js/jquery-weui.js"></script>
 

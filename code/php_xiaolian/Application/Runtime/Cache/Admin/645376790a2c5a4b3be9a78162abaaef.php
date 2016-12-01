@@ -19,9 +19,8 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="http://www.jscss.me">管理员</a></li>
-                <li><a href="http://www.jscss.me">修改密码</a></li>
-                <li><a href="http://www.jscss.me">退出</a></li>
+                <li><a href="#"><?php echo ($name); ?></a></li>
+                <li><a href="<?php echo U('home/user/logout');?>">退出</a></li>
             </ul>
         </div>
     </div>
@@ -45,7 +44,7 @@
                         <li><a href="<?php echo U('admin/university/view');?>"><i class="icon-font">&#xe017;</i>所有高校<li><a href="<?php echo U('admin/university/add');?>"><i class="icon-font">&#xe037;</i>添加高校</a></li>
                     </ul>
                 </li>
-                
+
             </ul>
         </div>
     </div>
@@ -59,9 +58,7 @@
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="addNews.html"><i class="icon-font"></i>新增新闻</a>
-                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
+                        <a href="<?php echo U('admin/news/add');?>"><i class="icon-font"></i>新增新闻</a>
                     </div>
                 </div>
                 <div class="result-content">
@@ -82,7 +79,7 @@
                                 <td><?php echo ($vo["tladdtime"]); ?></td>
                                 <td>
                                     <a class="link-update" href="<?php echo U('admin/news/update',array('id'=>$vo['tlid']));?>">修改</a>
-                                    <a class="link-del" href="#">删除</a>
+                                    <a class="link-del delete" href="<?php echo U('admin/news/delete',array('id'=>$vo['tlid']));?>">删除</a>
                                 </td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -91,8 +88,33 @@
                 </div>
             </form>
         </div>
+
     </div>
     <!--/main-->
 </div>
 </body>
+<script src="/Public/lib/jquery-2.1.4.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.delete').click(function(){
+            var tag=confirm('是够确认删除');
+            if(tag){
+                //使用ajax方式删除记录
+                var url = $(this).attr('href');
+                var self = $(this);
+                $.get(url,function(data){
+                    console.log(data);
+                    if(data==1){
+                        //隐藏相应的行
+                        self.parent().parent().children().hide();
+                    }else{
+                        alert('未知的错误，请联系开发者！');
+                    }
+                })
+            }
+            //阻止浏览器的默认操作
+            return false;
+        })
+    })
+</script>
 </html>

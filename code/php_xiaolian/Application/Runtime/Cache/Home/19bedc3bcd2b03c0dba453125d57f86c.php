@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
   <head>
     <title>校脸</title>
@@ -6,27 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
-    <link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
-    <link rel="stylesheet" href="__PUBLIC__/css/demos.css">
+    <link rel="stylesheet" href="/Public/lib/weui.min.css">
+    <link rel="stylesheet" href="/Public/css/jquery-weui.css">
+    <link rel="stylesheet" href="/Public/css/demos.css">
   </head>
 
   <body ontouchstart>
     <header class='demos-header'>
 
     </header>
-    <form action="{:U('home/match/successTips')}" method="post">
+    <form action="<?php echo U('home/match/successTips');?>" method="post">
     <div class="weui_cells weui_cells_form">
       <div class="weui_cell">
         <div class="weui_cell_hd" ><label class="weui_label" >目的地</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <div  id='show-toast-forbidden' class="weui_input" >{$university}</div>
+          <div  id='show-toast-forbidden' class="weui_input" ><?php echo ($university); ?></div>
         </div>
       </div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label for="" class="weui_label">到达时间</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input type="hidden" name="University" value="{$university}"/>
+          <input type="hidden" name="University" value="<?php echo ($university); ?>"/>
           <input class="weui_input" type="text" value="" id='datetime-picker' name="ReachTime">
         </div>
       </div>
@@ -44,14 +44,14 @@
         <input type="submit" class="weui_btn weui_btn_primary" value="GO"/>
       </div>
     </form>
-    <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
-<script src="__PUBLIC__/lib/fastclick.js"></script>
+    <script src="/Public/lib/jquery-2.1.4.js"></script>
+<script src="/Public/lib/fastclick.js"></script>
 <script>
   $(function() {
     FastClick.attach(document.body);
   });
 </script>
-<script src="__PUBLIC__/js/jquery-weui.js"></script>
+<script src="/Public/js/jquery-weui.js"></script>
 <script>
       $("#datetime-picker").datetimePicker();
       $(document).on("click", "#show-toast-forbidden", function() {

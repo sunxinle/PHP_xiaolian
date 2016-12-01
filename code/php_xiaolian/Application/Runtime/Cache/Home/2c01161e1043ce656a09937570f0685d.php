@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
   <head>
     <title>jQuery WeUI</title>
@@ -9,9 +9,9 @@
 <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
-<link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
-<link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
-<link rel="stylesheet" href="__PUBLIC__/css/demos.css">
+<link rel="stylesheet" href="/Public/lib/weui.min.css">
+<link rel="stylesheet" href="/Public/css/jquery-weui.css">
+<link rel="stylesheet" href="/Public/css/demos.css">
 <style type="text/css">
   .proposal{
     padding-left: 10%;
@@ -46,7 +46,7 @@
       <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
     </div>
     <div class="for_like"></div>
-    <form action="{:U('home/match/go')}" method="post">
+    <form action="<?php echo U('home/match/go');?>" method="post">
       <div class='demos-content-padded' style="margin-top:80%;">
         <div id="message">  </div>
 
@@ -55,15 +55,15 @@
       </div>
     </form>
 
-    <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
-<script src="__PUBLIC__/lib/fastclick.js"></script>
+    <script src="/Public/lib/jquery-2.1.4.js"></script>
+<script src="/Public/lib/fastclick.js"></script>
 <script>
   $(function() {
     FastClick.attach(document.body);
   });
 </script>
-<script src="__PUBLIC__/js/jquery-weui.js"></script>
-<script type="text/javascript" src="__PUBLIC__/js/autocomplete.js"></script>
+<script src="/Public/js/jquery-weui.js"></script>
+<script type="text/javascript" src="/Public/js/autocomplete.js"></script>
 <!--具体实现代码的时候，可以将数据库中的信息制作成为xml格式，通过ajax请求从服务器上获取文件的信息，具体操作请参见http://www.w3school.com.cn/ajax/ajax_xmlhttprequest_send.asp -->
 <script type="text/javascript">
 var proposals = ['河北师范大学', '河北科技大学', '河北医科大学', '河北大学', '河北师范大学汇华学院', '河北中医药大学', '北京大学','清华大学','河北农业大学','河北大学工商学院','河北工业大学','河北工程大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学'];

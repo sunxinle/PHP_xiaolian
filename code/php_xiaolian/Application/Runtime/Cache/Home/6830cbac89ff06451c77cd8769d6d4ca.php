@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>校脸后台登录</title>
-    <link href="/Public/css/admin_login.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/menu/css/admin_login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="admin_login_wrap">

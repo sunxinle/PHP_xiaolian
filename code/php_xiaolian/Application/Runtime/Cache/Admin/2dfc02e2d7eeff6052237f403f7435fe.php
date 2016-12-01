@@ -5,7 +5,7 @@
     <title>校脸后台新闻管理</title>
     <link rel="stylesheet" type="text/css" href="/Public/menu/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/menu/css/main.css"/>
-    <script type="text/javascript" src="/Public/menu/js//libs/modernizr.min.js"></script>
+    <script type="text/javascript" src="/Public/menu/js/libs/modernizr.min.js"></script>
 </head>
 <body>
 <div class="topbar-wrap white">
@@ -19,9 +19,8 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="http://www.jscss.me">管理员</a></li>
-                <li><a href="http://www.jscss.me">修改密码</a></li>
-                <li><a href="http://www.jscss.me">退出</a></li>
+                <li><a href="#"><?php echo ($name); ?></a></li>
+                <li><a href="<?php echo U('home/user/logout');?>">退出</a></li>
             </ul>
         </div>
     </div>
@@ -31,7 +30,7 @@
         <div class="sidebar-title">
             <h1>菜单</h1>
         </div>
-         <div class="sidebar-content">
+        <div class="sidebar-content">
             <ul class="sidebar-list">
                 <li>
                     <a href="#"><i class="icon-font">&#xe018;</i>新闻管理</a>
@@ -45,12 +44,14 @@
                         <li><a href="<?php echo U('admin/university/view');?>"><i class="icon-font">&#xe017;</i>所有高校<li><a href="<?php echo U('admin/university/add');?>"><i class="icon-font">&#xe037;</i>添加高校</a></li>
                     </ul>
                 </li>
+
             </ul>
         </div>
     </div>
     <!--/sidebar-->
     <div class="main-wrap">
 
+        
         <div class="crumb-wrap">
             <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="allNewses.html">新闻管理</a><span class="crumb-step">&gt;</span><span>新增新闻</span></div>
         </div>
@@ -91,4 +92,28 @@
     <!--/main-->
 </div>
 </body>
+<script src="/Public/lib/jquery-2.1.4.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.delete').click(function(){
+            var tag=confirm('是够确认删除');
+            if(tag){
+                //使用ajax方式删除记录
+                var url = $(this).attr('href');
+                var self = $(this);
+                $.get(url,function(data){
+                    console.log(data);
+                    if(data==1){
+                        //隐藏相应的行
+                        self.parent().parent().children().hide();
+                    }else{
+                        alert('未知的错误，请联系开发者！');
+                    }
+                })
+            }
+            //阻止浏览器的默认操作
+            return false;
+        })
+    })
+</script>
 </html>
