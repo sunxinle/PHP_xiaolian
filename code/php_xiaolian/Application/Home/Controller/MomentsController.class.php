@@ -13,5 +13,68 @@ use Think\Controller;
 
 class MomentsController extends Controller
 {
+	public function index(){
+		$xlart=M('xiaolianarticle');
+		$data=$xlart->limit(10)->order('xlaaddtime desc')->select();
+		$this->assign("data",$data);
 
+		$this->display();
+	}
+
+	public function detail(){
+		$id=I('get.id');
+		if(!$id){
+	 		$this->redirect('moments/detail', array('id' => "1"), 0.2, "<script>alert('没有了,返回第一篇文章')</script>");
+	 	}
+
+		$xlart=M('xiaolianarticle');
+		$xlac=M('xiaolianarticlecomment');
+
+		$art=$xlart->where("xlaid=%d",$id)->find();
+		$artc=$xlac->where("xlaid=%d",$id)->select();
+		$after=$xlart->where("xlaid>".$id)->order('xlaid asc')->limit('1')->find();
+		$nextid=$after['xlaid'];
+
+		$this->assign("art",$art);
+		$this->assign("artc",$artc);
+		$this->assign("nextid",$nextid);
+
+        $this->display();
+	}
+	public function getart()
+	{
+		$art=I('post.');
+		$data['xlacimage']=$art['img'];
+		$data['xlatitle']=$art['title'];
+		$data['xlacontent']=$art['art'];
+		$data['xlaaddtime']=date("Y-m-d H:i:s",time());
+		//$data['xlaimage']=$session['img'];//从session中获取用户信息
+		//$data['xlaauthor']=$session['author'];
+		$yonghuart=M('xiaolianarticle');
+		$result=$yonghuart->add($data);
+		if($result){
+			$this->redirect('moments/index', array('id' => $data['xlaid']),0.2, '评论成功');
+		}
+	}
+	public function comment()
+	{
+		$id=I('get.id');
+		$this->assign("id",$id);
+		$this->display();
+	}
+	public function getcomment()
+	{
+		$Pdata=I('post.');
+		$comment=M('xiaolianarticlecomment');
+
+		$data['xlacaddtime']=date("Y-m-d H:i:s",time());
+		$data['xlaccomment']=$Pdata['suggestion'];
+		$data['xlaid']=$Pdata['hid'];
+		//$data['xlacnickname']=$session['xlacnickname']//从session中获取评论人姓名
+		//$data['xlacimage']=$session['xlacimage']//从session中获取评论人头像
+		$result=$comment->add($data);
+		if($result){
+			$this->redirect('moments/detail', array('id' => $data['xlaid']), 1, '评论成功');
+		}
+	}
 }

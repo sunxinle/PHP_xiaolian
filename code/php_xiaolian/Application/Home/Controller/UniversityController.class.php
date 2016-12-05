@@ -21,4 +21,11 @@ class UniversityController extends Controller
      $this->assign("unidata",$data);
      $this->display();
    }
+   public function index()
+   {
+    $uni=M('university');
+    $result=$uni->select();
+    $this->assign("data",$result);
+   	$this->display();
+   }
 }
