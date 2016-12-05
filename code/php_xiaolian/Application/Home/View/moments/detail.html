@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>校脸圈动态详情</title>
+  <title>校脸圈首页</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -52,15 +52,15 @@
   <div class="weui_panel_bd">
     <div class="weui_media_box weui_media_text">
       <div class="back">
-      <a href="{:U('home/moments/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
+      <a href="{:U('moments/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
     </div>
       <h2 class="weui_media_title" style="font-size:24px;"
->佩罗娜幽灵公主自我拯救</h2>
+>{$art.xlatitle}</h2>
       <ul class="weui_media_info">
-                <li class="weui_media_info_meta">2016-11-18&nbsp;16:30:25</li>
-                <li class="weui_media_info_meta weui_media_info_meta_extra">河北科技大学</li>
-              </ul><br/>
-      <p style="font-size:17px;color:#999">她用自己为消极的能力去灭掉敌人，可以遇见更为消极的乌索普，她被消极了,于是乌索普成了她的心病</p>
+                <li class="weui_media_info_meta">{$art.xlaaddtime}</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">{$art.xlaauthor}</li>
+              </ul><br1/>
+      <p style="font-size:17px;color:#999">{$art.xlacontent}</p>
     </div>
 </div>
     <!--微信昵称，.说说文字内容结束-->
@@ -80,25 +80,27 @@
       <!--评论开始-->
      <div class="weui_panel">
   <div class="weui_panel_hd">评论列表</div>
+  <volist name="artc" id="va">
   <div class="weui_panel_bd">
     <div class="weui_media_box weui_media_text">
-      <h4 class="weui_media_title">来自星星的我你是来自哪的小怪兽快说话快说话</h4>
-      <p style="color:#999">河北师大最早起源于1902年创建于北京的顺天府学堂和1906年创建于天津的北洋女师范学堂。1996年6月，原河北师范大学、河北师范学院与创建于1952年的河北教育学院、创建于1984年的河北职业技术师范学院合并，组建成新的河北师范大学，是中国较早成立、规模较大的高等师范院校之一，为河北省人民政府与国家教育部共建大学、卓越教师培养计划实施高校。</p>
+      <h4 class="weui_media_title">评论111111</h4>
+      <p style="color:#999">{$va.xlaccomment}</p>
       <ul class="weui_media_info">
-        <li class="weui_media_info_meta">2016-11-24</li>
-        <li class="weui_media_info_meta weui_media_info_meta_extra">河北师范大学</li>
+        <li class="weui_media_info_meta">{$va.xlacaddtime}</li>
+        <li class="weui_media_info_meta weui_media_info_meta_extra">{$va.xlacnickname}</li>
       </ul>
     </div>
   </div>
+</volist>
 </div>
 <!--评论结束-->
 <!--说说详情结束-->
 </div>
 <!--下一篇+评论开始-->
     <div class="weui-row weui-no-gutter xiayipian">
-          <div class="weui-col-50"><a href="{:U('home/moments/detail')}" class="weui_btn close-popup
+          <div class="weui-col-50"><a href="{:U('moments/detail',array('id'=>$nextid))}" class="weui_btn close-popup
           weui_btn_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
-          <div class="weui-col-50"><a href="{:U('home/moments/comment')}" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
+          <div class="weui-col-50"><a href="{:U('moments/comment',array('id'=>$art['xlaid']))}" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
       </div>
 <!--下一篇+评论结束-->
 <!--在这里写主体的代码结束-->
