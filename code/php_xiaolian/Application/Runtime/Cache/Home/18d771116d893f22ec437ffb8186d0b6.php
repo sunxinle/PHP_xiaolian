@@ -23,7 +23,7 @@
 }
 </style>
 <body ontouchstart>
-    <form action="/php_xiaolian/home/news/getcomment" method="post">
+    <form action="/home/news/getcomment" method="post">
     <div class="weui_cells weui_cells_form">
       <div id="show">  </div>
       <div class="weui_cell">
