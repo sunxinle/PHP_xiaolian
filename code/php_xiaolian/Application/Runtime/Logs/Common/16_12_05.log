@@ -4,3 +4,9 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
 ERR: 无法加载模块:Application
 
+[ 2016-12-05T17:07:54+08:00 ] 127.0.0.1 /php_xiaolian/home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+ERR: 无法加载模块:Php_xiaolian
+
