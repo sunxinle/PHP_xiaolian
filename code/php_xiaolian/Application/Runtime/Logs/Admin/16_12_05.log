@@ -448,3 +448,72 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
 ERR: 无法加载控制器:Match
 
+[ 2016-12-05T18:26:52+08:00 ] 127.0.0.1 /index.php/admin/news/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+NOTIC: [2048] Declaration of Admin\Controller\NewsController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp64\www\github\code\php_xiaolian\Application\Admin\Controller\NewsController.class.php 第 12 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: name D:\wamp64\www\github\code\php_xiaolian\Application\Runtime\Cache\Admin\2dfc02e2d7eeff6052237f403f7435fe.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-12-05T18:27:08+08:00 ] 127.0.0.1 /index.php/admin/news/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: [2048] Declaration of Admin\Controller\NewsController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp64\www\github\code\php_xiaolian\Application\Admin\Controller\NewsController.class.php 第 12 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp64\www\github\code\php_xiaolian\ThinkPHP\Library\Think\Upload.class.php 第 182 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0010s ]
+SQL: INSERT INTO `xl_topline` (`tltitle`,`tlimage`,`tlcontent`) VALUES ('图片图片','newsimage/2016-12-05/584540fc0c658.png','图片图片图片图片图片图片') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001909s ]
+
+[ 2016-12-05T18:27:09+08:00 ] 127.0.0.1 /index.php/admin/news/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002354s ]
+NOTIC: [2048] Declaration of Admin\Controller\NewsController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp64\www\github\code\php_xiaolian\Application\Admin\Controller\NewsController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0477s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001704s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002602s ]
+

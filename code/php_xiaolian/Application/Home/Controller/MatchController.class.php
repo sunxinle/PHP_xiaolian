@@ -29,9 +29,9 @@ class MatchController extends Controller
         $match=M('match');
         $university=M('university');
        // $date['funiid']=$university->where(uniname=$StudentMsg[university]);
-        dump($date['funiid']);
+    /*    dump($date['funiid']);
         $match->add($date);
-        echo $match->getLastSql();
+        echo $match->getLastSql();*/
         $this->display();
     }
 }
