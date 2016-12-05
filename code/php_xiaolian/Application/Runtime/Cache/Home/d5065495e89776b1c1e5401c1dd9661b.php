@@ -10,7 +10,7 @@
     <h1>后台管理</h1>
     <div class="adming_login_border">
         <div class="admin_input">
-            <form action="<?php echo U('home/router/dologin');?>" method="post">
+            <form action="<?php echo U('home/root/dologin');?>" method="post">
                 <ul class="admin_items">
                     <li>
                         <label for="user">用户名：</label>

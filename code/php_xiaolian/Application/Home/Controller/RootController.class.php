@@ -1,11 +1,12 @@
 <?php
+
 namespace Home\Controller;
 
 use Org\Util\Rbac;
 use Think\Controller;
 
-class UserController extends Controller {
-    public function index(){
+class RootController extends Controller {
+    public function login(){
         $this->display();
     }
     public function logout() {

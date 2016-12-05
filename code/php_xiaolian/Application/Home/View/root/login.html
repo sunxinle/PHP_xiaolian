@@ -1,16 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>校脸后台登录</title>
-    <link href="/Public/menu/css/admin_login.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/menu/css/admin_login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="admin_login_wrap">
     <h1>后台管理</h1>
     <div class="adming_login_border">
         <div class="admin_input">
-            <form action="<?php echo U('home/router/dologin');?>" method="post">
+            <form action="{:U('home/root/dologin')}" method="post">
                 <ul class="admin_items">
                     <li>
                         <label for="user">用户名：</label>
