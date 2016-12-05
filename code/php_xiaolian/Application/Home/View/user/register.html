@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jQuery WeUI</title>
+    <title>注册页面</title>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -19,32 +19,39 @@
 
 
     <header class='demos-header'>
-      <h2 class="demos-title">笑脸注册</h2>
+      <h2 class="demos-title">校脸注册</h2>
     </header>
-    
+
+    <form action="/home/user/login" method="post">
     <div class="weui_cells weui_cells_form">
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">大学</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input id="university" class="weui_input" type="tel" placeholder="your university">
+          <input name="college" class="weui_input" type="text" placeholder="your university">
         </div>
       </div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input class="weui_input" type="tel" placeholder="your name">
+          <input name="name" class="weui_input" type="text" placeholder="your name">
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">性别</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <input name='sex' class="weui_input" type="text" placeholder="phone">
         </div>
       </div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">学号</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input class="weui_input" type="tel" placeholder="student number">
+          <input name="sno" class="weui_input" type="text" placeholder="student number">
         </div>
       </div>
          <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input id='tel' class="weui_input" type="tel" placeholder="phone number">
+          <input name='phonenumber' class="weui_input" type="text" placeholder="phone number">
         </div>
       </div>
       <div class="weui_cell">
@@ -53,12 +60,12 @@
           <input class="weui_input" type="date" value="">
         </div>
       </div>
-          <div class="weui_cells_tips">准确填写大学名称才能定位哦，童鞋</div>
+      <div class="weui_cells_tips">准确填写大学名称才能定位哦，童鞋</div>
       <div class="weui_btn_area">
-        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>
+        <input  type="submit" class="weui_btn weui_btn_primary"  id="showTooltips" value="提交">
       </div>
     </div>
-
+    </form>
 
     <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
 <script src="__PUBLIC__/lib/fastclick.js"></script>
