@@ -96,7 +96,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('.delete').click(function(){
-            var tag=confirm('是够确认删除');
+            var tag=confirm('是否确认删除');
             if(tag){
                 //使用ajax方式删除记录
                 var url = $(this).attr('href');

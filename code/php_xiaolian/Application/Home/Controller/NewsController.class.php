@@ -60,7 +60,7 @@ class NewsController extends Controller
 	 	//$data['tlcimage']=$sessiom['img'];      //提取保存在session中的用户图片
 	 	$result=$model->add($data);
 	 	if($result){
-	 		 $this->redirect('news/detail', array('id' => $data['tlid']), 1, '评论成功');
+	 		 $this->redirect('news/detail', array('id' => $data['tlid']),0);
 	 	}
 	 	else $this->error('新增失败');
 	 }
