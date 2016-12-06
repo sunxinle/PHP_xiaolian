@@ -14,7 +14,7 @@ class NewsController extends Controller
 	 public function index()
 	 {
 	 	$model=M('topline');
-         $data=$model->limit(10)->order('xlaaddtime desc')->select();
+        // $data=$model->limit(10)->order('xlaaddtime desc')->select();
 	 	$data=$model->select();
 	 	$this->assign("topline",$data);
 	 	$this->display();
