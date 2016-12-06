@@ -14,6 +14,7 @@ class NewsController extends Controller
 	 public function index()
 	 {
 	 	$model=M('topline');
+         $data=$model->limit(10)->order('xlaaddtime desc')->select();
 	 	$data=$model->select();
 	 	$this->assign("topline",$data);
 	 	$this->display();
@@ -29,9 +30,10 @@ class NewsController extends Controller
 	 	$model=M('topline');              //链接头条数据表
 	 	$comment=M('toplinecomment');      //链接评论数据表
 
-	 	$data2=$comment->where("tlid=%d",$id)->select();
+	 	$data2=$comment->where("tlid=%d",$id)->order('tlcaddtime desc')->select();
 	 	$data=$model->where("tlid=%d",$id)->find();
 	 	$after=$model->where("tlid>".$id)->order('tlid asc')->limit('1')->find();
+  
 	 	$nextid=$after['tlid'];
 
 	 	$this->assign("topcontent",$data);
