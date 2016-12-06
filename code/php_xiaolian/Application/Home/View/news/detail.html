@@ -79,7 +79,7 @@
       <!--评论开始-->
      <div class="weui_panel">
        <div class="weui_cells weui_cells_access">
-           <div class="weui_panel_hd">评论列表</div>  
+           <div class="weui_panel_hd">评论列表</div> <!--dump($topcomment);-->
            <volist name="topcomment" id="va">        
               <a class="weui_cell" href="">
                    <div class="weui_cell_hd">
@@ -87,7 +87,9 @@
                           </div>
                      <div class="weui_cell_bd weui_cell_primary">
                             <p style="font-size:10px;color:grey;">{$va.tlcnickname}</p>
-                            <p style="text-indent:1em;font-size:10px; ">{$va.tlccontent}</p>
+                            <input type="hidden" value="{$va.tlccontent}" class="suggestion"/>
+                            <p style="text-indent:1em;font-size:10px;" class="show"></p>
+
                       </div>
                     <span style="font-size:8px; color:grey; margin-top:-16px;">{$va.tlcaddtime}</span>
                 </a>
@@ -119,14 +121,24 @@
 </script>
 
 <script src="__PUBLIC__/js/jquery-weui.js"></script>
-
+<script  src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/lib/fastclick.js"></script>
+<script  src="__PUBLIC__/js/jquery.qqFace.js"></script>
 <script src="__PUBLIC__/js/swiper.js"></script>
 <script>
-      $(document).on("open", ".weui-popup-modal", function() {
-        console.log("open popup");
-      }).on("close", ".weui-popup-modal", function() {
-        console.log("close popup");
-      });
+    $(function(){
+        $(".suggestion").each(function(){
+            $(this).next().html(replace_em($(this).val()));
+        })
+    })
+
+      function replace_em(str){
+          str = str.replace(/\</g,'&lt;');
+          str = str.replace(/\>/g,'&gt;');
+          str = str.replace(/\n/g,'<br/>');
+          str = str.replace(/\[em_([0-9]*)\]/g,'<img src="__PUBLIC__/arclist/$1.gif" border="0" />');
+          return str;
+      }
     </script>
 </body>
 </html>

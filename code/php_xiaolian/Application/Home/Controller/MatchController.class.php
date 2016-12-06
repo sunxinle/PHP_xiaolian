@@ -13,16 +13,27 @@ class MatchController extends Controller
     public function select(){
         $this->display();
     }
+
+    public function beforego(){
+        $university=I('post.university');
+        if (!$university){
+            header("refresh:0;url=select");
+        }
+    }
     public function go(){
         $university=I('post.university');
+        if (!$university){
+            header("refresh:0;url=select");
+        }
         dump($university);
         $this->assign('university',$university);
         $this->display();
     }
     public function successTips(){
         $StudentMsg =I('post.');
+        dump($StudentMsg);
         $date=array();
-        $date['university'] =$StudentMsg[university];
+        $date['university'] =$StudentMsg[University];
         $date[] =$StudentMsg[ReachTime];
         $date[] =$StudentMsg[NoteMsg];
         dump($date);
@@ -35,3 +46,4 @@ class MatchController extends Controller
         $this->display();
     }
 }
+

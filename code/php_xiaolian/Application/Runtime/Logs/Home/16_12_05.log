@@ -5776,3 +5776,2857 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
 
+[ 2016-12-05T18:44:06+08:00 ] 127.0.0.1 /index.php/Home/Root/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2016-12-05T18:44:14+08:00 ] 127.0.0.1 /index.php/home/root/dologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `xl_think_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `xl_think_user` WHERE `name` = 'admin' AND `passwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index:  D:\wamp64\www\github\code\php_xiaolian\ThinkPHP\Library\Org\Util\Rbac.class.php 第 97 行.
+SQL: select node.id,node.name from think_role as role,think_role_user as user,think_access as access ,think_node as node where user.user_id='3' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=1 and node.status=1 [ RunTime:0.0020s ]
+SQL: select node.id,node.name from think_role as role,think_role_user as user,think_access as access ,think_node as node where user.user_id='3' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=2 and node.pid=1 and node.status=1 [ RunTime:0.0009s ]
+SQL: select node.id,node.name from think_role as role,think_role_user as user,think_access as access ,think_node as node where user.user_id='3' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=5 and node.status=1 [ RunTime:0.0008s ]
+SQL: select node.id,node.name from think_role as role,think_role_user as user,think_access as access ,think_node as node where user.user_id='3' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=15 and node.status=1 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000579s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010207s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001266s ]
+
+[ 2016-12-05T18:44:27+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-12-05T18:44:30+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0543s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=5 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=5 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>5 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000961s ]
+
+[ 2016-12-05T18:44:33+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-12-05T18:44:35+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001547s ]
+
+[ 2016-12-05T18:44:52+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002204s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014723s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001683s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001728s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002828s ]
+
+[ 2016-12-05T18:44:54+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002716s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002831s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001898s ]
+
+[ 2016-12-05T18:45:03+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001875s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001753s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001808s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001848s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001898s ]
+
+[ 2016-12-05T18:45:06+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001904s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001903s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002459s ]
+
+[ 2016-12-05T18:45:10+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002415s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001882s ]
+
+[ 2016-12-05T18:45:11+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001908s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001909s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001960s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001910s ]
+
+[ 2016-12-05T18:45:14+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000832s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001594s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/54.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+
+[ 2016-12-05T18:45:15+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001026s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/41.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004633s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0011s ]
+ERR: 1364:Field 'tlcnickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:45:16','          FASD ','7')
+ERR: 1364:Field 'tlcnickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:45:16','          FASD ','7')
+
+[ 2016-12-05T18:45:16+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001492s ]
+
+[ 2016-12-05T18:48:53+08:00 ] 127.0.0.1 /home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0008s ]
+ERR: 1364:Field 'tlcimage' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:48:53','          FASD ','7')
+ERR: 1364:Field 'tlcimage' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:48:53','          FASD ','7')
+
+[ 2016-12-05T18:49:18+08:00 ] 127.0.0.1 /home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0011s ]
+SQL: INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:49:18','          FASD ','7') [ RunTime:0.0005s ]
+
+[ 2016-12-05T18:49:19+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002195s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2016-12-05T18:49:26+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001731s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000950s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-12-05T18:49:32+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+
+[ 2016-12-05T18:49:32+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-12-05T18:49:32+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+
+[ 2016-12-05T18:49:32+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+
+[ 2016-12-05T18:49:32+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-12-05T18:49:32+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001222s ]
+
+[ 2016-12-05T18:49:32+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/54.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002018s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001713s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/41.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002543s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000089s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000932s ]
+
+[ 2016-12-05T18:49:33+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001348s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001077s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+
+[ 2016-12-05T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001313s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+
+[ 2016-12-05T18:49:35+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/54.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-12-05T18:49:36+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001126s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/45.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/41.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000897s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+
+[ 2016-12-05T18:49:37+08:00 ] 127.0.0.1 /home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0011s ]
+SQL: INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:49:37','          很吊的样子[em_36][em_42]','7') [ RunTime:0.0003s ]
+
+[ 2016-12-05T18:49:39+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009919s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2016-12-05T18:49:42+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001806s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008840s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000997s ]
+
+[ 2016-12-05T18:49:48+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000995s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000826s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/54.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002895s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001135s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/41.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+
+[ 2016-12-05T18:49:49+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001813s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000143s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001946s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-12-05T18:49:50+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-12-05T18:49:51+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/45.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:49:52+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-12-05T18:49:54+08:00 ] 127.0.0.1 /home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000996s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0011s ]
+SQL: INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:49:54','          我曹[em_55]','7') [ RunTime:0.0005s ]
+
+[ 2016-12-05T18:49:55+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001243s ]
+
+[ 2016-12-05T18:50:00+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010420s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001655s ]
+
+[ 2016-12-05T18:50:03+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001318s ]
+
+[ 2016-12-05T18:50:07+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014261s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001837s ]
+
+[ 2016-12-05T18:50:08+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001368s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001408s ]
+
+[ 2016-12-05T18:50:09+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001213s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001293s ]
+
+[ 2016-12-05T18:50:12+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001698s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001215s ]
+
+[ 2016-12-05T18:50:21+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001171s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005727s ]
+
+[ 2016-12-05T18:50:23+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001371s ]
+
+[ 2016-12-05T18:50:26+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001211s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001295s ]
+
+[ 2016-12-05T18:50:28+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001737s ]
+
+[ 2016-12-05T18:50:35+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011257s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001256s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2016-12-05T18:50:37+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001216s ]
+
+[ 2016-12-05T18:50:44+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-12-05T18:50:44+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-12-05T18:50:44+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000911s ]
+
+[ 2016-12-05T18:50:44+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+
+[ 2016-12-05T18:50:44+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-12-05T18:50:44+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+
+[ 2016-12-05T18:50:44+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001220s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/54.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001014s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001135s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001244s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/41.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-12-05T18:50:45+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001371s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000911s ]
+
+[ 2016-12-05T18:50:46+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000818s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000981s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:50:47','          真不好玩[em_40]','7') [ RunTime:0.0004s ]
+
+[ 2016-12-05T18:50:47+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002565s ]
+
+[ 2016-12-05T18:50:48+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001569s ]
+
+[ 2016-12-05T18:50:55+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010067s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000991s ]
+
+[ 2016-12-05T18:50:59+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-12-05T18:50:59+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+
+[ 2016-12-05T18:50:59+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-12-05T18:50:59+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000838s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/54.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001225s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/41.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-12-05T18:51:00+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002497s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001113s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+
+[ 2016-12-05T18:51:01+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:51:02+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001132s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/45.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000902s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-12-05T18:51:03+08:00 ] 127.0.0.1 /index.php/Home/news/comment/id/arclist/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+
+[ 2016-12-05T18:51:04+08:00 ] 127.0.0.1 /home/news/getcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: INSERT INTO `xl_toplinecomment` (`tlcaddtime`,`tlccontent`,`tlid`) VALUES ('2016-12-05 18:51:04','          哈哈[em_56]','7') [ RunTime:0.0004s ]
+
+[ 2016-12-05T18:51:05+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001298s ]
+
+[ 2016-12-05T18:51:13+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000981s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001884s ]
+
+[ 2016-12-05T18:51:53+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000980s ]
+
+[ 2016-12-05T18:52:10+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2016-12-05T18:52:13+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001017s ]
+
+[ 2016-12-05T18:52:16+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001150s ]
+
+[ 2016-12-05T18:52:20+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>7 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000990s ]
+
+[ 2016-12-05T18:52:37+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0449s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001044s ]
+
+[ 2016-12-05T18:52:39+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=8 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>8 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009583s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000847s ]
+
+[ 2016-12-05T18:52:47+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2016-12-05T18:52:49+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=8 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=8 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>8 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2016-12-05T18:52:51+08:00 ] 127.0.0.1 /index.php/Home/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001122s ]
+
+[ 2016-12-05T18:53:01+08:00 ] 127.0.0.1 /index.php/home/my/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000242s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001074s ]
+
+[ 2016-12-05T18:53:01+08:00 ] 127.0.0.1 /index.php/home/moments/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` ORDER BY xlaaddtime desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000902s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2016-12-05T18:53:03+08:00 ] 127.0.0.1 /index.php/home/moments/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2016-12-05T18:53:30+08:00 ] 127.0.0.1 /home/moments/getart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+NOTIC: [8] Undefined index: img D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\MomentsController.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0010s ]
+ERR: 1364:Field 'xlaimage' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `xl_xiaolianarticle` (`xlatitle`,`xlacontent`,`xlaaddtime`) VALUES ('地方啊','第三方  撒的发生','2016-12-05 18:53:30')
+ERR: 1364:Field 'xlaimage' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `xl_xiaolianarticle` (`xlatitle`,`xlacontent`,`xlaaddtime`) VALUES ('地方啊','第三方  撒的发生','2016-12-05 18:53:30')
+

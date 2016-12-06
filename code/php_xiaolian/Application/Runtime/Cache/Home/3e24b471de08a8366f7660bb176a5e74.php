@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-  <title>jQuery WeUI</title>
+  <title>头条</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -36,12 +36,12 @@
     </div>
       <!--头条开始-->
    <div class="weui_panel weui_panel_access">
-  <div class="weui_panel_hd">文字组合列表</div>
+  <div class="weui_panel_hd">头条</div>
   <div class="weui_panel_bd">
 
   <?php if(is_array($topline)): $i = 0; $__LIST__ = $topline;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('news/detail',array('id'=>$vo['tlid']));?>">
     <div class="weui_media_box weui_media_text">
-      <p class="weui_media_desc"> <div><img src="<?php echo ($vo["tlimage"]); ?>" width="98%" height="70%"></div></p>
+      <p class="weui_media_desc"> <div><img src="/Public/<?php echo ($vo["tlimage"]); ?>" width="98%" height="180px"></div></p>
       <h4 class="weui_panel_hd"><?php echo ($vo["tltitle"]); ?></h4>
     </div>
     </a><?php endforeach; endif; else: echo "" ;endif; ?>
