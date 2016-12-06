@@ -33,7 +33,7 @@ class NewsController extends Controller
 	 	$data2=$comment->where("tlid=%d",$id)->order('tlcaddtime desc')->select();
 	 	$data=$model->where("tlid=%d",$id)->find();
 	 	$after=$model->where("tlid>".$id)->order('tlid asc')->limit('1')->find();
-  
+
 	 	$nextid=$after['tlid'];
 
 	 	$this->assign("topcontent",$data);
