@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: 郭颖
+ * Date: 2016/11/30
+ * Time: 15:24
+ */
 namespace Home\Controller;
 
 use Org\Util\Rbac;
@@ -101,6 +107,4 @@ class UserController extends Controller {
             }
         }
     }
-
-
 }
