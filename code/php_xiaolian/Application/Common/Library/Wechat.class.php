@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: 郭颖
+ * Date: 2016/12/05
+ * Time: 20:03
+ */
 namespace Common\Library;
 //define your token
 
