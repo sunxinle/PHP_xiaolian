@@ -43,8 +43,16 @@ class MomentsController extends Controller
 	}
 	public function getart()
 	{
+		$upload = new \Think\Upload();// 实例化上传类
+        $upload->maxSize   =     3145728 ;// 设置附件上传大小
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+        $upload->rootPath =     $_SERVER['DOCUMENT_ROOT'].__ROOT__.'/Public/';
+        $upload->savePath = 'sayimage/';// 设置附件上传目录
+        //$upload->savePath  =      './Public/Uploads/';
+        // 上传单个文件
+        $info   =   $upload->upload();
 		$art=I('post.');
-		$data['xlacimage']=$art['img'];
+		$data['xlacimage']=$info['img']['savepath'].$info['img']['savename'];
 		$data['xlatitle']=$art['title'];
 		$data['xlacontent']=$art['art'];
 		$data['xlaaddtime']=date("Y-m-d H:i:s",time());
