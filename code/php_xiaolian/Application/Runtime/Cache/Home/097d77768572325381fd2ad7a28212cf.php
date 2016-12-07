@@ -71,7 +71,7 @@
     </a>
     <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
       <div class="weui_tabbar_icon">
-        <img src="/Public/images/daxue.png" alt="">
+        <img src="/Public/images/daxuec.png" alt="">
       </div>
       <p class="weui_tabbar_label" style="color:#29b6f6">大学</p>
     </a>

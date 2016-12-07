@@ -14,7 +14,7 @@ class MatchController extends Controller
         $this->display();
     }
 
-    public function beforego(){
+    public function _before_go(){
         $university=I('post.university');
         if (!$university){
             header("refresh:0;url=select");
@@ -22,23 +22,23 @@ class MatchController extends Controller
     }
     public function go(){
         $university=I('post.university');
-        if (!$university){
-            header("refresh:0;url=select");
-        }
-        dump($university);
+        //dump($university);
         $this->assign('university',$university);
         $this->display();
     }
     public function successTips(){
         $StudentMsg =I('post.');
-        dump($StudentMsg);
+       // dump($StudentMsg);
         $date=array();
         $date['university'] =$StudentMsg[University];
         $date[] =$StudentMsg[ReachTime];
         $date[] =$StudentMsg[NoteMsg];
-        dump($date);
+       // dump($date);
         $match=M('match');
         $university=M('university');
+        $user =D('User');
+        $user->select();
+        //$user->relation('University')->select();
        // $date['funiid']=$university->where(uniname=$StudentMsg[university]);
     /*    dump($date['funiid']);
         $match->add($date);
