@@ -22,24 +22,18 @@
       <h2 class="demos-title">校脸注册</h2>
     </header>
 
-    <form action="/home/user/login" method="post">
+    <form action="{:U('home/news/index')}" method="post">
     <div class="weui_cells weui_cells_form">
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">大学</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input name="college" class="weui_input" type="text" placeholder="your university">
+          <input name="college" class="weui_input" id="mobile" type="text" placeholder="your university">
         </div>
       </div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
         <div class="weui_cell_bd weui_cell_primary">
           <input name="name" class="weui_input" type="text" placeholder="your name">
-        </div>
-      </div>
-      <div class="weui_cell">
-        <div class="weui_cell_hd"><label class="weui_label">性别</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-          <input name='sex' class="weui_input" type="text" placeholder="phone">
         </div>
       </div>
       <div class="weui_cell">
@@ -55,9 +49,9 @@
         </div>
       </div>
       <div class="weui_cell">
-        <div class="weui_cell_hd"><label for="" class="weui_label">入学日期</label></div>
+        <div class="weui_cell_hd"><label for="date2" class="weui_label">入学日期</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input class="weui_input" type="date" value="">
+          <input class="weui_input" id="date2" type="text" value="">
         </div>
       </div>
       <div class="weui_cells_tips">准确填写大学名称才能定位哦，童鞋</div>
@@ -84,6 +78,33 @@
       });
     </script>
 <script src="__PUBLIC__/js/jquery-weui.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
 
+    <script>
+      $("#mobile").picker({
+        title: "请选择您的大学",
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['河北师范大学', '河北科技大学', '河北医科大学', '河北经贸大学', '北京大学', '清华大学', '北京交通大学']
+          }
+        ],
+        onChange: function(p, v, dv) {
+          console.log(p, v, dv);
+        },
+        onClose: function(p, v, d) {
+          console.log("close");
+        }
+      });
+      $("#date2").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy年mm月dd日'  // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+      });
+
+    </script>
   </body>
 </html>
