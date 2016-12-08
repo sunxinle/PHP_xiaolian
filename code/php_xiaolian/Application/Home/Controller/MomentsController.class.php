@@ -26,6 +26,9 @@ class MomentsController extends Controller
 	}
     //显示用户所想看id对应的某条校脸圈动态详情
 	public function detail(){
+		/*id是通过前台页面view/moments/index中
+		<a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}">
+		传递过来的参数*/
 		$id=I('get.id');
 		if(!$id){
 			//调用redirect方法，重定向到moments/detail且id=1，跳转时间为0.2,提示信息为(没有了，返回第一篇文章)
@@ -51,10 +54,12 @@ class MomentsController extends Controller
 		$xlac=M('xiaolianarticlecomment');
 
 		$art=$xlart->where("xlaid=%d",$id)->find();
+		dump($art);
 		$artc=$xlac->where("xlaid=%d",$id)->select();
-		$after=$xlart->where("xlaid>".$id)->order('xlaid asc')->limit('1')->find();
+		dump($artc);
+		$after=$xlart->where("xlaid".$id)->order('xlaid asc')->limit('1')->find();
 		$nextid=$after['xlaid'];
-
+        
 		$this->assign("art",$art);
 		$this->assign("artc",$artc);
 		$this->assign("nextid",$nextid);
@@ -63,12 +68,16 @@ class MomentsController extends Controller
 	}
 	public function getart()
 	{
-		$upload = new \Think\Upload();// 实例化上传类
-        $upload->maxSize   =     3145728 ;// 设置附件上传大小
-        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-        $upload->rootPath =     $_SERVER['DOCUMENT_ROOT'].__ROOT__.'/Public/';
-        $upload->savePath = 'sayimage/';// 设置附件上传目录
-        //$upload->savePath  =      './Public/Uploads/';
+		// 实例化上传类
+		$upload = new \Think\Upload();
+		// 设置附件上传大小
+        $upload->maxSize = 3145728 ;
+        // 设置附件上传类型
+        $upload->exts = array('jpg', 'gif', 'png', 'jpeg');
+        $upload->rootPath = $_SERVER['DOCUMENT_ROOT'].__ROOT__.'/Public/';
+        // 设置附件上传目录
+        $upload->savePath = 'sayimage/';
+        //$upload->savePath  = './Public/Uploads/';
         // 上传单个文件
         $info   =   $upload->upload();
 		$art=I('post.');
