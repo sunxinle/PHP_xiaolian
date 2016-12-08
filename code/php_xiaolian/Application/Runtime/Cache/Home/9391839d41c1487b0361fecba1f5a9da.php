@@ -83,7 +83,7 @@
       <div class="weui_tabbar_icon">
         <img src="/Public/images/toutiao.png" alt="">
       </div>
-      <p class="weui_tabbar_label" style="color:#29b6f6">头条</p>
+      <p class="weui_tabbar_label" >头条</p>
     </a>
     <a href="<?php echo U('home/university/index');?>" class="weui_tabbar_item">
       <div class="weui_tabbar_icon">
@@ -93,9 +93,9 @@
     </a>
     <a href="<?php echo U('home/moments/index');?>" class="weui_tabbar_item">
       <div class="weui_tabbar_icon">
-        <img src="/Public/images/xiaolianquan.png" alt="">
+        <img src="/Public/images/xiaolianquanc.png" alt="">
       </div>
-      <p class="weui_tabbar_label">校脸圈</p>
+      <p class="weui_tabbar_label" style="color:#29b6f6">校脸圈</p>
     </a>
     <a href="<?php echo U('home/my/index');?>" class="weui_tabbar_item">
       <div class="weui_tabbar_icon">
