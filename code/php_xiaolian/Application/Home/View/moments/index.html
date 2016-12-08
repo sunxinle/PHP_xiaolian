@@ -35,8 +35,10 @@
     <div class="weui_panel">
       <div class="weui_panel_hd">校友圈</div>
       <div class="weui_panel_bd">
+        <!--注意要避免name值跟id值相同，即使id值任意-->
         <volist name="data" id="vo">
           <div class="weui_media_box weui_media_text">
+            <!--超链接href中意为将此条数据id值给detail方法便于进行进一步业务逻辑处理，而id值寻其源来自volist里的name值data,data又来自moments控制器里的index方法-->
             <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_title">{$vo.xlatitle}
             </a>
             <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}">
@@ -64,12 +66,13 @@
     <!--在这里写主体的代码结束-->
   </div>
   <!--加号的界面-->
-  <div class="the_plus">
-    <a href="{:U('home/moments/add')}"><img src="__PUBLIC__/images/plus1.png" alt="发说说的加号"></a>
+    <div class="the_plus">
+      <a href="{:U('home/moments/add')}"><img src="__PUBLIC__/images/plus1.png" alt="发说说的加号"></a>
+    </div>
+    <!--加号界面的结束-->
   </div>
-  <!--加号界面的结束-->
-<!--weui_tab_bd界面结束-->  
-</div>
+
+  <!--weui_tab_bd界面结束-->
 
 <!--导航栏开始-->
   <div class="weui_tabbar">
