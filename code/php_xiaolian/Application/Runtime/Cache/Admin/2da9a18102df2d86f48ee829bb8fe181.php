@@ -20,7 +20,7 @@
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
                 <li><a href="#"><?php echo ($name); ?></a></li>
-                <li><a href="<?php echo U('home/user/logout');?>">退出</a></li>
+                <li><a href="<?php echo U('home/root/logout');?>">退出</a></li>
             </ul>
         </div>
     </div>

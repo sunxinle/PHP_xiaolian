@@ -20,7 +20,7 @@
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
                 <li><a href="#"><?php echo ($name); ?></a></li>
-                <li><a href="<?php echo U('home/user/logout');?>">退出</a></li>
+                <li><a href="<?php echo U('home/root/logout');?>">退出</a></li>
             </ul>
         </div>
     </div>
@@ -97,7 +97,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('.delete').click(function(){
-            var tag=confirm('是够确认删除');
+            var tag=confirm('是否确认删除');
             if(tag){
                 //使用ajax方式删除记录
                 var url = $(this).attr('href');
