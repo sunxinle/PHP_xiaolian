@@ -9,11 +9,14 @@ namespace Home\Controller;
 
 use Org\Util\Rbac;
 use Think\Controller;
+define('APPID', "wxbc8229b317266198");
+define('SECRET',"87ec313ac0a551cc2a1c4f5ab8008b28");
 
 class UserController extends Controller {
     public function index(){
         /*接收code的值*/
         $code=I('code');
+        dump($code);
         /*2、通过code换取网页授权access_token,这里通过code换取的是一个特殊的网页授权
         access_token,与基础支持中的access_token(该access_token用于调用其他接口)
         不同。公众号可通过下述接口来获取网页授权access_token
@@ -22,7 +25,7 @@ class UserController extends Controller {
 
         /*以下的调用接口正确返回时的jsno数据包里有
         access_token,expires_in,refresh_token,openid,scope*/
-        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=$code&grant_type=authorization_code";
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxbc8229b317266198&secret=87ec313ac0a551cc2a1c4f5ab8008b28&code=$code&grant_type=authorization_code";
         $curl = curl_init ($url);
         curl_setopt ( $curl, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt ( $curl, CURLOPT_SSL_VERIFYPEER, FALSE );
