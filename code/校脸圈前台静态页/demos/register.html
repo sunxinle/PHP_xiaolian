@@ -50,9 +50,9 @@
         </div>
       </div>
       <div class="weui_cell">
-        <div class="weui_cell_hd"><label for="" class="weui_label">入学日期</label></div>
+        <div class="weui_cell_hd"><label for="date2" class="weui_label">入学日期</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input class="weui_input" type="date" value="">
+          <input class="weui_input" id="date2" type="text" value="">
         </div>
       </div>
           <div class="weui_cells_tips">准确填写大学名称才能定位哦，童鞋</div>
@@ -61,6 +61,7 @@
       </div>
     </div>
 
+    <div id="inline-calendar"></div>
 
     <script src="../lib/jquery-2.1.4.js"></script>
 <script src="../lib/fastclick.js"></script>
@@ -79,8 +80,7 @@
       });
     </script>
 <script src="../js/jquery-weui.js"></script>
-<script src="../lib/jquery-2.1.4.js"></script>
-<script src="../lib/fastclick.js"></script>
+
 <script>
   $(function() {
     FastClick.attach(document.body);
@@ -105,6 +105,11 @@
           console.log("close");
         }
       });
+      $("#date2").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy年mm月dd日'  // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+      });
+
       </script>
   </body>
 </html>
