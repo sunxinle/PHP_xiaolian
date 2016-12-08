@@ -22,7 +22,7 @@ class MomentsController extends Controller
 		//将$data数据赋值给自定义的data
 		$this->assign("data",$data);
 		//通过display()来找到view文件夹中Moments中index.html
-        $this->display("index.html");
+        $this->display();
 	}
     //显示用户所想看id对应的某条校脸圈动态详情
 	public function detail(){
