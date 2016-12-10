@@ -1,19 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 郭颖
- * Date: 2016/11/30
- * Time: 15:24
- */
 namespace Home\Controller;
 
 use Org\Util\Rbac;
 use Think\Controller;
+define('APPID', "wxbc8229b317266198");
+define('SECRET',"87ec313ac0a551cc2a1c4f5ab8008b28");
 
 class UserController extends Controller {
     public function index(){
         /*接收code的值*/
         $code=I('code');
+        dump($code);
         /*2、通过code换取网页授权access_token,这里通过code换取的是一个特殊的网页授权
         access_token,与基础支持中的access_token(该access_token用于调用其他接口)
         不同。公众号可通过下述接口来获取网页授权access_token
@@ -22,7 +19,7 @@ class UserController extends Controller {
 
         /*以下的调用接口正确返回时的jsno数据包里有
         access_token,expires_in,refresh_token,openid,scope*/
-        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=$code&grant_type=authorization_code";
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxbc8229b317266198&secret=87ec313ac0a551cc2a1c4f5ab8008b28&code=$code&grant_type=authorization_code";
         $curl = curl_init ($url);
         curl_setopt ( $curl, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt ( $curl, CURLOPT_SSL_VERIFYPEER, FALSE );
@@ -68,16 +65,14 @@ class UserController extends Controller {
         $college = I('post.college');
         dump($college);
         $name = I('post.name');
-        $sex = I('post.sex');
         $phonenumber = I('post.phonenumber');
         $sno = I('post.sno');
         $openid = I('post.openid');
 
-        $user = M('user');
+        $user = M('xl_user');
         $data = array();
         $data['college'] = $college;
         $data['name'] = $name;
-        $data['sex'] = $sex;
         $data['phonenumber'] = $phonenumber;
         $data['sno'] = $sno;
         //thinkphp的数据写入操作使用add方法
@@ -105,6 +100,33 @@ class UserController extends Controller {
                 //错误页面的默认跳转页面是返回前一页javascript:history.back(-1)，通常不需要设置
                 $this->error('提交失败');
             }
+        }
+    }
+
+
+    public function logout() {
+        session(null);
+        $this->success('退出成功！请重新登录',U('home/root/login'));
+    }
+
+    public function dologin() {
+        // 构造condition条件
+        $condition = array();
+        $condition['name'] = I('post.username');
+        $condition['passwd'] = I('post.password', '', 'md5');
+        // 调用RBAC方法实现用户校验
+        $authInfo = Rbac::authenticate($condition);
+        if ($authInfo) {    // 用户名和密码成立
+            // 写入session数据（自由修改）
+            session('loginedUserName', $authInfo['name']);
+            // 写入权限认证识别号
+            session(C('USER_AUTH_KEY'), $authInfo['id']);
+            // 在session中写入当前角色的权限列表
+            Rbac::saveAccessList($authInfo['id']);
+            // 登录成功后的跳转
+            $this->success('登录成功！', '/Admin');
+        } else {
+            $this->error('用户名或密码错误，请重新登录！');
         }
     }
 }
