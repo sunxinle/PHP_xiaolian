@@ -54,10 +54,10 @@ class MomentsController extends Controller
 		$xlac=M('xiaolianarticlecomment');
 
 		$art=$xlart->where("xlaid=%d",$id)->find();
-		dump($art);
+		//dump($art);
 		$artc=$xlac->where("xlaid=%d",$id)->select();
-		dump($artc);
-		$after=$xlart->where("xlaid".$id)->order('xlaid asc')->limit('1')->find();
+		//dump($artc);
+		$after=$xlart->where("xlaid",$id)->order('xlaid asc')->limit('1')->find();
 		$nextid=$after['xlaid'];
         
 		$this->assign("art",$art);
