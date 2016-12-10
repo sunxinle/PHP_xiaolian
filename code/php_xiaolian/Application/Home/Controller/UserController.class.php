@@ -16,7 +16,7 @@ class UserController extends Controller {
         不同。公众号可通过下述接口来获取网页授权access_token
         如果网页授权的作用域为snsapi_base，则本步骤中获取到网页
         授权access_token的同时，也获取到了openid，snsaqi_base式的网页授权流程即到此为止*/
-
+ 
         /*以下的调用接口正确返回时的jsno数据包里有
         access_token,expires_in,refresh_token,openid,scope*/
         $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxbc8229b317266198&secret=87ec313ac0a551cc2a1c4f5ab8008b28&code=$code&grant_type=authorization_code";
