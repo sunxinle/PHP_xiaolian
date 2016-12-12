@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>校脸圈动态内容详情页</title>
+  <title>校脸圈</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -90,7 +90,8 @@
         <div class="weui_panel_bd">
           <div class="weui_media_box weui_media_text">
             <h4 class="weui_media_title">评论111111</h4>
-            <p style="color:#999">{$va.xlaccomment}</p>
+            <input type="hidden" value="{$va.xlaccomment}" class="suggestion"/>
+            <p style="color:#999"  class="show"></p>
             <ul class="weui_media_info">
               <li class="weui_media_info_meta">{$va.xlacaddtime}</li>
               <li class="weui_media_info_meta weui_media_info_meta_extra">{$va.xlacnickname}</li>
@@ -141,6 +142,21 @@ $(".swiper-container").swiper({
   loop: true,
   autoplay: 3000
 });
+</script>
+<script>
+  $(function(){
+    $(".suggestion").each(function(){
+      $(this).next().html(replace_em($(this).val()));
+    })
+  })
+
+  function replace_em(str){
+    str = str.replace(/\</g,'&lt;');
+    str = str.replace(/\>/g,'&gt;');
+    str = str.replace(/\n/g,'<br/>');
+    str = str.replace(/\[em_([0-9]*)\]/g,'<img src="__PUBLIC__/arclist/$1.gif" border="0" />');
+    return str;
+  }
 </script>
   </body>
 </html>

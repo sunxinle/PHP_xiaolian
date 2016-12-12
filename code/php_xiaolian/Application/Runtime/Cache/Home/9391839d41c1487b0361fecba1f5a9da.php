@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-  <title>校脸圈首页</title>
+  <title>校脸圈</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -33,42 +33,37 @@
     <!--在这里写主体的代码-->
     <!--说说开始-->
     <div class="weui_panel">
-        <div class="weui_panel_hd">校友圈</div>
-          <div class="weui_panel_bd">
-
-          <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="weui_media_box weui_media_text">
-              <a href="<?php echo U('moments/detail',array('id'=>$vo['xlaid']));?>" class="weui_media_title"><?php echo ($vo["xlatitle"]); ?>
-              </a>
-              <a href="<?php echo U('moments/detail',array('id'=>$vo['xlaid']));?>">
-                <p class="weui_media_desc"><?php echo ($vo["xlacontent"]); ?>
-                </p>
-              </a>
-              <p class="weui_media_desc">
-                <div class="weui_panel_bd">
-                  <a href="<?php echo U('moments/detail',array('id'=>$vo['xlaid']));?>" class="weui_media_box weui_media_appmsg">
-                    <div class="weui_media_hd">
-                      <img class="weui_media_appmsg_thumb" src="/Public/images/swiper-11.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
+      <div class="weui_panel_hd">校脸圈</div>
+      <div class="weui_panel_bd">
+        <!--注意要避免name值跟id值相同，即使id值任意-->
+        <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="weui_media_box weui_media_text">
+            <!--超链接href中意为将此条数据id值给detail方法便于进行进一步业务逻辑处理，而id值寻其源来自volist里的name值data,data又来自moments控制器里的index方法-->
+            <a href="<?php echo U('moments/detail',array('id'=>$vo['xlaid']));?>" class="weui_media_title"><?php echo ($vo["xlatitle"]); ?>
+            </a>
+            <a href="<?php echo U('moments/detail',array('id'=>$vo['xlaid']));?>">
+              <p class="weui_media_desc"><?php echo ($vo["xlacontent"]); ?>
               </p>
-              <ul class="weui_media_info">
-                <li class="weui_media_info_meta"><?php echo ($vo["xlaaddtime"]); ?></li>
-                <li class="weui_media_info_meta weui_media_info_meta_extra"><?php echo ($vo["xlaauthor"]); ?></li>
-              </ul>
-            </div><?php endforeach; endif; else: echo "" ;endif; ?>
-         
-            </div>
-
-
-        
-          </div>
-        </div>
-        
-<!--说说结束-->
-
+            </a>
+            <p class="weui_media_desc">
+              <div class="weui_panel_bd">
+                <a href="<?php echo U('moments/detail',array('id'=>$vo['xlaid']));?>" class="weui_media_box weui_media_appmsg">
+                  <div class="weui_media_hd">
+                    <img class="weui_media_appmsg_thumb" src="/Public/images/swiper-11.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </p>
+            <ul class="weui_media_info">
+              <li class="weui_media_info_meta"><?php echo ($vo["xlaaddtime"]); ?></li>
+              <li class="weui_media_info_meta weui_media_info_meta_extra"><?php echo ($vo["xlaauthor"]); ?></li>
+            </ul>
+          </div><?php endforeach; endif; else: echo "" ;endif; ?>
+      </div>
+    </div>
+    <!--说说结束-->
     <!--在这里写主体的代码结束-->
-    <!--加号的界面-->
+  </div>
+  <!--加号的界面-->
     <div class="the_plus">
       <a href="<?php echo U('home/moments/add');?>"><img src="/Public/images/plus1.png" alt="发说说的加号"></a>
     </div>

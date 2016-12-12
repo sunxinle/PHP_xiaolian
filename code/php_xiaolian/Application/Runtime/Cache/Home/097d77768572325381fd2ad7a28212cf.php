@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
-<title>笑脸</title>
+<title>我爱大学</title>
 <link rel="stylesheet" href="/Public/css/university.css">
 <link rel="stylesheet" href="/Public/lib/weui.min.css">
 <link rel="stylesheet" href="/Public/css/jquery-weui.css">
@@ -35,7 +35,7 @@
 <!-- 代码部分begin -->
 <header class="fixed">
 	<div class="header">
-		支持的大学列表
+		支持的大学
 	</div>
 </header>
 

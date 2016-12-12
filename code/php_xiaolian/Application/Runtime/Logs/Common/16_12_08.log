@@ -1,0 +1,24 @@
+[ 2016-12-08T10:23:05+08:00 ] 127.0.0.1 /index.php/webDemo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+ERR: 无法加载模块:WebDemo
+
+[ 2016-12-08T10:23:11+08:00 ] 127.0.0.1 /index.php/webdemo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+ERR: 无法加载模块:Webdemo
+
+[ 2016-12-08T10:25:10+08:00 ] 127.0.0.1 /index.php/webdemo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+ERR: 无法加载模块:Webdemo
+
+[ 2016-12-08T10:25:12+08:00 ] 127.0.0.1 /index.php/webdemo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+ERR: 无法加载模块:Webdemo
+

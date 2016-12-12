@@ -10,7 +10,7 @@ class UserController extends Controller {
     public function index(){
         /*接收code的值*/
         $code=I('code');
-        dump($code);
+        //dump($code);
         /*2、通过code换取网页授权access_token,这里通过code换取的是一个特殊的网页授权
         access_token,与基础支持中的access_token(该access_token用于调用其他接口)
         不同。公众号可通过下述接口来获取网页授权access_token
@@ -45,11 +45,24 @@ class UserController extends Controller {
             curl_setopt ( $curl, CURLOPT_SSL_VERIFYPEER, FALSE );
             curl_setopt ( $curl, CURLOPT_SSL_VERIFYHOST, false );
             $result2 = curl_exec ($curl);
-            dump($result2);
+            //dump($result2);
             if(curl_errno()==0){
+                $data=json_decode($result2);
+                $openid=$data->openid; //openi数据
+                $nickname=$data->nickname; //名字
+                $sex=$data->sex;        //性别
+                $language=$data->language;     //语言
+                $city=$data->city;                 //城市
+                $province=$data->province;          //省份
+                $country=$data->country;            //国家
+                $imageurl=$data->headimgurl;
+
                 //dump(json_decode($result2));
                 //把用户信息分配到视图文件中
-                $this->assign('user', json_decode($result2));
+                $this->assign('openid',$openid);
+                $this->assign('tlcnickname',$nickname);
+                $this->assign('sex',$sex);
+                $this->assign('headimgurl',$imageurl);
                 $this->display();
             }else{
                 dump(curl_errno($curl));
@@ -62,21 +75,27 @@ class UserController extends Controller {
     public function login(){
         //1、数据表xl_user的增
         //I方法其命名来自input，用于任何地方，更加方便和安全的获取系统输入变量
-        $college = I('post.college');
-        dump($college);
-        $name = I('post.name');
-        $phonenumber = I('post.phonenumber');
-        $sno = I('post.sno');
-        $openid = I('post.openid');
 
-        $user = M('xl_user');
+        $user = M('user');
+        $col=M('university');
+
         $data = array();
-        $data['college'] = $college;
-        $data['name'] = $name;
-        $data['phonenumber'] = $phonenumber;
-        $data['sno'] = $sno;
+        $da['uniname']=I('post.college');
+        $re=$col->where($da)->getField('uniid');
+         
+        $data['college'] = I('post.college');
+        $data['name'] = I('post.name');
+        $data['phonenumber'] =I('post.phonenumber');
+        $data['sno'] =  I('post.sno');
+        $data['uniid']=$re;
+        $data['openid']=I('post.openid');
+        $data['sex']=I('post.sex');
+        $data['headimgurl']=I('post.headimgurl');
+        $data['tlcnickname']=I('post.tlcnickname');
+        //dump($data);
         //thinkphp的数据写入操作使用add方法
-        if ($openid != $user->getField('openid')){
+        $ro['openid']=$data['openid'];
+        if (!$user->where($ro)->find()){
             $result = $user->add($data);
             /*success和error方法会判断当前请求是否属于ajax请求
             如果属于ajax请求则会调用ajaxReturn方法返回信息*/
@@ -91,7 +110,8 @@ class UserController extends Controller {
         } else {
             /*根据条件更新数据，如果没写条件，系统自动
             会把主键的值作为更新条件来更新其他字段的值*/
-            $result = $user->where('openid=$openid')->save($data);
+            alert('已注册');
+            //$result = $user->where($ro)->save($data);
             if ($result){
                 //设置成功后跳转页面的地址，默认的返回页面是$_SERVER['HTTP_REFERER']
                 //默认等待时间success方法是1秒，error方法是3秒

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>头条评论页</title>
+	<title></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -46,7 +46,7 @@
       <div class="weui_cell">
         <div class="weui_cell_bd weui_cell_primary">
           <textarea class="weui_textarea" placeholder="略微小评一下" rows="3" id="suggestion" name="suggestion"></textarea>
-          <div class="weui_textarea_counter"><span>0</span>/200</div>
+          <div class="weui_textarea_counter"><span class="OK">0</span>/200</div>
           <input type="hidden" name="hid" value="{$id}" id="hid"> 
         </div>
       </div>
@@ -70,6 +70,21 @@
 	$(function() {
 		FastClick.attach(document.body);
 	});
+    $(".weui_textarea").keyup(function() {
+        var len = $(".weui_textarea").val().length;
+        var MAX_LENGTH=200;
+        if (len>MAX_LENGTH){
+            $(this).val($(this).val().substring(0,MAX_LENGTH));
+            $.toast('字数已经够多啦','text');
+        }
+        $(".OK").text(len);
+    });
+    $(function(){
+        $('.emotion').qqFace({
+            assign:'suggestion',
+            path:'__PUBLIC__/arclist/' //表情存放的路径
+        });
+    });
 </script>
 <script src="__PUBLIC__/js/jquery-weui.js"></script>
     <script>

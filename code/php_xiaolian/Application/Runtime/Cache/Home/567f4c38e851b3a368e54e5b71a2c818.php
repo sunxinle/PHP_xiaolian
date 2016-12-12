@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
   <head>
-    <title>大学内容页</title>
+    <title><?php echo ($unidata["uniname"]); ?></title>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,7 +18,7 @@
   <body ontouchstart>
 
     <header class='demos-header'>
-      <h1 class="demos-title">河北师大</h1>
+      <h1 class="demos-title"><?php echo ($unidata["uniname"]); ?></h1>
     </header>
 
     <article class="weui_article">
