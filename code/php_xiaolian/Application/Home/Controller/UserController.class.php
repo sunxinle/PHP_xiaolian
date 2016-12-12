@@ -101,9 +101,8 @@ class UserController extends Controller {
             /*success和error方法会判断当前请求是否属于ajax请求
             如果属于ajax请求则会调用ajaxReturn方法返回信息*/
             if ($result){
-                //设置成功后跳转页面的地址，默认的返回页面是$_SERVER['HTTP_REFERER']
-                //默认等待时间success方法是1秒，error方法是3秒
-                $this->success('提交成功');
+                $this->assign('user',$result);
+                $this->display(T('Public/index'));
             } else {
                 //错误页面的默认跳转页面是返回前一页javascript:history.back(-1)，通常不需要设置
                 $this->error('提交失败');
@@ -111,17 +110,18 @@ class UserController extends Controller {
         } else {
             /*根据条件更新数据，如果没写条件，系统自动
             会把主键的值作为更新条件来更新其他字段的值*/
-            alert('已注册');
-            //$result = $user->where($ro)->save($data);
+            $condition['college'] = I('post.college');
+            $condition['name'] = I('post.name');
+            $condition['phonenumber'] =I('post.phonenumber');
+            $condition['sno'] =  I('post.sno');
+            $result = $user->where($condition)->save($data);
             if ($result){
-                //设置成功后跳转页面的地址，默认的返回页面是$_SERVER['HTTP_REFERER']
-                //默认等待时间success方法是1秒，error方法是3秒
-                $this->success('提交成功');
+                $this->assign('user',$result);
+                $this->display(T('Public/index'));
             } else {
                 //错误页面的默认跳转页面是返回前一页javascript:history.back(-1)，通常不需要设置
                 $this->error('提交失败');
             }
         }
     }
-
 }
