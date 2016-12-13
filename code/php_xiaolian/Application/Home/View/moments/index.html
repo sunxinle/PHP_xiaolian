@@ -33,39 +33,44 @@
     <!--在这里写主体的代码-->
     <!--说说开始-->
     <div class="weui_panel">
-      <div class="weui_panel_hd">校脸圈</div>
-      <div class="weui_panel_bd">
-        <!--注意要避免name值跟id值相同，即使id值任意-->
-        <volist name="data" id="vo">
-          <div class="weui_media_box weui_media_text">
-            <!--超链接href中意为将此条数据id值给detail方法便于进行进一步业务逻辑处理，而id值寻其源来自volist里的name值data,data又来自moments控制器里的index方法-->
-            <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_title">{$vo.xlatitle}
-            </a>
-            <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}">
-              <p class="weui_media_desc">{$vo.xlacontent}
+        <div class="weui_panel_hd">校友圈</div>
+          <div class="weui_panel_bd">
+
+          <volist name="data" id="vo">
+            <div class="weui_media_box weui_media_text">
+              <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_title">{$vo.xlatitle}
+              </a>
+              <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}">
+                <p class="weui_media_desc">{$vo.xlacontent}
+                </p>
+              </a>
+              <p class="weui_media_desc">
+                <div class="weui_panel_bd">
+                  <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                      <img class="weui_media_appmsg_thumb" src="__PUBLIC__/{$vo.xlaimageurl}" alt="">
+                    </div>
+                  </a>
+                </div>
               </p>
-            </a>
-            <p class="weui_media_desc">
-              <div class="weui_panel_bd">
-                <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_box weui_media_appmsg">
-                  <div class="weui_media_hd">
-                    <img class="weui_media_appmsg_thumb" src="__PUBLIC__/images/swiper-11.jpg" alt="">
-                  </div>
-                </a>
-              </div>
-            </p>
-            <ul class="weui_media_info">
-              <li class="weui_media_info_meta">{$vo.xlaaddtime}</li>
-              <li class="weui_media_info_meta weui_media_info_meta_extra">{$vo.xlaauthor}</li>
-            </ul>
+              <ul class="weui_media_info">
+                <li class="weui_media_info_meta">{$vo.xlaauthor}</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">{$vo.xlaaddtime}</li>
+              </ul>
+            </div>
+          </volist>
+         
+            </div>
+
+
+        
           </div>
-        </volist>
-      </div>
-    </div>
-    <!--说说结束-->
+        </div>
+        
+<!--说说结束-->
+
     <!--在这里写主体的代码结束-->
-  </div>
-  <!--加号的界面-->
+    <!--加号的界面-->
     <div class="the_plus">
       <a href="{:U('home/moments/add')}"><img src="__PUBLIC__/images/plus1.png" alt="发说说的加号"></a>
     </div>

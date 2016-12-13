@@ -13,80 +13,62 @@ use Think\Controller;
 
 class MomentsController extends Controller
 {
-	//显示数据的函数
 	public function index(){
-		//用thinkphp内置模型类M()函数
-		$xlart=M('xiaolianarticle');
-		//按添加时间倒序，且显示10条数据
-		$data=$xlart->limit(10)->order('xlaaddtime desc')->select();
-		//将$data数据赋值给自定义的data
-		$this->assign("data",$data);
-		//通过display()来找到view文件夹中Moments中index.html
-        $this->display();
+		if(!session('?openid'))
+	 	{
+	 		$this->writesession();
+			$xlart=M('xiaolianarticle');
+			$data=$xlart->limit(20)->order('xlaaddtime desc')->select();
+			$this->assign("data",$data);
+
+			$this->display();
+		}
+		else{
+			$xlart=M('xiaolianarticle');
+			$data=$xlart->limit(20)->order('xlaaddtime desc')->select();
+			$this->assign("data",$data);
+
+			$this->display();
+		}
 	}
-    //显示用户所想看id对应的某条校脸圈动态详情
+
 	public function detail(){
-		/*id是通过前台页面view/moments/index中
-		<a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}">
-		传递过来的参数*/
 		$id=I('get.id');
 		if(!$id){
-			//调用redirect方法，重定向到moments/detail且id=1，跳转时间为0.2,提示信息为(没有了，返回第一篇文章)
 	 		$this->redirect('moments/detail', array('id' => "1"), 0.2, "<script>alert('没有了,返回第一篇文章')</script>");
 	 	}
-        /*xiaolianarticle里有
-        xlaid字段代表动态id，
-        xlaaddtime字段代表动态发表时间
-        xlaimage代表动态中的图片
-        xlatitle代表动态的标题
-        xlaauthor代表动态的作者
-        xlacontent代表动态的内容
-        xlaviews代表动态的浏览次数
-        xlalikes代表动态的点赞次数*/
+
 		$xlart=M('xiaolianarticle');
-		/*xiaolianarticlecomment数据表中有
-		xlacid字段代表动态评论id
-		xlacaddtime字段代表动态评论时间
-		xlacimage字段代表动态评论头像
-		xlaccomment字段代表动态评论内容
-		xlacnickname字段代表动态评论人昵称
-		xlaid字段代表动态id*/
 		$xlac=M('xiaolianarticlecomment');
 
 		$art=$xlart->where("xlaid=%d",$id)->find();
-		//dump($art);
 		$artc=$xlac->where("xlaid=%d",$id)->select();
-		//dump($artc);
-		$after=$xlart->where("xlaid",$id)->order('xlaid asc')->limit('1')->find();
+		$after=$xlart->where("xlaid>".$id)->order('xlaid asc')->limit('1')->find();
 		$nextid=$after['xlaid'];
-        
+
 		$this->assign("art",$art);
 		$this->assign("artc",$artc);
 		$this->assign("nextid",$nextid);
-        //通过display()来找到view文件夹中moments中的detail.html
+
         $this->display();
 	}
 	public function getart()
 	{
-		// 实例化上传类
-		$upload = new \Think\Upload();
-		// 设置附件上传大小
-        $upload->maxSize = 3145728 ;
-        // 设置附件上传类型
-        $upload->exts = array('jpg', 'gif', 'png', 'jpeg');
-        $upload->rootPath = $_SERVER['DOCUMENT_ROOT'].__ROOT__.'/Public/';
-        // 设置附件上传目录
-        $upload->savePath = 'sayimage/';
-        //$upload->savePath  = './Public/Uploads/';
+		$upload = new \Think\Upload();// 实例化上传类
+        $upload->maxSize   =     3145728 ;// 设置附件上传大小
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg','JPG','PNG','PNEG','JPEG');// 设置附件上传类型
+        $upload->rootPath =     $_SERVER['DOCUMENT_ROOT'].__ROOT__.'/Public/';
+        $upload->savePath = 'sayimage/';// 设置附件上传目录
+        //$upload->savePath  =      './Public/Uploads/';
         // 上传单个文件
         $info   =   $upload->upload();
 		$art=I('post.');
-		$data['xlacimage']=$info['img']['savepath'].$info['img']['savename'];
+		$data['xlaimageurl']=$info['img']['savepath'].$info['img']['savename'];
 		$data['xlatitle']=$art['title'];
 		$data['xlacontent']=$art['art'];
 		$data['xlaaddtime']=date("Y-m-d H:i:s",time());
-		//$data['xlaimage']=$session['img'];//从session中获取用户信息
-		//$data['xlaauthor']=$session['author'];
+		$data['xlaimage']=session('headimgurl');//从session中获取用户信息
+		$data['xlaauthor']=session('tlcnickname');
 		$yonghuart=M('xiaolianarticle');
 		$result=$yonghuart->add($data);
 		if($result){
@@ -107,11 +89,76 @@ class MomentsController extends Controller
 		$data['xlacaddtime']=date("Y-m-d H:i:s",time());
 		$data['xlaccomment']=$Pdata['suggestion'];
 		$data['xlaid']=$Pdata['hid'];
-		//$data['xlacnickname']=$session['xlacnickname']//从session中获取评论人姓名
-		//$data['xlacimage']=$session['xlacimage']//从session中获取评论人头像
+		$data['xlacnickname']=session('tlcnickname');//从session中获取评论人姓名
+		$data['xlacimage']=session('headimgurl');//从session中获取评论人头像
 		$result=$comment->add($data);
 		if($result){
 			$this->redirect('moments/detail', array('id' => $data['xlaid']), 1, '评论成功');
 		}
 	}
+
+
+	 private function writesession()
+	 {
+		 $code=I('code');
+        //dump($code);
+        /*2、通过code换取网页授权access_token,这里通过code换取的是一个特殊的网页授权
+        access_token,与基础支持中的access_token(该access_token用于调用其他接口)
+        不同。公众号可通过下述接口来获取网页授权access_token
+        如果网页授权的作用域为snsapi_base，则本步骤中获取到网页
+        授权access_token的同时，也获取到了openid，snsaqi_base式的网页授权流程即到此为止*/
+
+        /*以下的调用接口正确返回时的jsno数据包里有
+        access_token,expires_in,refresh_token,openid,scope*/
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxbc8229b317266198&secret=87ec313ac0a551cc2a1c4f5ab8008b28&code=$code&grant_type=authorization_code";
+        $curl = curl_init ($url);
+        curl_setopt ( $curl, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt ( $curl, CURLOPT_SSL_VERIFYPEER, FALSE );
+        curl_setopt ( $curl, CURLOPT_SSL_VERIFYHOST, false );
+        $result = curl_exec ($curl);
+        curl_close ($curl);
+        if(curl_errno()==0){
+            $result = json_decode($result);
+            // dump($result);
+            //3、拉取用户信息(需scope为snsapi_userinfo)
+            $access_token=$result->access_token;
+            $openid=$result->openid;
+            /*开发者通过获取到access_token和openid值作为以下接口的参数来拉取用户信息
+            正确返回的json数据包里的参数有openid(用户唯一标识)，nickname(用户昵称),
+            sex(用户性别，值为1是男生，值为2是女生),province（个人资料填写的省份）,
+            city（普通用户个人资料填写的城市）,country（国家）
+            headimgurl（用户头像）,privilege（用户特权）,
+            unionid（只有在用户将公众号绑定到微信开放平台账号后
+            才会出现该字段）*/
+            $url2="https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
+            $curl = curl_init ($url2);
+            curl_setopt ( $curl, CURLOPT_RETURNTRANSFER, 1 );
+            curl_setopt ( $curl, CURLOPT_SSL_VERIFYPEER, FALSE );
+            curl_setopt ( $curl, CURLOPT_SSL_VERIFYHOST, false );
+            $result2 = curl_exec ($curl);
+            //dump($result2);
+            if(curl_errno()==0){
+                $data=json_decode($result2);
+          
+                //dump(json_decode($result2));
+                //把用户信息分配到视图文件中
+			
+			 	$openid=$data->openid;
+			 	$nickname=$data->nickname;
+			 	$headimgurl=$data->headimgurl;
+			 	$sex=$data->sex;
+
+			 	session("tlcnickname",$nickname);
+			 	session("openid",$openid);
+			 	session("headimgurl",$headimgurl);
+			 	session("sex",$sex); 
+
+			 	return 1;              
+            }else{
+                dump(curl_errno($curl));
+            }
+        }else {
+            dump(curl_errno($curl));
+        }
+	 }
 }
