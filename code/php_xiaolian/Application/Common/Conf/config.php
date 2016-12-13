@@ -5,7 +5,7 @@ return array(
     'DB_HOST'                => 'localhost', // 服务器地址
     'DB_NAME'                => 'php_xiaolian', // 数据库名
     'DB_USER'                => 'root', // 用户名
-    'DB_PWD'                 => '', // 密码
+    'DB_PWD'                 => 'root', // 密码
     'DB_PORT'                => '3306', // 端口
     'DB_PREFIX'              => 'xl_', // 数据库表前缀
     
@@ -28,4 +28,6 @@ return array(
     'RBAC_NODE_TABLE'   =>  'think_node',
     'GUEST_AUTH_ON'     =>  false,   // 是否允许游客访问
     'GUEST_AUTH_ID'     =>  0,      // 游客的用户表id值
+
+    'URL_HTML_SUFFIX' => '',
 );
