@@ -14,6 +14,29 @@ use Think\Controller;
 
 class MyController extends Controller
 {
+    //如果用户想要使用下面的高级功能，是需要注册的，可以先判断当前用户是否注册然后
+    public function _initialize(){
+        //判断当前用户是否已经把id写入到session中，如果已经写入过，就不再执行写入id的步骤
+        if (!session('?id')) {
+            //session("openid", 'offLcwdWSmYAcieoTwtw4A7kEDkU');
+            //判断当前用户是否是从微信客户端登录的
+            if (!session('?openid')) {
+                $this->error('请在微信客户端登录此网页来使用本功能！', U('home/news/index'));
+            }
+            $openid = session('openid');
+            $user = M('user');
+            //查询当前用户的id
+            $conditon['openid'] = $openid;
+            $userinfo = $user->where($conditon)->find();
+            //检测当前用户是否登录
+            if (!$userinfo) {
+                $this->redirect(U('home/index/notLoginTips'));
+            }
+            //把id写入到session中
+            session('id',$userinfo['id']);
+            session('uniid',$userinfo['uniid']);
+        }
+    }
     //捞一捞
     public function getOneMessage(){
         /*  思路：为了保证不会两次取到同一个瓶子，会每次把取到的信息的id放入到session里面保存
@@ -29,7 +52,8 @@ class MyController extends Controller
             session(array('name'=>'oldmid','expire'=>7200));
             session('oldmid',$oldmid);
         }
-        $tuniid = 1;      //此id从session中获取，判断当前用户所在的大学
+        //获取用户的大学的id
+        $tuniid = session('uniid');   //此id从session中获取，判断当前用户所在的大学
         $oldmid=session('oldmid');
         $match = M('match');
         // 构造查询条件
@@ -61,7 +85,7 @@ class MyController extends Controller
     }
     public function index(){
         //从session中获取的的当前登录人的id
-        $id = 1;
+        $id = session('id');
         $match = D('Match');
         $tempresult = D('Tempresult');
         //构造myreuqest的查询条件
