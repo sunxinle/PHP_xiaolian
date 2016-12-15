@@ -36,7 +36,7 @@
     </div>
       <!--头条开始-->
    <div class="weui_panel weui_panel_access">
-  
+  <div class="weui_panel_hd">热门头条</div>
   <div class="weui_panel_bd">
 
   <?php if(is_array($topline)): $i = 0; $__LIST__ = $topline;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('news/detail',array('id'=>$vo['tlid']));?>">
