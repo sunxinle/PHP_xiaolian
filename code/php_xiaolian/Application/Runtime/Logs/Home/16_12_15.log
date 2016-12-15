@@ -1,0 +1,810 @@
+[ 2016-12-15T08:38:42+08:00 ] 127.0.0.1 /home/my/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015002s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015623s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.124077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.124201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006936s ]
+
+[ 2016-12-15T08:38:51+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-12-15T08:38:57+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-12-15T08:39:04+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-12-15T08:39:18+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-12-15T08:39:57+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.3142s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0175s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005532s ]
+
+[ 2016-12-15T08:40:05+08:00 ] 127.0.0.1 /index.php/home/my/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004588s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+
+[ 2016-12-15T08:40:08+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2016-12-15T08:42:24+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0187s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2016-12-15T08:42:32+08:00 ] 127.0.0.1 /index.php/Home/news/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `xl_toplinecomment` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `xl_toplinecomment` WHERE ( tlid=1 ) ORDER BY tlcaddtime desc  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid=1 ) LIMIT 1   [ RunTime:0.0145s ]
+SQL: SELECT * FROM `xl_topline` WHERE ( tlid>1 ) ORDER BY tlid asc LIMIT 1   [ RunTime:0.0149s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2016-12-15T08:42:41+08:00 ] 127.0.0.1 /index.php/Home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008092s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001031s ]
+
+[ 2016-12-15T08:42:45+08:00 ] 127.0.0.1 /index.php/home/my/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+
+[ 2016-12-15T08:42:53+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008443s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-12-15T08:44:59+08:00 ] 127.0.0.1 /index.php/home/news/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 104 行.
+NOTIC: [8] Undefined property: stdClass::$access_token D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 108 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 109 行.
+NOTIC: [2] curl_errno() expects exactly 1 parameter, 0 given D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 124 行.
+NOTIC: [8] Undefined property: stdClass::$openid D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 130 行.
+NOTIC: [8] Undefined property: stdClass::$nickname D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 131 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 132 行.
+NOTIC: [8] Undefined property: stdClass::$sex D:\wamp64\www\github\code\php_xiaolian\Application\Home\Controller\NewsController.class.php 第 133 行.
+SQL: SHOW COLUMNS FROM `xl_topline` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `xl_topline`  [ RunTime:0.0146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007590s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001247s ]
+
+[ 2016-12-15T08:45:04+08:00 ] 127.0.0.1 /index.php/home/my/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `xl_user` [ RunTime:0.0222s ]
+SQL: SELECT * FROM `xl_user` WHERE `openid` = 'offLcwdWSmYAcieoTwtw4A7kEDkU' LIMIT 1   [ RunTime:0.0213s ]
+SQL: SHOW COLUMNS FROM `xl_match` [ RunTime:0.0193s ]
+SQL: SHOW COLUMNS FROM `xl_tempresult` [ RunTime:0.0215s ]
+SQL: SELECT * FROM `xl_match` WHERE `fid` = 17 AND `tag` = 0  [ RunTime:0.0221s ]
+SQL: SELECT * FROM `xl_tempresult` WHERE ( id=17 )  [ RunTime:0.0218s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000510s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000567s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2016-12-15T08:51:59+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000628s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000753s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2016-12-15T08:52:31+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000509s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000565s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2016-12-15T08:52:39+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000539s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000600s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000828s ]
+
+[ 2016-12-15T09:06:36+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000644s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000756s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000930s ]
+
+[ 2016-12-15T10:13:29+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013407s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000609s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000675s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016745s ]
+
+[ 2016-12-15T10:13:46+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000524s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000585s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2016-12-15T13:54:48+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012406s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015222s ]
+
+[ 2016-12-15T13:59:28+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013181s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000769s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000845s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016357s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016453s ]
+
+[ 2016-12-15T14:05:34+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000647s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000720s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2016-12-15T14:05:35+08:00 ] 127.0.0.1 /index.php/home/my/img/recycle.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+
+[ 2016-12-15T14:18:49+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000646s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000721s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-12-15T14:18:49+08:00 ] 127.0.0.1 /index.php/home/my/img/recycle.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-12-15T14:23:12+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012998s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000808s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000890s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.019530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.019596s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016708s ]
+
+[ 2016-12-15T14:23:13+08:00 ] 127.0.0.1 /index.php/home/my/img/recycle.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+
+[ 2016-12-15T14:26:49+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000674s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000777s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001086s ]
+
+[ 2016-12-15T14:26:49+08:00 ] 127.0.0.1 /index.php/home/my/img/recycle.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+
+[ 2016-12-15T14:29:25+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000644s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000725s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2016-12-15T14:29:26+08:00 ] 127.0.0.1 /index.php/home/my/img/recycle.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2016-12-15T14:44:46+08:00 ] 127.0.0.1 /index.php/home/my/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000649s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000720s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020185s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001268s ]
+
+[ 2016-12-15T14:44:47+08:00 ] 127.0.0.1 /index.php/home/my/img/recycle.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+
+[ 2016-12-15T14:47:25+08:00 ] 127.0.0.1 /index.php/home/my/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `xl_match` [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `xl_tempresult` [ RunTime:0.0145s ]
+SQL: SELECT * FROM `xl_match` WHERE `fid` = 17 AND `tag` = 0  [ RunTime:0.0161s ]
+SQL: SELECT * FROM `xl_tempresult` WHERE ( id=17 )  [ RunTime:0.0174s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-12-15T14:47:37+08:00 ] 127.0.0.1 /index.php/home/moments/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` ORDER BY xlaaddtime desc LIMIT 20   [ RunTime:0.0166s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000349s ]
+
+[ 2016-12-15T14:47:40+08:00 ] 127.0.0.1 /index.php/home/moments/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0181s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` ORDER BY xlaaddtime desc LIMIT 20   [ RunTime:0.0189s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-12-15T14:47:44+08:00 ] 127.0.0.1 /index.php/home/moments/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` ORDER BY xlaaddtime desc LIMIT 20   [ RunTime:0.0163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000999s ]
+
+[ 2016-12-15T14:47:52+08:00 ] 127.0.0.1 /index.php/Home/moments/detail/id/34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0179s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticlecomment` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` WHERE ( xlaid=34 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT * FROM `xl_xiaolianarticlecomment` WHERE ( xlaid=34 )  [ RunTime:0.0175s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` WHERE ( xlaid>34 ) ORDER BY xlaid asc LIMIT 1   [ RunTime:0.2349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001068s ]
+
+[ 2016-12-15T14:48:00+08:00 ] 127.0.0.1 /index.php/Home/moments/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` ORDER BY xlaaddtime desc LIMIT 20   [ RunTime:0.6684s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+
+[ 2016-12-15T14:48:02+08:00 ] 127.0.0.1 /index.php/Home/moments/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `xl_xiaolianarticle` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `xl_xiaolianarticle` ORDER BY xlaaddtime desc LIMIT 20   [ RunTime:0.0163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010740s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001002s ]
+

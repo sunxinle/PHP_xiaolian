@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-  <title>个人中心</title>
+  <title>我的</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -54,88 +54,42 @@
             <a class="weui_navbar_item">
               接收的请求
             </a>
-            <a class="weui_navbar_item">
-              聊天列表
-            </a>
+
           </div>
         <div class="weui_tab_bd">
         <!--第一个选项卡-->
           <div class="content">
             <div class="weui_cells weui_cells_access">
-              <a class="weui_cell" href="<?php echo U('home/my/request');?>">
-                <div class="weui_cell_hd">
-                  <img src="/Public/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                  <p style="font-size:16px; height: 30px;">白照运 河北师范大学</p>
-                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北科技大学</p>
-                </div>
-                <span class="weui_cell_ft"></span>
-              </a>
-              <a class="weui_cell" href="content.html">
-                <div class="weui_cell_hd">
-                  <img src="/Public/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                  <p style="font-size:16px; height: 30px;">白照运 河北师范大学</p>
-                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北医科大学</p>
-                </div>
-                <span class="weui_cell_ft"></span>
-              </a>
+              <?php if(is_array($myrequest)): $i = 0; $__LIST__ = $myrequest;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$myreq): $mod = ($i % 2 );++$i;?><a class="weui_cell" href="<?php echo U('home/my/request/',array('id'=>$myreq['mid']));?>">
+                  <div class="weui_cell_hd">
+                    <!--防止微信公众平台防盗链的方法 http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl= -->
+                    <img src="<?php echo ($myreq["headimgurl"]); ?>" class="headimg" alt="" style="margin-top:-30px;">
+                  </div>
+                  <div class="weui_cell_bd weui_cell_primary">
+                    <p style="font-size:16px; height: 30px;">&nbsp;<?php echo ($myreq["nickname"]); ?> <?php echo ($myreq["from_uni"]["uniname"]); ?></p>
+                    <p style="text-indent:1em;font-size:16px;font-weight:bold;">去<?php echo ($myreq["to_uni"]["uniname"]); ?></p>
+                  </div>
+                  <span class="weui_cell_ft"></span>
+                </a><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
           </div>
           <!--第二个选项卡-->
           <div class="content" style="display:none">
             <div class="weui_cells weui_cells_access">
-              <a class="weui_cell" href="<?php echo U('home/my/receive');?>">
-                <div class="weui_cell_hd">
-                  <img src="/Public/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                  <p style="font-size:16px; height: 30px;">孙新乐 河北科技大学</p>
-                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北师范大学</p>
-                </div>
+              <?php if(is_array($myreceive)): $i = 0; $__LIST__ = $myreceive;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$myrec): $mod = ($i % 2 );++$i;?><a class="weui_cell" href="<?php echo U('home/my/receive');?>">
+                  <div class="weui_cell_hd">
+                    <img src="<?php echo ($myrec["headimgurl"]); ?>" class="headimg" alt="" style="margin-top:-30px;">
+                  </div>
+                  <div class="weui_cell_bd weui_cell_primary">
+                    <p style="font-size:16px; height: 30px;"><?php echo ($myrec["nickname"]); ?> <?php echo ($myrec["from_uni"]["uniname"]); ?></p>
+                    <p style="text-indent:1em;font-size:16px;font-weight:bold;">去<?php echo ($myrec["to_uni"]["uniname"]); ?></p>
+                  </div>
 
-                <a href="contents.html" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-left:50px;">我带你吧</a>
-                
-                <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn" style="margin-left:50px; width: 77px;">忽略</a>
-              </a>
-              <a class="weui_cell" href="javascript:;">
-                <div class="weui_cell_hd">
-                  <img src="/Public/images/timg.jpg" class="headimg" alt="" style="margin-top:-30px;">
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                  <p style="font-size:16px; height: 30px;">王霖 河北医科大学</p>
-                  <p style="text-indent:1em;font-size:16px;font-weight:bold;">去河北医科大学</p>
-                </div>
-                <a href="contents.html" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-left:50px;">我带你吧</a>
-
-                <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn" style="margin-left:50px; width: 77px;">忽略</a>
-              </a>
+                  <a href="contents.html" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-left:50px;">查看详情</a>
+                </a><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
           </div>
-          <!--第三个选项卡-->
-          <div class="content" style="display:none">
-            <a class="weui_cell" href="chat.html">
-                <div class="weui_cell_bd weui_cell_primary">
-                  <p>萌果官方客服</p>
-                </div>
-                <div class="weui_cell_ft"><h5>2016年11月01日永久连接</h5></div>
-              </a>
-              <a class="weui_cell" href="chat.html">
-                <div class="weui_cell_bd weui_cell_primary">
-                  <p>孙新乐</p>
-                </div>
-                <div class="weui_cell_ft"><h5>2016年11月11日创建连接</h5></div>
-              </a>
-              <a class="weui_cell" href="chat.html">
-                <div class="weui_cell_bd weui_cell_primary">
-                  <p>王霖</p>
-                </div>
-                <div class="weui_cell_ft"><h5>2016年11月12日创建连接</h5></div>
-              </a>
-   
-          </div>
+
         </div>
       </div>
       <!--导航栏结束-->
@@ -166,7 +120,7 @@
                 我要去
               </p>
             </a>
-            <a href="<?php echo U('home/my/request');?>" class="weui_grid js_grid" data-id="msg">
+            <a href="<?php echo U('home/my/index');?>" class="weui_grid js_grid" data-id="msg">
               <div class="weui_grid_icon">
                 <img src="/Public/images/hasgone.png" alt="">
               </div>
@@ -174,7 +128,7 @@
                 我去过
               </p>
             </a>
-            <a href="<?php echo U('home/my/receive');?>" class="weui_grid js_grid" data-id="msg">
+            <a href="<?php echo U('home/my/index');?>" class="weui_grid js_grid" data-id="msg">
               <div class="weui_grid_icon">
                 <img src="/Public/images/match.png" alt="">
               </div>
@@ -191,19 +145,19 @@
 
   <!--weui_tab_bd界面结束-->
 
-  <!--导航栏开始-->
+<!--导航栏开始-->
   <div class="weui_tabbar">
-    <a href="<?php echo U('home/news/index');?>" class="weui_tabbar_item">
+    <a href="<?php echo U('home/news/index');?>" class="weui_tabbar_item weui_bar_item_on">
       <div class="weui_tabbar_icon">
         <img src="/Public/images/toutiao.png" alt="">
       </div>
-      <p class="weui_tabbar_label">头条</p>
+      <p class="weui_tabbar_label" style="color:grey">头条</p>
     </a>
-    <a href="<?php echo U('home/university/index');?>" class="weui_tabbar_item weui_bar_item_on">
+    <a href="<?php echo U('home/university/index');?>" class="weui_tabbar_item">
       <div class="weui_tabbar_icon">
         <img src="/Public/images/daxue.png" alt="">
       </div>
-      <p class="weui_tabbar_label" style="color:grey;">大学</p>
+      <p class="weui_tabbar_label">大学</p>
     </a>
     <a href="<?php echo U('home/moments/index');?>" class="weui_tabbar_item">
       <div class="weui_tabbar_icon">

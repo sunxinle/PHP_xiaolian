@@ -18,7 +18,7 @@ class MyController extends Controller
     public function _initialize(){
         //判断当前用户是否已经把id写入到session中，如果已经写入过，就不再执行写入id的步骤
         if (!session('?id')) {
-            //session("openid", 'offLcwdWSmYAcieoTwtw4A7kEDkU');
+            session("openid", 'offLcwdWSmYAcieoTwtw4A7kEDkU');
             //判断当前用户是否是从微信客户端登录的
             if (!session('?openid')) {
                 $this->error('请在微信客户端登录此网页来使用本功能！', U('home/news/index'));
