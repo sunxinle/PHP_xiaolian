@@ -13,6 +13,12 @@
   <link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
   <link rel="stylesheet" href="__PUBLIC__/css/demos.css">
   <style type="text/css">
+    .tupian{
+      
+    }
+    .panelbd{
+      text-align: center;
+    }
     .the_plus{
       position: absolute;
       bottom: 80px;
@@ -47,47 +53,38 @@
 <!--weui_tab_bd界面开始-->
     <!--在这里写主体的代码-->
     <!--说说详情开始-->
-    <!--微信昵称，说说文字内容开始-->
+    <!--说说内容开始-->
     <div class="weui_panel weui_panel_access">
-  <div class="weui_panel_bd">
-    <div class="weui_media_box weui_media_text">
-      <div class="back">
-      <a href="{:U('moments/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
-    </div>
-      <h2 class="weui_media_title" style="font-size:24px;"
->{$art.xlatitle}</h2>
-      <ul class="weui_media_info">
-                <li class="weui_media_info_meta">{$art.xlaaddtime}</li>
-                <li class="weui_media_info_meta weui_media_info_meta_extra">{$art.xlaauthor}</li>
-              </ul><br1/>
-      <p style="font-size:17px;color:#999">{$art.xlacontent}</p>
-    </div>
-</div>
-    <!--微信昵称，.说说文字内容结束-->
-    <!--图片开始-->
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide"><img src="__PUBLIC__/{$art.xlaimageurl}" /></div>
-       
+    <div class="weui_panel_bd">
+      <div class="weui_media_box weui_media_text">
+        <div class="back">
+          <a href="{:U('moments/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
+        </div>
+          <h2 class="weui_media_title" style="font-size:24px;color:#29b6f6">{$art.xlaauthor}</h2>
+          <ul class="weui_media_info">
+            <li class="weui_media_info_meta" style="color:#363636">{$art.xlaaddtime}</li>
+          </ul>
+          <br/>
+          <p style="font-size:17px;color:#000">{$art.xlacontent}</p>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
     </div>
-<!--图片结束-->
-      <!--评论开始-->
-     <div class="weui_panel">
-  <div class="weui_panel_hd">评论列表</div>
+      <div class="weui_media_hd panelbd">
+        <img class="weui_media_appmsg_thumb tupian" src="__PUBLIC__/{$art.xlaimageurl}" alt="">
+      </div>
+      <div>
+  </div>  
+  <!--说说内容结束-->
+  <!--评论开始-->
+  <div class="weui_panel">
+  <div class="weui_panel_hd" style="color:#29b6f6">评论列表</div>
   <volist name="artc" id="va">
   <div class="weui_panel_bd">
     <div class="weui_media_box weui_media_text">
       <h4 class="weui_media_title">{$va.xlacnickname}</h4>
       <input type="hidden" value="{$va.xlaccomment}" class="suggestion"/>
-      <p style="color:#999">{$va.xlaccomment}</p>
+      <p style="color:#000">{$va.xlaccomment}</p>
       <ul class="weui_media_info">
-        <li class="weui_media_info_meta" class="show"></li>
-        <li class="weui_media_info_meta weui_media_info_meta_extra">{$va.xlacaddtime}</li>
+        <li class="weui_media_info_meta" style="color:#363636">{$va.xlacaddtime}</li>
       </ul>
     </div>
   </div>
