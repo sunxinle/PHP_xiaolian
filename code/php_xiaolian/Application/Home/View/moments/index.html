@@ -13,6 +13,31 @@
   <link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
   <link rel="stylesheet" href="__PUBLIC__/css/demos.css">
   <style type="text/css">
+    .zhengti{
+      width:100%;
+    }
+    .tupian{
+      float:left;
+      width:40%;
+    }
+    .wenzidiv{
+      float:right;
+      width:60%;
+    }
+    .shuoshuo{
+      background-color: #8B8989;
+      border-radius: 15px;
+      border:1px solid #000;
+      margin-top: 15px;
+    }
+    .panelbd{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .yuanjiao{
+      border-radius: 15px;
+      border:1px solid #000;
+    }
     .the_plus{
       position: absolute;
       bottom: 80px;
@@ -22,7 +47,7 @@
       color:#29b6f6;
       font-weight: bolder;
     }  
-  </style>
+</style>
 </head>
 
 <body ontouchstart>
@@ -33,44 +58,37 @@
     <!--在这里写主体的代码-->
     <!--说说开始-->
     <div class="weui_panel">
-        <div class="weui_panel_hd">校友圈</div>
-          <div class="weui_panel_bd">
-
-          <volist name="data" id="vo">
-            <div class="weui_media_box weui_media_text">
-              <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_title">{$vo.xlatitle}
-              </a>
-              <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}">
-                <p class="weui_media_desc">{$vo.xlacontent}
-                </p>
-              </a>
-              <p class="weui_media_desc">
-                <div class="weui_panel_bd">
-                  <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_box weui_media_appmsg">
-                    <div class="weui_media_hd">
-                      <img class="weui_media_appmsg_thumb" src="__PUBLIC__/{$vo.xlaimageurl}" alt="">
-                    </div>
-                  </a>
-                </div>
-              </p>
-              <ul class="weui_media_info">
-                <li class="weui_media_info_meta">{$vo.xlaauthor}</li>
-                <li class="weui_media_info_meta weui_media_info_meta_extra">{$vo.xlaaddtime}</li>
-              </ul>
+      <div class="weui_panel_hd" style="color:#29b6f6">校脸圈</div>
+      <!--注意要避免name值跟id值相同，即使id值任意-->
+        <volist name="data" id="vo">
+          <div class="weui_panel_bd panelbd">
+          <div class="weui_media_box weui_media_text shuoshuo">
+            <!--超链接href中意为将此条数据id值给detail方法便于进行进一步业务逻辑处理，而id值寻其源来自volist里的name值data,data又来自moments控制器里的index方法-->
+            <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_title">{$vo.xlaauthor}
+            </a>
+            <div class="weui_panel_bd zhengti">
+                <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_box weui_media_appmsg">
+                  <div class="weui_media_hd tupian" style="width:100px;height:100px">
+                    <img class="weui_media_appmsg_thumb yuanjiao" src="__PUBLIC__/{$vo.xlaimageurl}" alt="">
+                  </div>
+                  <div class="wenzidiv">
+                     <p class="weui_media_desc"
+                     style="color:#fff;font-size:16px">{$vo.xlacontent}
+                     </p>
+                  </div>
+                </a>
             </div>
-          </volist>
-         
-            </div>
-
-
-        
-          </div>
-        </div>
-        
-<!--说说结束-->
-
+            <ul class="weui_media_info">
+              <li class="weui_media_info_meta">{$vo.xlaaddtime}</li>
+            </ul>
+          </div> 
+          </div> 
+        </volist>
+    </div>
+    <!--说说结束-->
     <!--在这里写主体的代码结束-->
-    <!--加号的界面-->
+  </div>
+  <!--加号的界面-->
     <div class="the_plus">
       <a href="{:U('home/moments/add')}"><img src="__PUBLIC__/images/plus1.png" alt="发说说的加号"></a>
     </div>
