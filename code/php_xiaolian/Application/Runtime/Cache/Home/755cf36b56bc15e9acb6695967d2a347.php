@@ -1656,7 +1656,7 @@
                 <div class="accordion" id="accordionDiv">
 
                     <div class="accordion-group">
-                        <div class="accordion-heading" style="width:100%px;height:130px; ">
+                        <div class="accordion-heading" style="width:100%;height:130px; ">
                             <a id="accordion1" class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDiv"
                                href="#collapseOne" style="font-size:60px;padding-top:60px ;padding-left:300px; padding-right:200px;width:540px;height:75px; ">
                                 我的好友</a>
@@ -1701,7 +1701,7 @@
         <div id="addFridentModal" class="modal hide fade" role="dialog" aria-hidden="true" data-backdrop="static" style="margin-left: -35%; width: 70%; height: 30%; display: block;">
             <div class="modal-header" style="height:20%;">
                 <button type="button" class="close" data-dismiss="modal"
-                        aria-hidden="true" style="height:100%;width:13%;"><img src="img/recycle.png"
+                        aria-hidden="true" style="height:100%;width:13%;"><img src="/Public/chatimg/recycle.png"
                                                                                style="cursor:hand; width: 90px;height:90px;padding-top:15%;" title="返回" /></button>
                 <h3 style="text-align:center;font-size:80px;padding-top:7%;">添加好友</h3>
             </div>
@@ -1724,7 +1724,7 @@
              aria-hidden="true" data-backdrop="static" style="margin-left: -35%; width: 70%; height: 30%; display: block;">
             <div class="modal-header" style="height:20%;">
                 <button type="button" class="close" data-dismiss="modal"
-                        aria-hidden="true" style="height:100%;width:13%;"><img src="img/recycle.png"
+                        aria-hidden="true" style="height:100%;width:13%;"><img src="/Public/chatimg/recycle.png"
                                                                                style="cursor:hand; width: 90px;height:90px;padding-top:15%;" title="返回" /></button>
                 <h3 style="text-align:center;font-size:80px;padding-top:7%;">删除好友</h3>
             </div>
@@ -1744,7 +1744,7 @@
         <!-- 一般消息通知 -->
         <div id="notice-block-div" class="modal fade hide" style="margin-left: -35%; width: 70%; height: 30%; display: block;">
             <div class="modal-header" style="height:20%;">
-                <button type="button" class="close" data-dismiss="alert"style="height:100%;width:13%;"><img src="img/recycle.png"
+                <button type="button" class="close" data-dismiss="alert"style="height:100%;width:13%;"><img src="/Public/chatimg/recycle.png"
                                                                                                             style="cursor:hand; width: 90px;height:90px;padding-top:15%;" title="返回" /></button></div>
             <div class="modal-body">
                 <h4 style="text-align:center;font-size:80px;padding-top:7%;">Warning!</h4>
