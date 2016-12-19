@@ -177,7 +177,7 @@ a:hover {
 }
 
 .close_btn {
-	background: url('__PUBLIC__/chatimg/icon.png') no-repeat 0 0;
+	background: url('../img/icon.png') no-repeat 0 0;
 	position: absolute;
 	top: 10px;
 	right: 8px;
@@ -187,7 +187,7 @@ a:hover {
 }
 
 .chat02_title {
-	background: url('__PUBLIC__/chatimg/chat_title_bg.jpg') repeat-x 0 0;
+	background: url('../img/chat_title_bg.jpg') repeat-x 0 0;
 	height: 25px;
 	position: relative;
 }
@@ -201,7 +201,7 @@ a:hover {
 
 .chat02_bar ul {
 	height: 100%;
-	background: url('__PUBLIC__/chatimg/wlf_bg.png') no-repeat 10px 8px;
+	background: url('../img/wlf_bg.png') no-repeat 10px 8px;
 }
 
 .chat02_bar li {
@@ -209,7 +209,7 @@ a:hover {
 }
 
 .chat03_title_t {
-	background: url('__PUBLIC__/chatimg/icon.png') no-repeat 0px -370px;
+	background: url('../img/icon.png') no-repeat 0px -370px;
 	position: absolute;
 	padding-left: 25px;
 	top: 8px;
@@ -310,7 +310,7 @@ a:hover {
 }
 
 .chat02_title_btn {
-	background: url('__PUBLIC__/chatimg/icon.png') no-repeat 0 0;
+	background: url('../img/icon.png') no-repeat 0 0;
 	float: left;
 	display: block;
 	width: 80px;
@@ -332,7 +332,7 @@ a:hover {
 }
 
 .chat02_title_t {
-	background: url('__PUBLIC__/chatimg/icon.png') no-repeat 0px -48px;
+	background: url('../img/icon.png') no-repeat 0px -48px;
 	position: absolute;
 	padding-left: 170px;
 	top: 8px;
@@ -354,7 +354,7 @@ a:hover {
 }
 
 .wl_faces_box {
-	background: url('__PUBLIC__/chatimg/wlf_bg.png') repeat 0 0;
+	background: url('../img/wlf_bg.png') repeat 0 0;
 	position: absolute;
 	width: 428px;
 	height: 225px;
@@ -372,7 +372,7 @@ a:hover {
 }
 
 .wl_faces_content .title {
-	background: url('__PUBLIC__/chatimg/wlf_title_bg.jpg') repeat-x 0 0;
+	background: url('../img/wlf_title_bg.jpg') repeat-x 0 0;
 	height: 40px;
 	position: relative;
 }
@@ -387,7 +387,7 @@ a:hover {
 }
 
 .wl_faces_content .title ul li.title_name {
-	background: url('__PUBLIC__/chatimg/wlf_title_btn.jpg') no-repeat 0 0;
+	background: url('../img/wlf_title_btn.jpg') no-repeat 0 0;
 	width: 82px;
 	height: 30px;
 	bottom: 0;
@@ -405,7 +405,7 @@ a:hover {
 }
 
 .wl_faces_content .title ul li.wl_faces_close span {
-	background: url('__PUBLIC__/chatimg/icon.png') repeat-x 0 0;
+	background: url('../img/icon.png') repeat-x 0 0;
 	cursor: pointer;
 	display: block;
 	width: 15px;
@@ -441,7 +441,7 @@ a:hover {
 }
 
 .wlf_icon {
-	background: url('__PUBLIC__/chatimg/layer_arrow.png') no-repeat 0 0;
+	background: url('../img/layer_arrow.png') no-repeat 0 0;
 	position: absolute;
 	width: 22px;
 	height: 9px;
@@ -459,14 +459,14 @@ a:hover {
 }
 
 label.online {
-	background: url('__PUBLIC__/chatimg/status.gif') no-repeat 0 0;
-	_background: url('__PUBLIC__/chatimg/status.gif') no-repeat 0 5px;
+	background: url('../img/status.gif') no-repeat 0 0;
+	_background: url('../img/status.gif') no-repeat 0 5px;
 	bottom: 4px;
 	_bottom: 2px;
 }
 
 label.offline {
-	background: url('__PUBLIC__/chatimg/status.gif') no-repeat 0 -11px;
+	background: url('../img/status.gif') no-repeat 0 -11px;
 	bottom: 4px;
 	_top: 25px;
 	align: center
