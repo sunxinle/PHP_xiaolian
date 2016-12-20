@@ -5183,7 +5183,7 @@ input[type="submit"].btn.btn-mini {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: #29b6f6;
 }
 
 .modal-backdrop.fade {
@@ -5192,7 +5192,7 @@ input[type="submit"].btn.btn-mini {
 
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  opacity: 0.8;
+  opacity: 0.3;
   filter: alpha(opacity=80);
 }
 
@@ -5983,7 +5983,7 @@ a.badge:focus {
 
 .accordion-heading .accordion-toggle {
   display: block;
-  padding: 8px 15px;
+ /* padding: 8px 15px;*/
 }
 
 .accordion-toggle {
