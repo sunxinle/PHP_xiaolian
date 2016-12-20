@@ -14,9 +14,9 @@ use Think\Controller;
 class GameController extends Controller
 {
 	public function plane(){
-		this->display();
+		$this->display();
 	}
 	public function shuzi(){
-		this->display();
+		$this->display();
 	}
 }
