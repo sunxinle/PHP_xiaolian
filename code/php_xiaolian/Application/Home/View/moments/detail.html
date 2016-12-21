@@ -66,9 +66,7 @@
     <div class="weui_panel weui_panel_access">
     <div class="weui_panel_bd">
       <div class="weui_media_box weui_media_text">
-        <div class="back">
-          <a href="{:U('moments/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
-        </div>
+        
           <h2 class="weui_media_title" style="font-size:24px;color:#29b6f6">{$art.xlaauthor}</h2>
           <ul class="weui_media_info">
             <li class="weui_media_info_meta" style="color:#363636">{$art.xlaaddtime}</li>
@@ -107,15 +105,19 @@
 <!--评论结束-->
 <!--说说详情结束-->
 </div>
-<!--下一篇+评论开始-->
+
+<!--在这里写主体的代码结束-->
+</div>
+  <!--weui_tab_bd界面结束-->
+  <!--下一篇+评论开始-->
     <div class="weui-row weui-no-gutter xiayipian">
           <div class="weui-col-50"><a href="{:U('moments/detail',array('id'=>$nextid))}" class="weui_btn close-popup weui_btn_plain_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
           <div class="weui-col-50"><a href="{:U('moments/comment',array('id'=>$art['xlaid']))}" class="weui_btn close-popup weui_btn_plain_primary">评&nbsp;&nbsp;论</a></div>
       </div>
 <!--下一篇+评论结束-->
-<!--在这里写主体的代码结束-->
-</div>
-  <!--weui_tab_bd界面结束-->
+  <div class="back">
+          <a href="{:U('moments/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
+        </div>
 <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
 <script src="__PUBLIC__/lib/fastclick.js"></script>
 <script>
