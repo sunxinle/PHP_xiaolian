@@ -88,17 +88,19 @@
   	<div class="weui_cells weui_cells_access">
   		<div class="weui_panel_hd" style="color:#29b6f6">评论列表</div>
   			<volist name="artc" id="va">
-  				<div class="weui_panel_bd">
-    				<div class="weui_media_box weui_media_text">
-    				 <p class="flor"> {$i}楼</p>
-      					<h4 class="weui_media_title">{$va.xlacnickname}</h4>
-      					<input type="hidden" value="{$va.xlaccomment}" class="suggestion"/>
-      					<p style="color:#000">{$va.xlaccomment}</p>
-      					<ul class="weui_media_info">
-        					<li class="weui_media_info_meta" style="color:#363636">{$va.xlacaddtime}</li>
-     					</ul>
-    				</div>
-  				</div>
+  				
+  					<div class="weui_panel_bd">
+    					<div class="weui_media_box weui_media_text">
+    				 		<p class="flor"> {$i}楼</p>
+      						<h4 class="weui_media_title">{$va.xlacnickname}</h4>
+      						<input type="hidden" value="{$va.xlaccomment}" class="suggestion"/>
+      						<p style="color:#000">{$va.xlaccomment}</p>
+      						<ul class="weui_media_info">
+        						<li class="weui_media_info_meta" style="color:#363636">{$va.xlacaddtime}</li>
+     						</ul>
+    					</div>
+  					</div>
+  				
 			</volist>
 		</div>
 	</div>
