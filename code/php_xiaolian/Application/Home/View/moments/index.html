@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="__PUBLIC__/css/demos.css">
   <style type="text/css">
     .breathe-btn{ 
-    	position:relative; width:340px; height:5px; margin:3px auto; line-height:40px; border:1px solid #2b92d4; border-radius:5px; color:#fff; font-size:20px; text-align:center; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.3); overflow:hidden; 
+    	position:relative; width:auto; height:5px; margin:3px auto; line-height:40px; border:1px solid #2b92d4; color:#fff; font-size:20px; text-align:center; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.3); 
 		background-image: -webkit-gradient(linear, left top, left bottom, from(#6cc3fe), to(#21a1d0));
 		background-image: -moz-linear-gradient(#6cc3fe,#21a1d0);
        -webkit-animation-timing-function: ease-in-out;
@@ -33,46 +33,85 @@
     100% { opacity: 1; border:1px solid rgba(59,235,235,1); box-shadow:0 1px 30px rgba(59,255,255,1);}
     }
     .zhengti{
-      width:100%;
+      width:83%;
+      border:0px;
     }
-    .tupian{
+    .tupiandiv{
       float:left;
-      width:40%;
-      height:100%;
     }
     .wenzidiv{
       float:right;
       width:60%;
     }
-    .tupian img{
-      width:auto;
-      height:auto;
-      max-width: 100%;
-      max-height: 100%;
+    .zhengtia{
+      margin-left: 15px;
+      padding-left:0px;
+      padding-top: 15px;
+      padding-right: 0px;
+      padding-bottom: 15px;
+    }
+    .viewdiv{
+      background-color: #e3e3e3;
+      border-radius: 5px;
+      position:absolute;
+      right:4%;
+      top:1%;
+      width:52px;
+      height:63px;
+      overflow:hidden;
+    }
+    .viewtupiandiv{
+      padding-left: 2px;
+      padding-right: 2px;
+      max-width:100%;
+      width:52px;
+      height: 42px;
+    }
+    #viewwenzidiv{
+      width:52px;
+    }
+    .likediv{
+      background-color: #e3e3e3;
+      border-radius: 40px;
+      position:absolute;
+      right:3%;
+      bottom:3%;
+      width:60px;
+      height:60px;
+      overflow:hidden;
+    }
+    #likewenzidiv{
+      width:60px;
+    }
+    .liketupiandiv{
+      margin-left: 14px;
+      margin-right: 14px;
+      width:60px;
+      height:35px;
     }
     .shuoshuo{
-      background-color: #8B8989;
+      background: rgb(210,210,210);
+     position: relative;
+     box-shadow: 0px 5px 6px rgb(160,160,160);
+    background:-webkit-linear-gradient(60deg,rgba(250,250,250,1) 25%,rgba(210,210,210,1));
       border-radius: 15px;
-      border:3px solid rgba(0,0,0,0.85);
       margin-top: 15px;
     }
     .panelbd{
       margin-left: 5px;
       margin-right: 5px;
     }
-    .yuanjiao{
+    .tupian{
       border-radius: 15px;
       border:1px solid rgba(0,0,0,0.85);
+      min-height: 100%;
+      min-width: 100%;
     }
     .the_plus{
       position: absolute;
       bottom: 80px;
       left: 80%;
     }
-    .weui_media_title{
-      color:#29b6f6;
-      font-weight: bolder;
-    }  
 </style>
 </head>
 
@@ -85,35 +124,66 @@
     <div class="weui-pull-to-refresh-layer">
       <div class='pull-to-refresh-arrow'></div>
       <div class='pull-to-refresh-preloader'></div>
-      <div class="down">下拉刷新</div>
+      <div class="down">校脸圈</div>
       <div class="up">释放刷新</div>
       <div class="refresh">上次刷新时间: <span id="time">未知</span></div>
     </div>
     <!--说说开始-->
+    <div class="breathe-btn"></div>
     <div class="weui_panel">
-      <!--<div class="weui_panel_hd" style="color:#29b6f6">校脸圈</div>-->
-      <div class="breathe-btn"></div>
       <!--注意要避免name值跟id值相同，即使id值任意-->
         <volist name="data" id="vo">
+
           <div class="weui_panel_bd panelbd">
           <div class="weui_media_box weui_media_text shuoshuo">
+            <!--浏览次数-->
+            <div class="viewdiv" value="{$vo.xlaviews}">
+              <div class="viewtupiandiv">
+                <img src="__PUBLIC__/images/Joinin.png">
+                <input type="hidden" name="hi" class="xlaid" value="{$vo.xlaid}" id="xlaid">
+              </div>
+              <div id="viewwenzidiv">
+                <p style="text-align:center;color:#696969">{$vo.xlaviews}</p>
+              </div>
+            </div>
+            <!--浏览结束-->
+            <!--点赞次数-->
+            <div class="likediv">
+              
+               <eq name="vo.tag" value="1">   
+                  <div class="liketupiandiv">
+                    <img src="__PUBLIC__/images/rheart.png">
+                  </div>
+              <else /> 
+                  
+                    <div class="liketupiandiv">
+                    <img src="__PUBLIC__/images/wheart.png">
+                    </div>
+              </eq>
+
+              <div id="likewenzidiv">
+                <p style="text-align:center;color:#696969">{$vo.xlaviews}</p>
+              </div>
+            </div>
+
+            <!--点赞结束-->
             <!--超链接href中意为将此条数据id值给detail方法便于进行进一步业务逻辑处理，而id值寻其源来自volist里的name值data,data又来自moments控制器里的index方法-->
-            <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_title" style="color:#fff">{$vo.xlaauthor}
+            <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" onclick="viewNumber()" class="weui_media_title author" style="color:#29b6f6">{$vo.xlaauthor}
             </a>
             <div class="weui_panel_bd zhengti">
-                <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_box weui_media_appmsg">
-                  <div class="weui_media_hd tupian" style="width:100px;height:100px">
-                    <img class="weui_media_appmsg_thumb yuanjiao" src="__PUBLIC__/{$vo.xlaimageurl}" alt="">
+                <a href="{:U('moments/detail',array('id'=>$vo['xlaid']))}" class="weui_media_box weui_media_appmsg zhengtia" onclick="viewNumber()">
+                  <div class="weui_media_hd tupiandiv" style="width:100px;height:100px;text-align:center">
+                    <img class="tupian weui_media_appmsg_thumb" src="__PUBLIC__/{$vo.xlaimageurl}" alt="">
                   </div>
                   <div class="wenzidiv">
                      <p class="weui_media_desc"
-                     style="color:#fff;font-size:18px">{$vo.xlacontent}
+                      style="color:#000;font-size:16px;font-family:Arial;-webkit-line-clamp: 4;text-align:left">{$vo.xlacontent}
                      </p>
                   </div>
                 </a>
             </div>
             <ul class="weui_media_info">
-              <li class="weui_media_info_meta" style="color:#fff">{$vo.xlaaddtime}</li>
+              <li class="weui_media_info_meta" style="color:#696969">{$vo.xlaaddtime}</li>
             </ul>
           </div> 
           </div> 
@@ -124,7 +194,7 @@
   </div>
   <!--加号的界面-->
     <div class="the_plus">
-      <a href="{:U('home/moments/add')}"><img src="__PUBLIC__/images/plus1.png" alt="发说说的加号"></a>
+      <a href="{:U('home/moments/add')}"><img src="__PUBLIC__/images/shuoshuo.png" alt="发说说的加号"></a>
     </div>
     <!--加号界面的结束-->
   </div>
@@ -186,6 +256,41 @@
           $(".weui_tab_bd").pullToRefreshDone();
         }, 2000);
       });
+
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      var a=document.getElementsByClassName('liketupiandiv');
+      for (var i = a.length - 1; i >= 0; i--) {
+        a[i].i=i;
+        a[i].onclick=function () {
+          var url="{:U('home/moments/getclick','','')}";
+          var j=this.i;
+          var author=document.getElementsByClassName('author')[j].innerHTML;
+          var xlaid=document.getElementsByClassName('xlaid')[j].value;
+
+          var ccc= $(this).children('img');
+
+          $.post(url,{author:author,xlaid:xlaid},function(data){
+            if(data.status)
+            {
+      
+              ccc.attr('src',"__PUBLIC__/images/rheart.png");
+              //document.getElementById('sayclick').innerHTML="已点";
+              //var str="name";
+              // a[j].firstChild.setAttribute("src","__PUBLIC__/images/rheart.png");
+             // $(this).children('img').attr('src',"__PUBLIC__/images/rheart.png");
+            }else{
+              ccc.attr('src',"__PUBLIC__/images/wheart.png");
+            }
+          })
+          // alert(this.i);
+          //$(this).children('img').attr('src',"__PUBLIC__/images/rheart.png");
+        };
+  };
+  })
+
 </script>
 </body>
 </html>

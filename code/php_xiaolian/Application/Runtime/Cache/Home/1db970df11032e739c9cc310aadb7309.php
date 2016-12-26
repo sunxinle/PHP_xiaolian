@@ -1,14 +1,15 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta name="description" content="河北师范大学软件学院微官网">
-	<link rel="stylesheet" href="/Public/lib/weui.min.css">
-	<link rel="stylesheet" href="/Public/css/jquery-weui.css">
-	<link rel="stylesheet" href="/Public/css/demos.css">
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  <link rel="stylesheet" href="/Public/lib/weui.min.css">
+  <link rel="stylesheet" href="/Public/css/jquery-weui.css">
+  <link rel="stylesheet" href="/Public/css/demos.css">
 </head>
  <style type="text/css">
      .weui_tabbar{
@@ -39,13 +40,13 @@
       left: 5%;
     }
   </style>
-<body ontouchstart>
+<body ontouchstart><!--/home/moments/getcomment-->
     <form action="/home/moments/getcomment" method="post">
     <div class="weui_cells weui_cells_form">
-      <div id="show">  </div>
+     <!-- <div id="show">  </div>-->
       <div class="weui_cell">
         <div class="weui_cell_bd weui_cell_primary">
-          <textarea class="weui_textarea" placeholder="略微小评一下" rows="3" id="suggestion" name="suggestion"></textarea>
+          <textarea class="weui_textarea"  rows="3" id="suggestion" name="suggestion" placeholder="输入评论哦" ></textarea>
           <div class="weui_textarea_counter"><span class="OK">0</span>/200</div>
           <input type="hidden" name="hid" value="<?php echo ($id); ?>" id="hid"> 
         </div>
@@ -56,7 +57,7 @@
     <div class="weui_cells weui_cells_form">
        <div class="weui_cells_tips"><img src="/Public/images/happy_face.png" width="8%" height="8%" style="margin-left:6%" class="emotion"></div>
       <div class="weui_btn_area">
-        <input type="submit" class="weui_btn weui_btn_primary sub_btn" value="提交"/>
+       <input type="submit" class="weui_btn weui_btn_primary toptip " vaule="确认">
       </div>
     </div>
 
@@ -66,10 +67,19 @@
     <!--说说结束-->
 <script src="/Public/lib/jquery-2.1.4.js"></script>
 <script src="/Public/lib/fastclick.js"></script>
+<script src="/Public/js/jquery-weui.js"></script>
 <script>
-	$(function() {
-		FastClick.attach(document.body);
-	});
+  $(function() {
+    FastClick.attach(document.body);
+  });
+  $(".toptip").click(function() {
+      var sug = $('.weui_textarea').val();
+      if(!sug) {
+          alert('亲你还没有评论');
+          return false;
+      }
+      else $.toptip('评论成功啦', 'success');
+  })
     $(".weui_textarea").keyup(function() {
         var len = $(".weui_textarea").val().length;
         var MAX_LENGTH=200;
@@ -78,32 +88,25 @@
             $.toast('字数已经够多啦','text');
         }
         $(".OK").text(len);
-    });
-    $(function(){
-        $('.emotion').qqFace({
-            assign:'suggestion',
-            path:'/Public/arclist/' //表情存放的路径
-        });
-    });
+    })
+
 </script>
 <script src="/Public/js/jquery-weui.js"></script>
-    <script>
-      $("#showTooltips").click(function() {
-        var sug = $('#suggestion').val();
-        if(!sug) $.toptip('还没有填写评论啊');
-        else $.toptip('评论成功啦', 'success');
+    <script type="text/javascript" >
+
+      $(function(){
+          $('.emotion').qqFace({
+              assign:'suggestion',
+              path:'/Public/arclist/' //表情存放的路径
+          });
       });
       $(function(){
-  $('.emotion').qqFace({
-    id : 'facebox', 
-    assign:'suggestion', 
-    path:'arclist/' //表情存放的路径
-  });
   $(".sub_btn").click(function(){
     var str = $("#suggestion").val();
     $("#show").html(replace_em(str));
   });
 });
+
 //查看结果
 function replace_em(str){
   str = str.replace(/\</g,'&lt;');

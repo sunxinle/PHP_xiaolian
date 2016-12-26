@@ -13,12 +13,26 @@ use Common\Controller\BaseController;
 class UniversityController extends BaseController
 {
     public function view(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         $university = M('university');
         $result = $university->select();
         $this->assign('result',$result);
         $this->display();
     }
     public function update(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         if (I('submit')){
             $id = I('id');
             $data = array();
@@ -40,6 +54,13 @@ class UniversityController extends BaseController
 
     }
     public function show(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         $id = I('id');
         $university = M('university');
         $result = $university->where("uniid=$id")->find();
@@ -47,6 +68,13 @@ class UniversityController extends BaseController
         $this->display();
     }
     public function add(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         if(I('submit')){
             $upload = new \Think\Upload();// 实例化上传类
             $upload->maxSize   =     3145728 ;// 设置附件上传大小

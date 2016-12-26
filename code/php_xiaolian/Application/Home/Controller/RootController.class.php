@@ -29,7 +29,7 @@ class RootController extends Controller {
             // 在session中写入当前角色的权限列表
             Rbac::saveAccessList($authInfo['id']);
             // 登录成功后的跳转
-            $this->success('登录成功！', '/Admin');
+            $this->success('登录成功！', '/Admin/news/view');
         } else {
             $this->error('用户名或密码错误，请重新登录！');
         }

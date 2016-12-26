@@ -13,6 +13,12 @@
   <link rel="stylesheet" href="/Public/css/jquery-weui.css">
   <link rel="stylesheet" href="/Public/css/demos.css">
   <style type="text/css">
+    .weui_on{
+      border:1px solid #29b6f6;
+      border-radius: 10px;
+      background-color: #fff;
+      color:#29b6f6;
+    }
     .the_plus{
       position: absolute;
       bottom: 80px;
@@ -48,11 +54,11 @@
       <!--导航栏开始-->
         <div class="weui_tab">
           <div class="weui_navbar">
-            <a class="weui_navbar_item weui_bar_item_on">
-              我的请求
+            <a class="weui_navbar_item weui_on">
+              我&nbsp;的&nbsp;请&nbsp;求
             </a>
             <a class="weui_navbar_item">
-              接收的请求
+              接&nbsp;收&nbsp;的&nbsp;请&nbsp;求
             </a>
           </div>
         <div class="weui_tab_bd">
@@ -65,10 +71,11 @@
                     <img src="<?php echo ($myreq["headimgurl"]); ?>" class="headimg" alt="" style="margin-top:-30px;">
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                    <p style="font-size:16px; height: 30px;">&nbsp;<?php echo ($myreq["nickname"]); ?> <?php echo ($myreq["from_uni"]["uniname"]); ?></p>
-                    <p style="text-indent:1em;font-size:16px;font-weight:bold;">去<?php echo ($myreq["to_uni"]["uniname"]); ?></p>
+                    <p style="font-size:16px; height: 30px;">&nbsp;<?php echo ($myreq["nickname"]); ?> 请求编号：<span style="color: #29b6f6;"><?php echo ($myreq["mid"]); ?></span></p>
+                    <p style="text-indent:1em;font-size:16px;font-weight:bold;">去&nbsp;<span style="color: #2a6496;"><?php echo ($myreq["to_uni"]["uniname"]); ?></span></p>
                   </div>
-                  <span class="weui_cell_ft"></span>
+                  <span><img src="/Public/images/shou.png"></span>
+
                 </a><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
           </div>
@@ -84,7 +91,7 @@
                     <p style="font-size:16px; height: 30px;">&nbsp;<?php echo ($myrec["nickname"]); ?> <?php echo ($myrec["from_uni"]["uniname"]); ?></p>
                     <p style="text-indent:1em;font-size:16px;font-weight:bold;">去<?php echo ($myrec["to_uni"]["uniname"]); ?></p>
                   </div>
-                  <span class="weui_cell_ft"></span>
+                  <span><img src="/Public/images/shou.png"></span>
                 </a><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
           </div>
@@ -103,27 +110,19 @@
       <div class="weui-popup-modal">
         <div class="toolbar">
           <div class="toolbar-inner">
-            <a href="javascript:;" class="picker-button close-popup">关闭</a>
+            <a href="javascript:;" class="picker-button close-popup" style="color:#29b6f6">关闭</a>
             <h1 class="title">快捷功能</h1>
           </div>
         </div>
         <div class="modal-content">
           <div class="weui_grids">
 
-            <a href="<?php echo U('home/match/select');?>" class="weui_grid js_grid" data-id="progress">
+            <a href="<?php echo U('home/match/select');?>" class="weui_grid js_grid" data-id="msg">
               <div class="weui_grid_icon">
-                <img src="/Public/images/gothere.png" alt="">
+                <img src="/Public/images/hasgo.png" alt="">
               </div>
               <p class="weui_grid_label">
-                我要去
-              </p>
-            </a>
-            <a href="<?php echo U('home/my/index');?>" class="weui_grid js_grid" data-id="msg">
-              <div class="weui_grid_icon">
-                <img src="/Public/images/hasgone.png" alt="">
-              </div>
-              <p class="weui_grid_label">
-                我去过
+                我想去
               </p>
             </a>
             <a href="<?php echo U('home/my/getinfo');?>" class="weui_grid js_grid" data-id="msg">
@@ -132,6 +131,14 @@
               </div>
               <p class="weui_grid_label">
                 捞一捞
+              </p>
+            </a>
+            <a href="<?php echo U('home/my/chat');?>" class="weui_grid js_grid" data-id="progress">
+              <div class="weui_grid_icon">
+                <img src="/Public/images/liaoba.png" alt="">
+              </div>
+              <p class="weui_grid_label">
+                校脸聊吧
               </p>
             </a>
           </div>
@@ -191,8 +198,8 @@
     $(".weui_tabbar").show();
   });
    $(".weui_navbar .weui_navbar_item").click(function() {
-      $(".weui_navbar .weui_navbar_item").removeClass("weui_bar_item_on");//移除所有on效果
-      $(this).addClass("weui_bar_item_on");//单击后添加on效果
+      $(".weui_navbar .weui_navbar_item").removeClass("weui_on");//移除所有on效果
+      $(this).addClass("weui_on");//单击后添加on效果
       //判断点击第几个选项卡
       var which=$(this).index();
       //让所有内容区域隐藏

@@ -44,7 +44,7 @@
                         <li><a href="<?php echo U('admin/university/view');?>"><i class="icon-font">&#xe017;</i>所有高校<li><a href="<?php echo U('admin/university/add');?>"><i class="icon-font">&#xe037;</i>添加高校</a></li>
                     </ul>
                 </li>
-                <li>
+                <li style="display:<?php echo ($tag); ?>;">
                     <a href="#"><i class="icon-font">&#xe018;</i>管理员管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('admin/root/view');?>"><i class="icon-font">&#xe017;</i>所有管理员<li><a href="<?php echo U('admin/root/add');?>"><i class="icon-font">&#xe037;</i>添加管理员</a></li>
@@ -83,8 +83,8 @@
                                 </td>
                                 <td><?php echo ($vo["time"]); ?></td>
                                 <td>
-                                    <a class="link-update" href="<?php echo U('admin/root/update',array('id'=>$vo['id']));?>">修改</a>
-                                    <a class="link-del delete" href="<?php echo U('admin/root/delete',array('id'=>$vo['id']));?>">删除</a>
+                                   
+                                    <a class="link-del" href="<?php echo U('admin/root/delete',array('id'=>$vo['id']));?>">删除</a>
                                 </td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 

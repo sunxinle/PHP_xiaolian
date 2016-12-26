@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-	<title>对<?php echo ($topcontent["tltitle"]); ?>评论啦</title>
+	<title></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -41,7 +41,7 @@
     <div class="weui_cells weui_cells_form">
        <div class="weui_cells_tips"><img src="/Public/images/happy_face.png" width="8%" height="8%" style="margin-left:6%" class="emotion"></div>
       <div class="weui_btn_area">
-        <input type="submit" class="weui_btn weui_btn_primary"/>
+        <input type="submit" class="weui_btn weui_btn_primary toptip"/>
       </div>
     </div>
 </form>
@@ -63,7 +63,14 @@
                 $.toast('字数已经够多啦','text');
             }
             $(".OK").text(len);
-        });
+        })
+        $(".toptip").click(function() {
+            var text=$('.weui_textarea').val();
+            if(!text){
+                $.toptip('输入评论才能提交哦', 'warning');
+                return false;
+            }
+        })
          $(function(){
           $('.emotion').qqFace({
             assign:'suggestion',

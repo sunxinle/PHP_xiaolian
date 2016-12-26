@@ -16,18 +16,22 @@
     .tupian{
     	width:auto;
     	height:auto;
-    	max-height: 100%;
     	max-width:100%;
+      min-width:100%;
     }
     .panelbd{
-      text-align: center;
-      width:300px;
-      height:300px;
+      margin-left: 15px;
+      margin-right: 15px;
     }
     .the_plus{
       position: absolute;
       bottom: 80px;
       left: 80%;
+    }
+    .delete{
+      position: absolute;
+      right:5%;
+      top:15%;
     }
     .weui_media_title{
       color:#29b6f6;
@@ -46,9 +50,13 @@
       left: 5%;
     }
     .xiayipian{
-      position: absolute;
+      position: fixed;
       bottom: 0px;
       width: 100%;
+    }
+    .flor{
+      color: #29b6f6;
+      float: right;
     }
   </style>
 </head>
@@ -65,6 +73,11 @@
         <div class="back">
           <a href="<?php echo U('moments/index');?>"><img src="/Public/images/back.png" alt=""></a>
         </div>
+        <!--删除开始-->
+        <div class="delete" style="display:<?php echo ($tag); ?>;">
+           <a href="<?php echo U('moments/delete',array('id'=>$art['xlaid']));?>"><img src="/Public/images/delete1.png"></a>
+        </div>
+        <!--删除结束-->
           <h2 class="weui_media_title" style="font-size:24px;color:#29b6f6"><?php echo ($art["xlaauthor"]); ?></h2>
           <ul class="weui_media_info">
             <li class="weui_media_info_meta" style="color:#363636"><?php echo ($art["xlaaddtime"]); ?></li>
@@ -84,11 +97,18 @@
   <div class="weui_panel_hd" style="color:#29b6f6">评论列表</div>
   <?php if(is_array($artc)): $i = 0; $__LIST__ = $artc;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$va): $mod = ($i % 2 );++$i;?><div class="weui_panel_bd">
     <div class="weui_media_box weui_media_text">
+      <p class="flor"> <?php echo ($i); ?>楼</p>
       <h4 class="weui_media_title"><?php echo ($va["xlacnickname"]); ?></h4>
       <input type="hidden" value="<?php echo ($va["xlaccomment"]); ?>" class="suggestion"/>
       <p style="color:#000"><?php echo ($va["xlaccomment"]); ?></p>
       <ul class="weui_media_info">
         <li class="weui_media_info_meta" style="color:#363636"><?php echo ($va["xlacaddtime"]); ?></li>
+
+      <?php if(($va["xlacnickname"]) == $_SESSION['tlcnickname']): ?><!--   <eq condition="($va.xlacnickname) eq ($Think.session.tlcnickname)"> -->
+          <div style="display:block;"><a href="<?php echo U('moments/deletecom',array('id'=>$va['xlacid']));?>"><img class="flor" src="/Public/images/delete2.png"/></a></div>
+        <?php else: ?> 
+            <div style="display:none;"><a href="<?php echo U('moments/deletecom',array('id'=>$va['xlacid']));?>"><img class="flor" src="/Public/images/delete2.png"/></a></div><?php endif; ?>
+        
       </ul>
     </div>
   </div><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -97,10 +117,9 @@
 <!--说说详情结束-->
 </div>
 <!--下一篇+评论开始-->
-    <div class="weui-row weui-no-gutter xiayipian">
-          <div class="weui-col-50"><a href="<?php echo U('moments/detail',array('id'=>$nextid));?>" class="weui_btn close-popup
-          weui_btn_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
-          <div class="weui-col-50"><a href="<?php echo U('moments/comment',array('id'=>$art['xlaid']));?>" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
+    <div class="weui-row xiayipian">
+          <div class="weui-col-50"><a href="<?php echo U('moments/detail',array('id'=>$nextid));?>" class="weui_btn close-popup weui_btn_plain_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;条</a></div>
+          <div class="weui-col-50"><a href="<?php echo U('moments/comment',array('id'=>$art['xlaid']));?>" class="weui_btn close-popup weui_btn_plain_primary">评&nbsp;&nbsp;论</a></div>
       </div>
 <!--下一篇+评论结束-->
 <!--在这里写主体的代码结束-->

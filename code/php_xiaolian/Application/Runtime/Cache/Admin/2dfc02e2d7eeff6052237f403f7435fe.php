@@ -44,7 +44,7 @@
                         <li><a href="<?php echo U('admin/university/view');?>"><i class="icon-font">&#xe017;</i>所有高校<li><a href="<?php echo U('admin/university/add');?>"><i class="icon-font">&#xe037;</i>添加高校</a></li>
                     </ul>
                 </li>
-                <li>
+                <li style="display:<?php echo ($tag); ?>;">
                     <a href="#"><i class="icon-font">&#xe018;</i>管理员管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('admin/root/view');?>"><i class="icon-font">&#xe017;</i>所有管理员<li><a href="<?php echo U('admin/root/add');?>"><i class="icon-font">&#xe037;</i>添加管理员</a></li>
@@ -81,6 +81,7 @@
                                 <th><i class="require-red">*</i>内容：</th>
                                 <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10"></textarea></td>
                             </tr>
+                            
                             <tr>
                                 <th></th>
                                 <td>

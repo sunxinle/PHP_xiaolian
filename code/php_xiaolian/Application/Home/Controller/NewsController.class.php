@@ -18,8 +18,8 @@ class NewsController extends Controller
 	 	{
 	 		$this->writesession();
 	 		$model=M('topline');
-	        // $data=$model->limit(10)->order('xlaaddtime desc')->select();
-		 	$data=$model->select();
+	        $data=$model->limit(15)->order('tladdtime desc')->select();
+		 	//$data=$model->select();
 		 	$this->assign("topline",$data);
 		 	$this->display();
 	 	}
@@ -27,8 +27,8 @@ class NewsController extends Controller
 	 	{
 	 		//dump(session('headimgurl'));
 		  	$model=M('topline');
-	        //$data=$model->limit(10)->order('xlaaddtime desc')->select();
-		  	$data=$model->select();
+	        $data=$model->limit(15)->order('tladdtime desc')->select();
+		  	//$data=$model->select();
 		  	$this->assign("topline",$data);
 		  	$this->display();
 		  }

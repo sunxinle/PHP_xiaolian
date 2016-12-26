@@ -54,19 +54,24 @@ class UserController extends Controller {
                 $condition['headimgurl']=$data->headimgurl;//头像
                 $ro['openid']=$condition['openid'];
                 if (!$user->where($ro)->find()){
-                	//dump(json_decode($result2));
-                	//把用户信息分配到视图文件中
-                	$this->assign('user',$condition);
-                	$this->display();
-            	}else{
-                	$count = $user->where($ro)->find();
-                	$this->assign('user',$count);
-                	$this->display();
-            	}
-        	}else {
-            	dump(curl_errno($curl));
-        	}
-    	}
+                    //dump(json_decode($result2));
+                    //把用户信息分配到视图文件中
+
+                    //注册huanxin账号和密码
+                    $condition['account']=$this->account();
+                    $condition['password']=$this->password();
+                    
+                    $this->assign('user',$condition);
+                    $this->display();
+                }else{
+                    $count = $user->where($ro)->find();
+                    $this->assign('user',$count);
+                    $this->display();
+                }
+            }else {
+                dump(curl_errno($curl));
+            }
+        }
     }
    
     public function login(){
@@ -93,11 +98,15 @@ class UserController extends Controller {
         $data['sex']=I('post.sex');
         $data['headimgurl']=I('post.headimgurl');
         $data['nickname']=I('post.nickname');
+
+        $data['account']=I('post.account');  //获取huanxin账号
+        $data['password']=I('post.password');//获取huanxin密码
         //thinkphp的数据写入操作使用add方法
         $ro['openid']=$data['openid'];
         if (!$user->where($ro)->find()){
             $result = $user->add($data);
             if ($result){
+                $data['prompt'] = '注册成功';
                 $this->assign('user',$data);
                 $this->display('index');
             } else {
@@ -114,16 +123,39 @@ class UserController extends Controller {
             $condition['enrollmentDate'] = I('post.enrollmentDate');
             $result = $user->where($ro)->save($condition);
             if ($result){
-            	$count = $user->where($ro)->find();
-            	$count['prompt'] = '信息修改成功了哦^_^';
+                $count = $user->where($ro)->find();
+                $count['prompt'] = '信息修改成功了哦^_^';
                 $this->assign('user',$count);
                 $this->display('index');
             }else{
-            	$count = $user->where($ro)->find();
-            	$count['prompt'] = '信息没有修改哦^_^'; 
+                $count = $user->where($ro)->find();
+                $count['prompt'] = '信息没有修改哦^_^'; 
                 $this->assign('user',$count);
                 $this->display('index');
             }
         }
     }
+
+
+     private function account($length = 10 ) {
+        // 密码字符集，可任意添加你需要的字符
+        $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        $password ='';
+        for ( $i = 0; $i < $length; $i++ )
+        {
+            $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+        }
+        return $password;
+    }
+    private function password($length = 8 ) {
+        // 密码字符集，可任意添加你需要的字符
+        $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        $password ='';
+        for ( $i = 0; $i < $length; $i++ )
+        {
+            $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+        }
+        return $password;
+    }
+
 }

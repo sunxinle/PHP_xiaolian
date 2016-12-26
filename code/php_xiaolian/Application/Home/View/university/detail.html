@@ -12,35 +12,59 @@
 <link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
 <link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
 <link rel="stylesheet" href="__PUBLIC__/css/demos.css">
-
+<style>
+ .back{
+  position: fixed;
+      top: 13%;
+      left: 5%;
+ }
+ .fanhui{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+ }
+ .uninamediv{
+  padding:35px 0 10px 0;
+ }
+ .uniarticle{
+  padding: 5px 15px;
+ }
+ .uniarticle p{
+  margin: 0 10px;
+ }
+</style>
   </head>
 
   <body ontouchstart>
 
-    <header class='demos-header'>
-      <h1 class="demos-title">{$unidata.uniname}</h1>
+    <header class='demos-header uninamediv'>
+      <p class="demos-title uniname" style="font-size:24px">{$unidata.uniname}</p>
     </header>
 
-    <article class="weui_article">
-      <h1>我的校园</h1>
+    <article class="weui_article uniarticle">
       <section>
     
         <section>
-          <p>{$unidata.unidescription}</p>
+          <p style="font-size:18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$unidata.unidescription}</p>
 
           <p>
             <img src="__PUBLIC__/{$unidata.uniimage}" alt="河北师范大学校徽">
           </p>
         </section>
-    
-        <section>
-            <div class="weui-row">
-  				<div class="weui-col-50"><a href="javascript:;" onclick="history.go(-1)" class="weui_btn weui_btn_plain_primary close-popup">返回</a></div>
-  				<div class="weui-col-50"><a href="{:U('match/go',array('id'=>1))}" class="weui_btn weui_btn_plain_primary close-popup">我要去</a></div>
-			</div>
-          </section>
+			
       </section>
     </article>
+    <!--返回+我要去开始-->
+    <div class="weui-row fanhui">
+        <div class="weui-col-50"><a href="javascript:;" onclick="history.go(-1)" class="weui_btn weui_btn_plain_primary close-popup">返&nbsp;&nbsp;&nbsp;&nbsp;回</a></div>
+        <div class="weui-col-50"><a href="{:U('match/select',array('id'=>1))}" class="weui_btn weui_btn_plain_primary close-popup">我&nbsp;&nbsp;要&nbsp;&nbsp;去</a></div><!--跳转select页面-->
+      </div>
+    <!--返回+我要去结束-->
+    <!--back开始-->
+    <div class="back">
+      <a href="{:U('university/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
+    </div>
+    <!--back结束-->
     <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
 <script src="__PUBLIC__/lib/fastclick.js"></script>
 <script>

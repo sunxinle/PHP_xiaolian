@@ -21,8 +21,18 @@
 
       .back{
       position: fixed;
-      top: 10%;
+      top: 13%;
       left: 5%;
+    }
+    .titleheader{
+      padding:35px 0 0 0; 
+    }
+    .detailtitle{
+      margin:0 5%;
+      font-weight: normal;
+    }
+    .detailarticle{
+      padding:5px 25px;
     }
     .xiayipian{
       position: absolute;
@@ -59,50 +69,46 @@
 
 <body ontouchstart>
 <div class="weui_tab_bd">
-      <header class='demos-header'>
-      <h1 class="demos-title"><?php echo ($topcontent["tltitle"]); ?></h1>
+      <header class='demos-header titleheader'>
+      <p class="demos-title detailtitle" style="font-size:24px"><?php echo ($topcontent["tltitle"]); ?></p>
     </header>
 
-    <article class="weui_article">
-      <h1><?php echo ($topcontent["tltitle"]); ?></h1>
-      <section>
+    <article class="weui_article detailarticle">
         <section>
-          <p><?php echo ($topcontent["tlcontent"]); ?></p>
+          <p style="font-size:18px">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($topcontent["tlcontent"]); ?></p>
 
           <p>
             <img src="/Public/<?php echo ($topcontent["tlimage"]); ?>" alt="">
           </p>
         </section>
-      </section>
     </article>
 
       <!--评论开始-->
      <div class="weui_panel">
        <div class="weui_cells weui_cells_access">
            <div class="weui_panel_hd">评论列表</div> <!--dump($topcomment);-->
-           <?php if(is_array($topcomment)): $i = 0; $__LIST__ = $topcomment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$va): $mod = ($i % 2 );++$i;?><a class="weui_cell" href="">
+           <?php if(is_array($topcomment)): $i = 0; $__LIST__ = $topcomment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$va): $mod = ($i % 2 );++$i;?><div class="weui_cell">
                    <div class="weui_cell_hd">
                       <img src="<?php echo ($va["tlcimage"]); ?>" alt=""  width="30px" height="30px">
                           </div>
                      <div class="weui_cell_bd weui_cell_primary">
-                            <p style="font-size:10px;color:grey;"><?php echo ($va["tlcnickname"]); ?></p>
+                            <p style="font-size:13px;color:grey;"><?php echo ($va["tlcnickname"]); ?></p>
                             <input type="hidden" value="<?php echo ($va["tlccontent"]); ?>" class="suggestion"/>
-                            <p style="text-indent:1em;font-size:10px;" class="show"></p>
+                            <p style="text-indent:1em;font-size:15px;" class="show"></p>
 
                       </div>
-                    <span style="font-size:8px; color:grey; margin-top:-16px;"><?php echo ($va["tlcaddtime"]); ?></span>
-                </a><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <span style="font-size:10px; color:grey; margin-top:-16px;"><?php echo ($va["tlcaddtime"]); ?></span>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
                       </div>
               </div>
 <!--评论结束-->
 
 </div>
 
-<!--下一篇+评论开始-->
-    <div class="weui-row weui-no-gutter xiayipian">
-          <div class="weui-col-50"><a href="<?php echo U('news/detail',array('id'=>$nextid));?>" class="weui_btn close-popup
-          weui_btn_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
-          <div class="weui-col-50"><a href="<?php echo U('news/comment',array('id'=>$topcontent['tlid']));?>" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
+<!--下一篇+评论开始 weui-no-gutter  xiayipian-->
+    <div class="weui-row xiayipian">
+          <div class="weui-col-50"><a href="<?php echo U('news/detail',array('id'=>$nextid));?>" class="weui_btn close-popup weui_btn_plain_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
+          <div class="weui-col-50"><a href="<?php echo U('news/comment',array('id'=>$topcontent['tlid']));?>" class="weui_btn close-popup weui_btn_plain_primary">评&nbsp;&nbsp;论</a></div>
       </div>
 <!--下一篇+评论结束-->
 

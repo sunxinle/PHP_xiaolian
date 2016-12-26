@@ -11,6 +11,13 @@ use Common\Controller\BaseController;
 class NewsController extends BaseController
 {
     public function view(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         $topline = M('topline');
         $result = $topline->select();
         //输出当前登录的用户的名字
@@ -20,6 +27,13 @@ class NewsController extends BaseController
         $this->display();
     }
     public function update(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         if (I('submit')){
             $id = I('id');
             $data = array();
@@ -42,6 +56,13 @@ class NewsController extends BaseController
 
     }
     public function show(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         $id = I('id');
         $topline = M('topline');
         $result = $topline->where("tlid=$id")->find();
@@ -49,6 +70,13 @@ class NewsController extends BaseController
         $this->display();
     }
     public function add(){
+         $name = $_SESSION['loginedUserName'];
+        if($name=='admin'){
+            $this->assign('tag','block');
+        }
+        else{
+             $this->assign('tag','none');
+        }
         if(I('submit')){
             $upload = new \Think\Upload();// 实例化上传类
             $upload->maxSize   =     3145728 ;// 设置附件上传大小
@@ -65,7 +93,7 @@ class NewsController extends BaseController
             }else{
                 // 上传成功 获取上传文件信息
                 foreach($info as $file) {
-                    echo $file['savepath'].$file['savename'];
+                    $this->success('上传成功');
                 }
             }
             $data = array();

@@ -75,38 +75,51 @@
           //使用ajax方式删除记录
           var url = "{:U('home/my/getOneMessage')}";
           var self = $(this);
+          var mychar = 'nothing';
           $.post(url,function(data){
-            var dataObj = JSON.parse(data);
-            console.log(dataObj);
-            if(data=='null'){
-              function haha() {
+            console.log(data);
+            if (data===mychar) {
+              function hei(mychar) {
                 $.modal({
-                  title: '没有啦',
-                  text: '都看过一遍啦，可以点击下面的重来按钮重新找哦',
+                  title: '没有瓶子啦',
+                  text: '已经没有新的请求啦，请点击下面的重来重新开始',
                   buttons: [
                     { text: "重来", onClick: function(){
-                      var url = "<?=U('home/my/refreshGetOneMessage');?>"
+                      var url = "<?=U('home/my/refreshGetOneMessage');?>";
                       $.get(url,function(newdata){
                         if(newdata==1){
-                          //隐藏相应的行
-                          console.log("成功删除历史缓存");
+                          //跳转到相应的行
                           $.alert('成功！');
                         }else{
-                          /*防止发生错误*/
                           console.log(newdata);
                           $.alert(newdata);
                         }
                       })
                     } },
 
-                    { text: "取消", className: "default", onClick: function(){ console.log('取消') } },
+                    { text: "取消", className: "default", onClick: function(){ console.log('取消了刷新')} },
 
                   ]
                 });
               }
-              haha();
+              hei(mychar);
 
-            }else{
+            } else if(data==='toomuch') {
+              function hei(mychar) {
+                $.modal({
+                  title: '次数过多提醒',
+                  text: '您今天捞瓶子的次数已经超过了三次，明天再来试试吧',
+                  buttons: [
+
+                    { text: "取消", className: "default", onClick: function(){ console.log('取消了刷新')} },
+
+                  ]
+                });
+              }
+              hei(mychar);
+
+            } else{
+              var dataObj = JSON.parse(data);
               function haha(dataObj) {
                 $.modal({
                   title: '来自'+dataObj.from_uni.uniname+'的瓶子',

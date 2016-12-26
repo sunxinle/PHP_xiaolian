@@ -1,0 +1,10 @@
+[ 2016-12-26T14:20:03+08:00 ] 123.56.233.103 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+NOTIC: [2048] Declaration of Admin\Controller\NewsController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/Application/Admin/Controller/NewsController.class.php 第 12 行.
+NOTIC: [8] Undefined index: authid /var/www/html/ThinkPHP/Library/Org/Util/Rbac.class.php 第 163 行.
+

@@ -16,18 +16,22 @@
     .tupian{
     	width:auto;
     	height:auto;
-    	max-height: 100%;
     	max-width:100%;
+      min-width:100%;
     }
     .panelbd{
-      text-align: center;
-      width:300px;
-      height:300px;
+      margin-left: 15px;
+      margin-right: 15px;
     }
     .the_plus{
       position: absolute;
       bottom: 80px;
       left: 80%;
+    }
+    .delete{
+      position: absolute;
+      right:5%;
+      top:15%;
     }
     .weui_media_title{
       color:#29b6f6;
@@ -46,9 +50,13 @@
       left: 5%;
     }
     .xiayipian{
-      position: absolute;
+      position: fixed;
       bottom: 0px;
       width: 100%;
+    }
+    .flor{
+      color: #29b6f6;
+      float: right;
     }
   </style>
 </head>
@@ -65,6 +73,11 @@
         <div class="back">
           <a href="{:U('moments/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
         </div>
+        <!--删除开始-->
+        <div class="delete" style="display:{$tag};">
+           <a href="{:U('moments/delete',array('id'=>$art['xlaid']))}"><img src="__PUBLIC__/images/delete1.png"></a>
+        </div>
+        <!--删除结束-->
           <h2 class="weui_media_title" style="font-size:24px;color:#29b6f6">{$art.xlaauthor}</h2>
           <ul class="weui_media_info">
             <li class="weui_media_info_meta" style="color:#363636">{$art.xlaaddtime}</li>
@@ -85,11 +98,20 @@
   <volist name="artc" id="va">
   <div class="weui_panel_bd">
     <div class="weui_media_box weui_media_text">
+      <p class="flor"> {$i}楼</p>
       <h4 class="weui_media_title">{$va.xlacnickname}</h4>
       <input type="hidden" value="{$va.xlaccomment}" class="suggestion"/>
       <p style="color:#000">{$va.xlaccomment}</p>
       <ul class="weui_media_info">
         <li class="weui_media_info_meta" style="color:#363636">{$va.xlacaddtime}</li>
+
+      <eq name="va.xlacnickname" value="$Think.session.tlcnickname">
+    <!--   <eq condition="($va.xlacnickname) eq ($Think.session.tlcnickname)"> -->
+          <div style="display:block;"><a href="{:U('moments/deletecom',array('id'=>$va['xlacid']))}"><img class="flor" src="__PUBLIC__/images/delete2.png"/></a></div>
+        <else /> 
+            <div style="display:none;"><a href="{:U('moments/deletecom',array('id'=>$va['xlacid']))}"><img class="flor" src="__PUBLIC__/images/delete2.png"/></a></div>
+        </eq>
+        
       </ul>
     </div>
   </div>
@@ -99,10 +121,9 @@
 <!--说说详情结束-->
 </div>
 <!--下一篇+评论开始-->
-    <div class="weui-row weui-no-gutter xiayipian">
-          <div class="weui-col-50"><a href="{:U('moments/detail',array('id'=>$nextid))}" class="weui_btn close-popup
-          weui_btn_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;篇</a></div>
-          <div class="weui-col-50"><a href="{:U('moments/comment',array('id'=>$art['xlaid']))}" class="weui_btn close-popup weui_btn_primary">评&nbsp;&nbsp;论</a></div>
+    <div class="weui-row xiayipian">
+          <div class="weui-col-50"><a href="{:U('moments/detail',array('id'=>$nextid))}" class="weui_btn close-popup weui_btn_plain_primary">下&nbsp;&nbsp;一&nbsp;&nbsp;条</a></div>
+          <div class="weui-col-50"><a href="{:U('moments/comment',array('id'=>$art['xlaid']))}" class="weui_btn close-popup weui_btn_plain_primary">评&nbsp;&nbsp;论</a></div>
       </div>
 <!--下一篇+评论结束-->
 <!--在这里写主体的代码结束-->

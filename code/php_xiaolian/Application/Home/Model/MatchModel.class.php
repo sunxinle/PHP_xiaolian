@@ -18,7 +18,7 @@ class MatchModel extends RelationModel
             'mapping_type' => self::BELONGS_TO,
             'class_name'   => 'user',
             'foreign_key'  => 'fid',
-            'as_fields'    => 'nickname,name,headimgurl'
+            'as_fields'    => 'nickname,name,headimgurl,openid,wechatid,account'
         ),
         'to_uni' => array(
             'mapping_type' => self::BELONGS_TO,
