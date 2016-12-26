@@ -9,10 +9,55 @@
   <link href="__PUBLIC__/css/jquery-weui.min.css" type="text/css" rel="stylesheet" />
 
   <style type="text/css">
-   img{ 
-      width: 30px;
-      height: 30px;
+  .myrequestdiv{
+    background: rgb(210,210,210);
+     box-shadow: 0px 5px 6px rgb(160,160,160);
+    background:-webkit-linear-gradient(60deg,rgba(250,250,250,1) 25%,rgba(210,210,210,1));
+      border-radius: 15px;
+      margin-top: 15px;
+  }
+  .tupiandiv{
+    width:10px;
+    height:10px;
+    text-align: center;
+  }
+  .wenzidiv{
+    text-align:center;
+  }
+    html,body{
+      height: 100%;
     }
+    .swiper-container {
+    width: 100%;
+    }
+    .swiper-container img {
+    display: block;
+    /*width: 100%;*/
+    }
+    .weui_tab .weui_tab_bd .content img{
+      /*width: 100%;*/
+      display: block;
+    }
+   .back{
+     position: fixed;
+     top:2%;
+     left: 5%;
+     z-index: 100;
+      .myrequestdiv{
+    background: rgb(210,210,210);
+     box-shadow: 0px 5px 6px rgb(160,160,160);
+    background:-webkit-linear-gradient(60deg,rgba(250,250,250,1) 25%,rgba(210,210,210,1));
+      border-radius: 15px;
+      margin-top: 15px;
+  }
+  .tupiandiv{
+    width:10px;
+    height:10px;
+    text-align: center;
+  }
+  .wenzidiv{
+    text-align:center;
+  }
     html,body{
       height: 100%;
     }
@@ -43,24 +88,23 @@
   </div>
   <!--顶部标题栏-->
   <div class="weui_tab">
-  <div class="weui_navbar">
-    <a class="weui_navbar_item weui_bar_item_on">
-      我的请求
-    </a>
-  </div>
   <div class="weui_tab_bd">
-
+    <div class="tupiandiv">
+      <img src="{$myrequest.headimgurl}" alt="" style="border-radius:50px">
+    </div>
+    <div class="wenzidiv myrequestdiv">
+      <p style="font-size:18px; height: 30px;">目的地：{$myrequest.to_uni.uniname}</p>
+      <p style="text-indent:1em;font-size:16px;">前往时间：{$myrequest.mgotime}</p>
+      <p style="text-indent:1em;font-size:14px;">&nbsp;&nbsp;发送时间：{$myrequest.msendtime}</p>
+    </div>
     <div class="content">
 
             <div class="weui_cells weui_cells_access">
               <a class="weui_cell" href="javascript:;">
-                <div class="weui_cell_hd">
-                  <img src="{$myrequest.headimgurl}" alt="" style="margin-top:-30px;">
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_cell_bd weui_cell_primary myrequestdiv">
                   <p style="font-size:16px; height: 30px;">目的地：{$myrequest.to_uni.uniname}</p>
                   <p style="text-indent:1em;font-size:10px;">前往时间：{$myrequest.mgotime}</p>
-                  <p style="text-indent:1em;font-size:9px;">&nbsp&nbsp&nbsp&nbsp&nbsp发送时间：{$myrequest.msendtime}</p>
+                  <p style="text-indent:1em;font-size:9px;">&nbsp;&nbsp;发送时间：{$myrequest.msendtime}</p>
                 </div>
 
               </a>
@@ -69,7 +113,7 @@
                         <a class="weui_cell" href="javascript:;" style="margin-left: 5%;">
 
                           <div class="weui_cell_bd weui_cell_primary" >
-                              <div style="float:left;"><img src="{$myc.confirm_user.headimgurl}" alt=""></div>
+                              <div style="float:left;"><img src="{$myrequest.headimgurl}" alt=""></div>
                               <div style="float: left;">
                             <p style="font-size:16px; height: 32px; "><span style="color: #2a6496;">&nbsp;{$myc.confirm_user.nickname}</span> 同意带您游玩</p>
                             <p style="text-indent:1em;font-size:10px;">&nbsp;同意时间：{$myc.agreetime}</p>
