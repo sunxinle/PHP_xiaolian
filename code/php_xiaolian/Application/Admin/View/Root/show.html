@@ -1,0 +1,25 @@
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="./view">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="./view">管理员管理</a><span class="crumb-step">&gt;</span><span>查看管理员</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="/jscss/admin/design/add" method="post" enctype= "multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        <tr>
+                            <!-- <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th> -->
+                            <td align="center">管理员名称</td>
+                            <td align="center">发布时间</td>
+                            <td align="center">密码</td>
+                        </tr>
+                        <tr>
+                            <!-- <td class="tc"><input name="id[]" value="59" type="checkbox"></td> -->
+                            <td style="font-size: 26px" align="center">{$result.name}</td>
+                            <td style="font-size: 12px" align="center">{$result.time}</td>
+                            <td style="font-size: 26px" align="center">{$result.passwd}</td>
+                        </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>

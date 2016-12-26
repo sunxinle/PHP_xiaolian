@@ -49,7 +49,6 @@
       height:auto;
       max-width: 100%;
       max-height: 100%;
-      text-align: center;
     }
     .shuoshuo{
       background-color: #8B8989;
@@ -112,8 +111,7 @@
                   </div>
                 </a>
             </div>
-            <ul c
-            lass="weui_media_info">
+            <ul class="weui_media_info">
               <li class="weui_media_info_meta" style="color:#fff"><?php echo ($vo["xlaaddtime"]); ?></li>
             </ul>
           </div> 

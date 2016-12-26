@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-	<title>头条评论页</title>
+	<title>对<?php echo ($topcontent["tltitle"]); ?>评论啦</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -23,7 +23,7 @@
 }
 </style>
 <body ontouchstart>
-    <form action="/home/news/getcomment" method="post">
+    <form action="/index.php/home/news/getcomment" method="post">
 
         <div class="comment">
             <div class="weui_cells weui_cells_form">

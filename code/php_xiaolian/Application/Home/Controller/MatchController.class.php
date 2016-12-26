@@ -46,11 +46,16 @@ class MatchController extends Controller
                 $arr[] = $k;
             }
         }
-        $this->assign('result',$arr);
+        //dump($arr);
+        dump($result);
+        $result = json_encode($arr,JSON_UNESCAPED_UNICODE);
+        $this->assign('result',$result);
+        dump($result);
+        exit;
         $this->display();
 
     }
-
+    // 用于是否填写大学的纠正
     public function _before_go(){
         $university=I('post.university');
         if (!$university){
@@ -82,6 +87,8 @@ class MatchController extends Controller
         $date['mgotime'] =$StudentMsg[ReachTime];//想要去的时间
         $date['mmessage'] =$StudentMsg[NoteMsg];//备注信息
         //dump($date['msendtime']);
+        //dump($date);
+        //exit;
         $match->add($date);
         $this->display();
     }

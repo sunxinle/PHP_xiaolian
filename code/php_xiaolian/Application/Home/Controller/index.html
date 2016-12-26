@@ -1,1 +1,115 @@
- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>个人中心</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+<link rel="stylesheet" href="__PUBLIC__/lib/weui.min.css">
+<link rel="stylesheet" href="__PUBLIC__/css/jquery-weui.css">
+<link rel="stylesheet" href="__PUBLIC__/css/demos.css">
+
+  </head>
+
+  <body ontouchstart>
+
+
+    <header class='demos-header'>
+      <h2 class="demos-title">等你来~{$user.nickname}</h2>
+    </header>
+
+    <form action="{:U('home/user/login')}" method="post">
+
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">大学</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <input name="college" class="weui_input" id="mobile" type="text" placeholder="your university" value="{$user.college}">
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <input name="name" class="weui_input" type="text" placeholder="your name" value="{$user.name}">
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">学号</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <input name="sno" class="weui_input" type="text" placeholder="student number" value="{$user.sno}">
+        </div>
+      </div>
+         <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <input name='phonenumber' class="weui_input" type="text" placeholder="phone number" value="{$user.phonenumber}">
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd"><label for="date2" class="weui_label">入学日期</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <input name='enrollmentDate' class="weui_input" id="date2" type="text" value="{$user.enrollmentDate}">
+        </div>
+      </div>
+      <input type="hidden" name="openid" value="{$user.openid}"> 
+      <input type="hidden" name="nickname" value="{$user.nickname}"> 
+      <input type="hidden" name="sex" value="{$user.sex}"> 
+      <input type="hidden" name="headimgurl" value="{$user.headimgurl}"> 
+      <div class="weui_cells_tips">{$user.prompt}</div>
+      <div class="weui_btn_area">
+        <input  type="submit" class="weui_btn weui_btn_primary"  id="showTooltips" value="提交">
+      </div>
+    </div>
+    </form>
+
+    <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+<script src="__PUBLIC__/lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+      $("#showTooltips").click(function() {
+        var tel = $('#tel').val();
+        if(!tel || !/1[3|4|5|7|8]\d{9}/.test(tel)) $.toptip('请输入手机号');
+        else $.toptip('提交成功', 'success');
+      });
+      $("#university").blur(function(){
+          var university =$("#university").val();
+          if(!university) $.toptip('你所输入的大学名称不正确');
+      });
+    </script>
+<script src="__PUBLIC__/js/jquery-weui.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+
+    <script>
+      $("#mobile").picker({
+        title: "请选择您的大学",
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['河北师范大学', '河北科技大学', '河北医科大学', '河北经贸大学', '北京大学', '清华大学', '北京交通大学']
+          }
+        ],
+        onChange: function(p, v, dv) {
+          console.log(p, v, dv);
+        },
+        onClose: function(p, v, d) {
+          console.log("close");
+        }
+      });
+      $("#date2").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy年mm月dd日'  // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+      });
+
+    </script>
+  </body>
+</html>

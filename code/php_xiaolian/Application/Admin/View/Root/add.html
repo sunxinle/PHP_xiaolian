@@ -1,0 +1,60 @@
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="./view">管理员管理</a><span class="crumb-step">&gt;</span><span>新增管理员</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('admin/root/add')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>管理员名称：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="name" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>密码：</th>
+                                <td>
+                                    <input class="common-text required" id="pw1" name="passwd" size="50" value="" type="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>确认密码：</th>
+                                <td>
+                                    <input class="common-text required" id="pw2" name="repasswd" size="50" value="" type="password" onblur="pw()" >
+                                    <span id="tishi"></span>
+                                </td>
+                               
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" name="submit" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+<script type="text/javascript">
+    function pw() {
+              var pw1 = document.getElementById("pw1").value;
+              var pw2 = document.getElementById("pw2").value;
+              if(pw1 == pw2) {
+                  document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同</font>";
+                  document.getElementById("submit").disabled = false;
+              }
+              else {
+                  document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
+                document.getElementById("submit").disabled = true;
+              }
+          }
+</script>
+</html>

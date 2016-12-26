@@ -88,6 +88,9 @@ class NewsController extends BaseController
         //从url中获取要删除的那一条数据的id
         $id = I('id');
         $university = M('topline');
+        $tpc=M('toplinecomment');
+        $map['tlid']=$id;
+        $tpc->where($map)->delete();
         if($university->where("tlid=$id")->delete()){
             echo 1;
         }

@@ -38,7 +38,7 @@ class NewsController extends Controller
 	 {
 	 	$id=I('get.id');
 	 	if(!$id){
-	 		$this->redirect('news/detail', array('id' => "1"), 0.2, "<script>alert('没有了')</script>");
+	 		$this->redirect('news/detail', array('id' => "1"), 0.01, "<script>alert('没有了')</script>");
 	 	}
 
 	 	$model=M('topline');              //链接头条数据表
@@ -46,7 +46,7 @@ class NewsController extends Controller
 
 	 	$data2=$comment->where("tlid=%d",$id)->order('tlcaddtime desc')->select();
 	 	$data=$model->where("tlid=%d",$id)->find();
-	 	$after=$model->where("tlid>".$id)->order('tlid asc')->limit('1')->find();
+	 	$after=$model->where("tlid<".$id)->order('tlid desc')->limit('1')->find();
 	 	//dump($data2);
 	 	
 	 	$nextid=$after['tlid'];
@@ -71,9 +71,7 @@ class NewsController extends Controller
 	 	$data['tlcaddtime']=date("Y-m-d H:i:s",time());
 	 	$data['tlccontent']=$comment['suggestion'];
 	 	$data['tlid']=$comment['hid'];
-
 	 	$data['tlcnickname']=session('tlcnickname'); //提取保存在session的用户信息
-
 	 	$data['tlcimage']=session('headimgurl');      //提取保存在session中的用户图片
 	 	$result=$model->add($data);
 	 	if($result){

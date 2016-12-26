@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
   <head>
-    <title>select</title>
+    <title>校脸</title>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -22,12 +22,16 @@
   .selected{
     color: #29b6f6;
   }
+  .for_like{
+    margin-top:0px;
+    float: left;
+    width: 100%;
+  }
 </style>
 
   </head>
 
   <body ontouchstart>
-
     <div class="weui_search_bar" id="search_bar">
       <form class="weui_search_outer" action="index.php">
         <div class="weui_search_inner">
@@ -45,24 +49,27 @@
       </form>
       <a href="javascript:void(0)" class="weui_search_cancel" id="search_cancel">取消</a>
     </div>
-    <div class="for_like" style="margin-top:0px;"></div>
+    <div class="for_like"></div>
     <form  action="<?php echo U('home/match/go');?>" method="post">
       <div class='demos-content-padded' style="margin-top:80%;">
         <div id="message" >  </div>
 
         <input type="submit" class="weui_btn weui_btn_primary toptip" vaule="确认">
-        <a href="javascript:void(0);" onclick="history.go(-1)" class="weui_btn weui_btn_warn toptip">取消</a>
+
+        <a href="javascript:void(0);" onclick="history.go(-1)" class="weui_btn weui_btn_warn toptip">取消<?php echo ($result); ?></a>
       </div>
     </form>
+    <!--用php将分配过来的数组转换为json串，然后就可以在js中直接用了-->
 
     <script src="/Public/lib/jquery-2.1.4.js"></script>
 <script src="/Public/lib/fastclick.js"></script>
 <script src="/Public/js/jquery-weui.js"></script>
 <script type="text/javascript" src="/Public/js/autocomplete.js"></script>
-<!--具体实现代码的时候，可以将数据库中的信息制作成为xml格式，通过ajax请求从服务器上获取文件的信息，具体操作请参见http://www.w3school.com.cn/ajax/ajax_xmlhttprequest_send.asp -->
 <script type="text/javascript">
-var proposals = ['河北师范大学', '河北科技大学', '河北医科大学', '河北大学', '河北师范大学汇华学院', '河北中医药大学', '北京大学','清华大学','河北农业大学','河北大学工商学院','河北工业大学','河北工程大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学','河北工业大学'];
-
+/*  var proposals = new Array();*/
+/*var proposals = eval('<?php echo $result; ?>');*/
+var proposals = '<?php echo ($result); ?>';
+console.log(proposals);
 $(document).ready(function(){
   FastClick.attach(document.body);
   $('#search-form').autocomplete({

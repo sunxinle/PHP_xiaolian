@@ -54,7 +54,6 @@
             <a class="weui_navbar_item">
               接收的请求
             </a>
-
           </div>
         <div class="weui_tab_bd">
         <!--第一个选项卡-->
@@ -76,20 +75,19 @@
           <!--第二个选项卡-->
           <div class="content" style="display:none">
             <div class="weui_cells weui_cells_access">
-              <?php if(is_array($myreceive)): $i = 0; $__LIST__ = $myreceive;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$myrec): $mod = ($i % 2 );++$i;?><a class="weui_cell" href="<?php echo U('home/my/receive');?>">
+              <?php if(is_array($myreceive)): $i = 0; $__LIST__ = $myreceive;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$myrec): $mod = ($i % 2 );++$i;?><a class="weui_cell" href="<?php echo U('home/my/receive/',array('id'=>$myrec['mid']));?>">
                   <div class="weui_cell_hd">
+                    <!--防止微信公众平台防盗链的方法 http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl= -->
                     <img src="<?php echo ($myrec["headimgurl"]); ?>" class="headimg" alt="" style="margin-top:-30px;">
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                    <p style="font-size:16px; height: 30px;"><?php echo ($myrec["nickname"]); ?> <?php echo ($myrec["from_uni"]["uniname"]); ?></p>
+                    <p style="font-size:16px; height: 30px;">&nbsp;<?php echo ($myrec["nickname"]); ?> <?php echo ($myrec["from_uni"]["uniname"]); ?></p>
                     <p style="text-indent:1em;font-size:16px;font-weight:bold;">去<?php echo ($myrec["to_uni"]["uniname"]); ?></p>
                   </div>
-
-                  <a href="contents.html" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-left:50px;">查看详情</a>
+                  <span class="weui_cell_ft"></span>
                 </a><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
           </div>
-
         </div>
       </div>
       <!--导航栏结束-->
@@ -128,7 +126,7 @@
                 我去过
               </p>
             </a>
-            <a href="<?php echo U('home/my/index');?>" class="weui_grid js_grid" data-id="msg">
+            <a href="<?php echo U('home/my/getinfo');?>" class="weui_grid js_grid" data-id="msg">
               <div class="weui_grid_icon">
                 <img src="/Public/images/match.png" alt="">
               </div>

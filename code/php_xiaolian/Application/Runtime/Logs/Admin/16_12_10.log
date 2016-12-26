@@ -1,10 +1,10 @@
-[ 2016-12-10T22:39:31+08:00 ] 127.0.0.1 /admin/news/view
+[ 2016-12-10T14:03:32+08:00 ] 123.56.233.103 /admin
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
-NOTIC: [2048] Declaration of Admin\Controller\NewsController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp64\www\github\code\php_xiaolian\Application\Admin\Controller\NewsController.class.php 第 12 行.
-NOTIC: [8] Undefined index: authid D:\wamp64\www\github\code\php_xiaolian\ThinkPHP\Library\Org\Util\Rbac.class.php 第 163 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [2048] Declaration of Admin\Controller\NewsController::show() should be compatible with that of Think\Controller::show() /var/www/html/Application/Admin/Controller/NewsController.class.php 第 12 行.
+NOTIC: [8] Undefined index: authid /var/www/html/ThinkPHP/Library/Org/Util/Rbac.class.php 第 163 行.
 

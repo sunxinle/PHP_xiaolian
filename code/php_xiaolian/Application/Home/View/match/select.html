@@ -32,7 +32,6 @@
   </head>
 
   <body ontouchstart>
-
     <div class="weui_search_bar" id="search_bar">
       <form class="weui_search_outer" action="index.php">
         <div class="weui_search_inner">
@@ -56,18 +55,21 @@
         <div id="message" >  </div>
 
         <input type="submit" class="weui_btn weui_btn_primary toptip" vaule="确认">
-        <a href="javascript:void(0);" onclick="history.go(-1)" class="weui_btn weui_btn_warn toptip">取消</a>
+
+        <a href="javascript:void(0);" onclick="history.go(-1)" class="weui_btn weui_btn_warn toptip">取消{$result}</a>
       </div>
     </form>
     <!--用php将分配过来的数组转换为json串，然后就可以在js中直接用了-->
-    <php>$result = json_encode($result,JSON_UNESCAPED_UNICODE);</php>
 
     <script src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
 <script src="__PUBLIC__/lib/fastclick.js"></script>
 <script src="__PUBLIC__/js/jquery-weui.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/autocomplete.js"></script>
 <script type="text/javascript">
-var proposals = eval('<?php echo $result; ?>');
+/*  var proposals = new Array();*/
+/*var proposals = eval('<?php echo $result; ?>');*/
+var proposals = '{$result}';
+console.log(proposals);
 $(document).ready(function(){
   FastClick.attach(document.body);
   $('#search-form').autocomplete({

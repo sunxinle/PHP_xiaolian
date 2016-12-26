@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
   <head>
-    <title>注册页面</title>
+    <title>个人中心</title>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -12,11 +12,6 @@
 <link rel="stylesheet" href="/Public/lib/weui.min.css">
 <link rel="stylesheet" href="/Public/css/jquery-weui.css">
 <link rel="stylesheet" href="/Public/css/demos.css">
-    <script type="text/javascript" src="/Public/chatjs/jquery-1.11.1.js"></script>
-    <script type="text/javascript" src="/Public/chatjs/strophe-custom-2.0.1.js"></script>
-    <script type="text/javascript" src="/Public/chatjs/json2.js"></script>
-    <script type="text/javascript" src="/Public/chatjs/easemob.im-1.0.7.js"></script>
-    <script type="text/javascript" src="/Public/chatjs/bootstrap.js"></script>
 
   </head>
 
@@ -24,55 +19,50 @@
 
 
     <header class='demos-header'>
-      <h2 class="demos-title">校脸注册</h2>
+      <h2 class="demos-title">
+      等你来@<?php echo ($user["nickname"]); ?></h2>
     </header>
 
     <form action="<?php echo U('home/user/login');?>" method="post">
+
     <div class="weui_cells weui_cells_form">
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">大学</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input name="college" class="weui_input" id="mobile" type="text" placeholder="your university">
+          <input name="college" class="weui_input" id="mobile" type="text" placeholder="your university" value="<?php echo ($user["college"]); ?>">
         </div>
       </div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input name="name" class="weui_input" type="text" placeholder="your name">
+          <input name="name" class="weui_input" type="text" placeholder="your name" value="<?php echo ($user["name"]); ?>">
         </div>
       </div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">学号</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input name="sno" class="weui_input" type="text" placeholder="student number">
+          <input name="sno" class="weui_input" type="text" placeholder="student number" value="<?php echo ($user["sno"]); ?>">
         </div>
       </div>
          <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input name='phonenumber' class="weui_input" type="text" placeholder="phone number">
+          <input name='phonenumber' class="weui_input" type="text" placeholder="phone number" value="<?php echo ($user["phonenumber"]); ?>">
         </div>
       </div>
       <div class="weui_cell">
         <div class="weui_cell_hd"><label for="date2" class="weui_label">入学日期</label></div>
         <div class="weui_cell_bd weui_cell_primary">
-          <input class="weui_input" id="date2" type="text" value="">
+          <input name='enrollmentDate' class="weui_input" id="date2" type="text" value="<?php echo ($user["enrollmentDate"]); ?>">
         </div>
       </div>
-      <!--注册操作界面 -->
-            <table>
-              <tr>
-                <td><label>用户名:</label>
-                  <input type="text" value="" id="regist_username" tabindex="1" />
-                  <label>密码:</label>
-                  <input type="password" value="" id="regist_password" tabindex="2" />
-                </td>
-              </tr>
-            </table>
-      <!-- 注册操作界面 -->
-      <div class="weui_cells_tips">准确填写大学名称才能定位哦，童鞋</div>
+      <input type="hidden" name="openid" value="<?php echo ($user["openid"]); ?>"> 
+      <input type="hidden" name="nickname" value="<?php echo ($user["nickname"]); ?>"> 
+      <input type="hidden" name="sex" value="<?php echo ($user["sex"]); ?>"> 
+      <input type="hidden" name="headimgurl" value="<?php echo ($user["headimgurl"]); ?>"> 
+      <div class="weui_cells_tips"><?php echo ($user["prompt"]); ?></div>
       <div class="weui_btn_area">
-        <input  type="submit" class="weui_btn weui_btn_primary"  id="showTooltips" onclick="regist()" value="提交">
+        <input  type="submit" class="weui_btn weui_btn_primary"  id="showTooltips" value="提交">
       </div>
     </div>
     </form>
@@ -118,59 +108,15 @@
       });
       $("#date2").calendar({
         value: ['2016-12-12'],
-        dateFormat: 'yyyy年mm月dd日'  // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+        dateFormat: 'yyyy年mm月dd日' , // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+        onChange: function(p, v, dv) {
+          console.log(p, v, dv);
+        },
+        onClose: function(p, v, d) {
+          console.log("close");
+        }
       });
 
     </script>
   </body>
-  <script type="text/javascript">
-    var xmppURL = null;
-    var apiURL = null;
-    var curUserId = null;
-    var curChatUserId = null;
-    var conn = null;
-    var curRoomId = null;
-    var msgCardDivId = "chat01";
-    var talkToDivId = "talkTo";
-    var talkInputId = "talkInputId";
-    var fileInputId = "fileInput";
-    var bothRoster = [];
-    var toRoster = [];
-    var maxWidth = 200;
-    var groupFlagMark = "group--";
-    var groupQuering = false;
-    var textSending = false;
-    var appkey = "1180161208115132#xiaolian";
-    var time = 0;
-
-    //easemobwebim-sdk注册回调函数列表
-    $(document).ready(function() {
-      conn = new Easemob.im.Connection();
-    });
-    //注册新用户操作方法
-    var regist = function() {
-      var user = $("#regist_username").val();
-      var pass = $("#regist_password").val();
-      var nickname = $("#regist_nickname").val();
-      if (user == '' || pass == '') {
-        alert("你的聊天功能出现问题，请联系公众号管理员");
-        return;
-      }
-      var options = {
-        username : user,
-        password : pass,
-        nickname : nickname,
-        appKey : appkey,
-        success : function(result) {
-          alert("注册成功!");
-
-        },
-        error : function(e) {
-          alert(e.error);
-        },
-        apiUrl : apiURL
-      };
-      Easemob.im.Helper.registerUser(options);
-    };
-  </script>
 </html>

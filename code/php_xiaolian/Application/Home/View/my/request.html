@@ -17,20 +17,30 @@
       height: 100%;
     }
     .swiper-container {
-        width: 100%;
-        } 
-        .swiper-container img {
-        display: block;
-        /*width: 100%;*/
-        }
-        .weui_tab .weui_tab_bd .content img{
-          /*width: 100%;*/
-          display: block;
-        }
+    width: 100%;
+    }
+    .swiper-container img {
+    display: block;
+    /*width: 100%;*/
+    }
+    .weui_tab .weui_tab_bd .content img{
+      /*width: 100%;*/
+      display: block;
+    }
+   .back{
+     position: fixed;
+     top:2%;
+     left: 5%;
+     z-index: 100;
+   }
   </style>
 
 </head>
 <body>
+
+  <div class="back">
+    <a href="{:U('home/my/index')}"><img src="__PUBLIC__/images/back.png" alt=""></a>
+  </div>
   <!--顶部标题栏-->
   <div class="weui_tab">
   <div class="weui_navbar">
@@ -39,7 +49,9 @@
     </a>
   </div>
   <div class="weui_tab_bd">
+
     <div class="content">
+
             <div class="weui_cells weui_cells_access">
               <a class="weui_cell" href="javascript:;">
                 <div class="weui_cell_hd">
@@ -53,26 +65,66 @@
 
               </a>
                     <volist name="myConfirm" id="myc">
-                      <a class="weui_cell" href="javascript:;" style="margin-left: 5%;">
+                      <div class="reply">
+                        <a class="weui_cell" href="javascript:;" style="margin-left: 5%;">
 
-                        <div class="weui_cell_bd weui_cell_primary" >
-                            <div style="float:left;"><img src="{$myrequest.headimgurl}" alt=""></div>
-                            <div style="float: left;">
-                          <p style="font-size:16px; height: 32px; "><span style="color: #2a6496;">&nbsp;{$myc.confirm_user.nickname}</span> 同意带您游玩</p>
-                          <p style="text-indent:1em;font-size:10px;">&nbsp;同意时间：{$myc.agreetime}</p>
-                            </div>
-                         </div>
-                        <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn" style="margin-left:50px; width: 100px;">不好意思</a>
-                        <a href="chat.html" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-left:15px; width: 100px;">同意并聊天</a>
-                      </a>
+                          <div class="weui_cell_bd weui_cell_primary" >
+                              <div style="float:left;"><img src="{$myrequest.headimgurl}" alt=""></div>
+                              <div style="float: left;">
+                            <p style="font-size:16px; height: 32px; "><span style="color: #2a6496;">&nbsp;{$myc.confirm_user.nickname}</span> 同意带您游玩</p>
+                            <p style="text-indent:1em;font-size:10px;">&nbsp;同意时间：{$myc.agreetime}</p>
+                              </div>
+                           </div>
+                          <a href="{:U('home/my/deleteOneReply',array('id'=>$myc['rrid']))}" class="weui_btn weui_btn_mini weui_btn_warn delete" style="margin-left:50px; width: 100px;">不好意思</a>
+                          <a href="{:U('home/my/agreeReply',array('id'=>$myc['rrid']))}" class="weui_btn weui_btn_mini weui_btn_primary agree" style="margin-left:15px; width: 100px;">同意并聊天</a>
+                        </a>
+                        </div>
                     </volist>
             </div>
           </div>
   </div>
 </div>
 </body>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.delete').click(function(){
+        //使用ajax方式删除记录
+        var url = $(this).attr('href');
+        var self = $(this);
+        $.get(url,function(data){
+          console.log(data);
+          if(data==1){
+            //隐藏相应的行
+            self.parent(".reply").children().animate({
+              height:'hide'
+            });
+          }else{
+            alert('未知的错误，请联系开发者！');
+          }
+        })
+      //阻止浏览器的默认操作
+      return false;
+    });
+    $('.agree').click(function(){
+      //使用ajax方式删除记录
+      var url = $(this).attr('href');
+      var self = $(this);
+      $.get(url,function(data){
+        if(data==1){
+          //隐藏相应的行
+          window.location.href = "<?=U('home/my/index');?>";
+        }else{
+          console.log(data);
+          alert(data);
+        }
+      })
+      //阻止浏览器的默认操作
+      return false;
+    })
+  })
+</script>
 
-  <script type="text/javascript" src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
   <script type="text/javascript" src="__PUBLIC__/js/jquery-weui.min.js"></script>
   <script type="text/javascript" src="__PUBLIC__/js/swiper.js"></script>
 </html>

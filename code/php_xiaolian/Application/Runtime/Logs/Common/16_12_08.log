@@ -1,24 +1,312 @@
-[ 2016-12-08T10:23:05+08:00 ] 127.0.0.1 /index.php/webDemo/index.php
+[ 2016-12-08T20:47:31+08:00 ] 107.151.148.193 http://www.sbjudge2.com/azenv.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+ERR: 无法加载模块:Azenv
+
+[ 2016-12-08T21:01:33+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:02:52+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:09:01+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:09:01+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:09:05+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:09:05+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001352s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:09:09+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:09:09+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:09:44+08:00 ] 115.159.45.175 /phpMyAdmin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+ERR: 无法加载模块:PhpMyAdmin
+
+[ 2016-12-08T21:14:09+08:00 ] 107.151.148.193 http://www.proxyjudge.info/azenv.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+ERR: 无法加载模块:Azenv
+
+[ 2016-12-08T21:24:34+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:24:35+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:24:52+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:24:53+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:25:01+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:25:01+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:51:34+08:00 ] 101.226.35.225 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:51:34+08:00 ] 101.226.35.225 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T21:51:34+08:00 ] 101.226.35.225 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:14:48+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:14:48+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:15:07+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:15:08+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:15:29+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:15:29+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:15:36+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:18:18+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:18:18+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:21:07+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:21:08+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:21:38+08:00 ] 183.197.99.105 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:21:38+08:00 ] 183.197.99.105 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:22:08+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:22:08+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:41:51+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:49:49+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:49:49+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:49:53+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:49:53+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:50:11+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:50:11+08:00 ] 223.104.13.19 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:51:57+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T22:51:57+08:00 ] 183.197.99.71 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T23:37:39+08:00 ] 223.104.13.11 /favicon.ico
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
-ERR: 无法加载模块:WebDemo
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+ERR: 无法加载模块:Favicon
 
-[ 2016-12-08T10:23:11+08:00 ] 127.0.0.1 /index.php/webdemo/index.php
+[ 2016-12-08T23:37:39+08:00 ] 223.104.13.11 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
-ERR: 无法加载模块:Webdemo
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+ERR: 无法加载模块:Favicon
 
-[ 2016-12-08T10:25:10+08:00 ] 127.0.0.1 /index.php/webdemo/index.php
+[ 2016-12-08T23:39:32+08:00 ] 223.104.13.11 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
-ERR: 无法加载模块:Webdemo
-
-[ 2016-12-08T10:25:12+08:00 ] 127.0.0.1 /index.php/webdemo/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
-ERR: 无法加载模块:Webdemo
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T23:39:32+08:00 ] 223.104.13.11 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T23:40:28+08:00 ] 223.104.13.11 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T23:40:28+08:00 ] 223.104.13.11 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T23:41:18+08:00 ] 223.104.13.11 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-12-08T23:41:18+08:00 ] 223.104.13.11 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+ERR: 无法加载模块:Favicon
 

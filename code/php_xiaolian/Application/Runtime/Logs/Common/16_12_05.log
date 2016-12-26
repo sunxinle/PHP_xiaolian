@@ -10,33 +10,3 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
 ERR: 无法加载模块:Php_xiaolian
 
-[ 2016-12-05T18:35:35+08:00 ] 127.0.0.1 /php_xiaolian/home/news/getcomment
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
-ERR: 无法加载模块:Php_xiaolian
-
-[ 2016-12-05T18:39:19+08:00 ] 127.0.0.1 /php_xiaolian/home/news/getcomment
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
-ERR: 无法加载模块:Php_xiaolian
-
-[ 2016-12-05T18:40:27+08:00 ] 127.0.0.1 /php_xiaolian/home/news/getcomment
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
-ERR: 无法加载模块:Php_xiaolian
-
-[ 2016-12-05T18:40:29+08:00 ] 127.0.0.1 /php_xiaolian/home/news/getcomment
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
-ERR: 无法加载模块:Php_xiaolian
-
-[ 2016-12-05T18:40:33+08:00 ] 127.0.0.1 /php_xiaolian/home/news/getcomment
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
-ERR: 无法加载模块:Php_xiaolian
-

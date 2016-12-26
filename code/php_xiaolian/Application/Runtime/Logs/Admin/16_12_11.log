@@ -1,0 +1,19 @@
+[ 2016-12-11T09:20:02+08:00 ] 121.42.210.61 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+NOTIC: [2048] Declaration of Admin\Controller\NewsController::show() should be compatible with that of Think\Controller::show() /var/www/html/Application/Admin/Controller/NewsController.class.php 第 12 行.
+NOTIC: [8] Undefined index: authid /var/www/html/ThinkPHP/Library/Org/Util/Rbac.class.php 第 163 行.
+
+[ 2016-12-11T22:28:32+08:00 ] 222.186.56.246 /admin/loginAction.action?method:%23_memberAccess%3d@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS,%23req%3d%40org.apache.struts2.ServletActionContext%40getRequest(),%23res%3d%40org.apache.struts2.ServletActionContext%40getResponse(),%23res.setCharacterEncoding(%23parameters.encoding[0]),%23path%3d%23req.getRealPath(%23parameters.pp[0]),%23w%3d%23res.getWriter(),%23w.print(%23parameters.web[0]),%23w.print(%23parameters.path[0]),%23w.print(%23path),1?%23xx:%23request.toString&pp=%2f&encoding=UTF-8&web=web&path=path%3a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+ERR: 无法加载控制器:LoginAction.action
+

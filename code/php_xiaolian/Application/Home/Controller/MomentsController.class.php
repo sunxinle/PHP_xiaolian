@@ -64,7 +64,6 @@ class MomentsController extends Controller
         $info   =   $upload->upload();
 		$art=I('post.');
 		$data['xlaimageurl']=$info['img']['savepath'].$info['img']['savename'];
-		$data['xlatitle']=$art['title'];
 		$data['xlacontent']=$art['art'];
 		$data['xlaaddtime']=date("Y-m-d H:i:s",time());
 		$data['xlaimage']=session('headimgurl');//从session中获取用户信息
