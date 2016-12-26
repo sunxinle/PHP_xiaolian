@@ -113,6 +113,134 @@ class MomentsController extends Controller
 
         $this->display();
 	}
+	class MomentsController extends Controller
+{
+	public function index(){
+		if(!session('?openid'))
+	 	{
+
+	 		$this->writesession();
+
+	 		$click=M('click');
+	 		$map['opeid']=session('openid');
+	 		$cresult=$click->where($map)->select();
+
+
+			$xlart=M('xiaolianarticle');
+			$data=$xlart->limit(20)->order('xlaaddtime desc')->select();
+			
+			for($i=0;$i<20;$i++){
+				for ($j=0; $j < count($cresult); $j++) { 
+					if($data[$i]['xlaid']==$cresult[$j]['xlaid'])
+					{
+						$data[$i]['tag']=1;
+						break;
+					}
+					else{
+					
+						$data[$i]['tag']=0;
+					}
+				}
+
+			}
+			$this->assign("data",$data);
+			//dump($data);
+			$this->assign('ope',session('openid'));
+			$this->display();
+		}
+		else{
+			$click=M('click');
+	 		$map['opeid']=session('openid');
+	 		$cresult=$click->where($map)->select();
+
+
+			$xlart=M('xiaolianarticle');
+			$data=$xlart->limit(20)->order('xlaaddtime desc')->select();
+			
+			for($i=0;$i<20;$i++){
+				for ($j=0; $j < count($cresult); $j++) { 
+					if($data[$i]['xlaid']==$cresult[$j]['xlaid'])
+					{
+						$data[$i]['tag']=1;
+						break;
+					}
+					else{
+					
+						$data[$i]['tag']=0;
+					}
+				}
+
+			}
+			$this->assign("data",$data);
+			//dump($data);
+			$this->assign('ope',session('openid'));
+			$this->display();
+		}
+	}
+	class MomentsController extends Controller
+{
+	public function index(){
+		if(!session('?openid'))
+	 	{
+
+	 		$this->writesession();
+
+	 		$click=M('click');
+	 		$map['opeid']=session('openid');
+	 		$cresult=$click->where($map)->select();
+
+
+			$xlart=M('xiaolianarticle');
+			$data=$xlart->limit(20)->order('xlaaddtime desc')->select();
+			
+			for($i=0;$i<20;$i++){
+				for ($j=0; $j < count($cresult); $j++) { 
+					if($data[$i]['xlaid']==$cresult[$j]['xlaid'])
+					{
+						$data[$i]['tag']=1;
+						break;
+					}
+					else{
+					
+						$data[$i]['tag']=0;
+					}
+				}
+
+			}
+			$this->assign("data",$data);
+			//dump($data);
+			$this->assign('ope',session('openid'));
+			$this->display();
+		}
+		else{
+			$click=M('click');
+	 		$map['opeid']=session('openid');
+	 		$cresult=$click->where($map)->select();
+
+
+			$xlart=M('xiaolianarticle');
+			$data=$xlart->limit(20)->order('xlaaddtime desc')->select();
+			
+			for($i=0;$i<20;$i++){
+				for ($j=0; $j < count($cresult); $j++) { 
+					if($data[$i]['xlaid']==$cresult[$j]['xlaid'])
+					{
+						$data[$i]['tag']=1;
+						break;
+					}
+					else{
+					
+						$data[$i]['tag']=0;
+					}
+				}
+
+			}
+			$this->assign("data",$data);
+			//dump($data);
+			$this->assign('ope',session('openid'));
+			$this->display();
+		}
+	}
 	public function getart()
 	{
 		$upload = new \Think\Upload();// 实例化上传类
